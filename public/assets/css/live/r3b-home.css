@@ -1,0 +1,891 @@
+/* ==========================================================================
+   r3b-home.css  -  Runde 3, ABNAHME der Startseite "/" (Post 7895)
+
+   Diese Datei entsteht bei der unabhaengigen Abnahme und enthaelt nur die
+   Restfixes, die beim Gegenlesen von r3-home.css uebrig blieben. r3-home.css
+   selbst wird NICHT geaendert (dort arbeitet ein anderer Agent); das Plugin
+   lvlup-fixes laedt alphabetisch, "r3b-home.css" also nach "r3-home.css".
+   Kaans Dateien (lvlup-theme.css, lvlup-home.css, Plugin lvlup-home-v2) und
+   die fixes-*.css von gestern bleiben unangetastet.
+
+   Sicherung des Vorzustands:
+     runde3/home/backups/plugin-fixes-abnahme-20260810-182029/r3-home.css
+     runde3/home/backups/20260810-182029_post-7895-elementor-data.json
+
+   Messgrundlage: eigener Referenz-Verbund
+     shots/abnahme-home-ref-1760.png   (Desktop, 1760 x 11225)
+     shots/abnahme-home-mobref-512.png (Mobil, 512 x 11287, Frame 440)
+   gegen eigene Renders
+     shots/abnahme-home-desktop-1760.png, shots/abnahme-home-mob390.png,
+     shots/abnahme-home-mob440.png
+   Vollstaendige Messreihen: runde3/home/ABNAHME.md
+
+   SEITENBINDUNG wie in r3-home.css: jeder Selektor beginnt mit
+   body.page-id-7895, damit auf /rules/ (Post 8048, gleiche .lvf-s10-Klassen)
+   nichts mitwirkt.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   R3B-home-01: "Payout Protector"-Panel im Add-Ons-Band (s04) viel zu dunkel
+
+   BEFUND (Desktop, Panel .lvf-s04-addon, live x807..1485 / y3288..3366;
+   Referenz um 7 px versetzt). Gemessen 5x5-gemittelt, RGB:
+
+     x        815        920       1000       1120       1170
+     y3296  SOLL 108,205,236  200,236,251  245,251,255  248,252,254  243,251,253
+            IST   15,103,151   18,104,152   21,105,152   24,107,153   25,107,153
+     y3312  SOLL 103,203,234  197,235,250  244,251,254  248,252,255  242,249,254
+            IST   43,125,168   51,128,170   60,132,172   69,136,173   70,136,173
+     y3350  SOLL  88,196,232  189,233,249  242,250,253  247,252,255  240,249,255
+            IST  110,178,209  129,187,213  152,197,218  175,206,222  177,207,222
+
+   Das Soll ist also ein WAAGERECHTER Verlauf (cyan links -> weiss ab rund
+   31 % Panelbreite), live liegt ein SENKRECHTER Verlauf vor (dunkelblau oben
+   -> hell unten). Am staerksten weicht die Panel-Oberkante ab: RGB-Summe
+   -471 von 765.
+
+   URSACHE: Kaan setzt auf .lvf-s04-addon (lvlup-home.css Z. 2051 ff.) nur eine
+   fast durchsichtige Fuellung und `backdrop-filter: blur(116px)`. Der Backdrop
+   wird also aus dem Bandverlauf darunter gewonnen; bei 116 px Radius auf einem
+   nur 76 px hohen Element dominiert die Randbehandlung des Blurs und erzeugt
+   den senkrechten Verlauf. Gegengeprueft mit einem zweiten, unabhaengigen
+   Renderweg (CDP-Screenshot am gescrollten Viewport statt --screenshot):
+   dieselben Werte, also kein Aufnahme-Artefakt.
+
+   LOESUNG: Backdrop-Filter aus, Panelgrund als expliziter waagerechter
+   Verlauf aus den Soll-Werten. Stops = gemessene Referenzpunkte
+   (rel = (x - 807) / 678):
+     rel 0.004 96,194,227 | 0.043 125,211,239 | 0.081 146,218,243
+     rel 0.119 170,227,246 | 0.158 195,234,250 | 0.196 217,243,253
+     rel 0.235 233,247,254 | 0.273 242,250,254 | 0.311 248,252,255
+     rel 0.35+ 249,253,255 (flach; ab rel 0.568 verdeckt der schwarze Wertekasten)
+   Kaans Rahmenverlauf (border-box) bleibt unveraendert erhalten.
+   Nur Desktop: mobil liegt das Band im Soll (Bandmittel live 120..182 gegen
+   Referenz 45..171 ueber dieselben Zeilen), dort wird nichts angefasst.
+   ========================================================================== */
+
+@media (min-width: 768px) {
+
+  body.page-id-7895 .lvf-s04 .lvf-s04-addons .lvf-s04-addon {
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    background:
+      linear-gradient(90deg,
+        #5ec1e3 0%,
+        #7dd3ef 4.3%,
+        #92daf3 8.1%,
+        #aae3f6 11.9%,
+        #c3eafa 15.8%,
+        #d9f3fd 19.6%,
+        #e9f7fe 23.5%,
+        #f2fafe 27.3%,
+        #f8fcff 31.1%,
+        #f9fdff 40%,
+        #f9fdff 100%) padding-box,
+      linear-gradient(180deg, #005a8d 0%, rgba(0, 91, 143, 0) 100%) border-box;
+  }
+
+}
+
+
+/* ==========================================================================
+   Homepage QA handoff: missing interactive details from the annotated file
+   ========================================================================== */
+
+/* The six-link Figma navigation still fits at the existing desktop breakpoint,
+   but the intermediate desktop range needs the tighter spacing shown there. */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  body.page-id-7895 .lvf-s01-links { gap: clamp(14px, 1.35vw, 19px); }
+  body.page-id-7895 .lvf-s01-link { font-size: 13.5px; }
+  body.page-id-7895 .lvf-s01-logo-img { width: 190px; }
+}
+
+/* Pricing information must be readable outside the card/add-on frame. */
+body.page-id-7895 .lvf-s04 .lvf-s04-card-in,
+body.page-id-7895 .lvf-s04 .lvf-s04-addons,
+body.page-id-7895 .lvf-s04 .lvf-s04-addon {
+  overflow: visible;
+}
+
+body.page-id-7895 .lvf-s04 .lvf-s04-addon-info {
+  position: relative;
+  cursor: help;
+}
+
+body.page-id-7895 .lvf-s04 .lvf-s04-addon-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  z-index: 50;
+  width: min(310px, 72vw);
+  padding: 12px 14px;
+  border: 1px solid rgba(81, 192, 255, 0.38);
+  border-radius: 10px;
+  background: #071722;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.58), 0 0 24px rgba(18, 169, 255, 0.12);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 5px);
+  transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+}
+
+body.page-id-7895 .lvf-s04 .lvf-s04-addon-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border: 7px solid transparent;
+  border-top-color: #071722;
+  transform: translateX(-50%);
+}
+
+body.page-id-7895 .lvf-s04 .lvf-s04-addon-info:hover .lvf-s04-addon-tooltip,
+body.page-id-7895 .lvf-s04 .lvf-s04-addon-info:focus .lvf-s04-addon-tooltip,
+body.page-id-7895 .lvf-s04 .lvf-s04-addon-info:focus-visible .lvf-s04-addon-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+body.page-id-7895 .lvf-s04 .lvf-s04-addon-val {
+  color: inherit;
+  text-decoration: none;
+  transition: filter 0.18s ease, box-shadow 0.18s ease;
+}
+
+body.page-id-7895 .lvf-s04 .lvf-s04-addon-val:hover { filter: brightness(1.12); }
+body.page-id-7895 .lvf-s04 .lvf-s04-addon-val:focus-visible {
+  outline: 2px solid #6ecaff;
+  outline-offset: 3px;
+}
+
+/* The revised testimonial dataset intentionally has no role/subtitle line. */
+body.page-id-7895 .lvf-s07-role { display: none; }
+
+/* Landing popup ----------------------------------------------------------- */
+.lvf-landing-modal[hidden],
+.lvf-video-modal[hidden] { display: none; }
+
+.lvf-landing-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 4000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.24s ease;
+}
+
+.lvf-landing-modal.is-open { opacity: 1; }
+
+.lvf-landing-backdrop,
+.lvf-video-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 5, 8, 0.72);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.lvf-landing-dialog {
+  position: relative;
+  isolation: isolate;
+  width: min(880px, 100%);
+  min-height: 553px;
+  max-height: calc(100vh - 48px);
+  overflow: visible;
+  padding: 48px 72px 36px;
+  border-radius: 32px;
+  background:
+    radial-gradient(ellipse 55% 50% at 0% 70%, rgba(18, 169, 255, 0.55) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 50% at 100% 70%, rgba(18, 169, 255, 0.55) 0%, transparent 70%),
+    linear-gradient(180deg, #0a0e11 0%, #0d1418 40%, #1a3a4d 58%, #e8f4fb 72%, #ffffff 80%, #ffffff 100%);
+  box-shadow: 0 42px 110px rgba(0, 0, 0, 0.72);
+  color: #fff;
+  text-align: center;
+  transform: translateY(18px) scale(0.97);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lvf-landing-modal.is-open .lvf-landing-dialog { transform: translateY(0) scale(1); }
+
+.lvf-landing-aura {
+  display: none;
+}
+
+body.page-id-7895 .lvf-landing-modal .lvf-landing-close {
+  position: absolute;
+  z-index: 3;
+  top: -12px;
+  right: -12px;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: #2d3640;
+  color: #5bbfee;
+  font: 500 30px/1 Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+body.page-id-7895 .lvf-video-modal .lvf-video-close {
+  position: absolute;
+  z-index: 3;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.48);
+  color: rgba(255, 255, 255, 0.85);
+  font: 300 24px/1 Arial, sans-serif;
+  cursor: pointer;
+}
+
+body.page-id-7895 .lvf-landing-modal .lvf-landing-close:hover { background: #3a4550; }
+body.page-id-7895 .lvf-video-modal .lvf-video-close:hover { background: rgba(18, 169, 255, 0.2); }
+body.page-id-7895 .lvf-landing-modal .lvf-landing-close:focus-visible,
+body.page-id-7895 .lvf-video-modal .lvf-video-close:focus-visible { outline: 2px solid #6ecaff; outline-offset: 3px; }
+
+.lvf-landing-trophy {
+  display: block;
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 15px;
+}
+
+.lvf-landing-title {
+  font-family: var(--lvf-font-display);
+  font-size: clamp(34px, 3.2vw, 46px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.lvf-landing-title span {
+  background: linear-gradient(180deg, #8cd5ff 0%, #12a9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shared highlight style: blue gradient text */
+.lvf-landing-hl {
+  background: linear-gradient(180deg, #8cd5ff 0%, #12a9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.lvf-landing-copy {
+  max-width: 650px;
+  margin: 18px auto 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+}
+
+.lvf-landing-copy strong.lvf-landing-hl {
+  font-weight: 400;
+}
+
+.lvf-landing-form { margin-top: 25px; }
+
+.lvf-landing-field {
+  display: flex;
+  max-width: 680px;
+  min-height: 62px;
+  margin-inline: auto;
+  padding: 0;
+  padding-left: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(20, 30, 38, 0.92);
+  box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.15);
+}
+
+.lvf-landing-input {
+  min-width: 0;
+  flex: 1;
+  padding: 0 18px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+}
+.lvf-landing-input::placeholder { color: rgba(255, 255, 255, 0.43); }
+.lvf-landing-input:focus-visible { box-shadow: inset 0 -2px #35b0f8; }
+
+body.page-id-7895 .lvf-landing-modal .lvf-landing-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 184px;
+  padding: 0 15px 0 8px;
+  border: none;
+  border-radius: 14px;
+  align-self: stretch;
+  background: linear-gradient(180deg, #8cd5ff 0%, #12a9ff 100%);
+  box-shadow: inset 0 2px 12px rgba(255, 255, 255, 0.3), 0 6px 20px rgba(18, 169, 255, 0.24);
+  color: #00101a;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lvf-landing-submit-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 5px;
+  background: #02080c;
+}
+.lvf-landing-submit-icon img { width: 20px; height: 20px; }
+body.page-id-7895 .lvf-landing-modal .lvf-landing-submit:hover { filter: brightness(1.08); }
+body.page-id-7895 .lvf-landing-modal .lvf-landing-submit:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+.lvf-landing-status {
+  min-height: 20px;
+  margin-top: 8px;
+  color: #8cd5ff;
+  font-size: 13px;
+}
+
+.lvf-landing-note {
+  margin-top: 4px;
+  color: #111111;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.lvf-landing-terms {
+  margin-top: 14px;
+  color: #999999;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* In-page video player ---------------------------------------------------- */
+.lvf-video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3900;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+.lvf-video-modal.is-open { opacity: 1; }
+
+.lvf-video-dialog {
+  position: relative;
+  width: min(1080px, 100%);
+  padding: 28px;
+  border: 1px solid rgba(79, 190, 255, 0.28);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(2, 17, 26, 0.99), rgba(0, 0, 0, 0.99));
+  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.78), inset 0 0 70px rgba(18, 169, 255, 0.08);
+  transform: translateY(14px) scale(0.98);
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lvf-video-modal.is-open .lvf-video-dialog { transform: translateY(0) scale(1); }
+
+.lvf-video-modal-title {
+  max-width: calc(100% - 56px);
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: clamp(19px, 2.2vw, 28px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.lvf-video-frame {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(18, 169, 255, 0.32);
+  border-radius: 14px;
+  background: #000;
+}
+.lvf-video-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+.lvf-video-watch-link {
+  display: inline-flex;
+  margin-top: 16px;
+  color: #8cd5ff;
+  font-size: 14px;
+  text-decoration: none;
+}
+.lvf-video-watch-link:hover { color: #fff; }
+
+@media (max-width: 767px) {
+  body.page-id-7895 .lvf-s04 .lvf-s04-tooltip {
+    right: auto;
+    left: 50%;
+    transform: translate(calc(-50% - 10px), 4px);
+  }
+  body.page-id-7895 .lvf-s04 .lvf-s04-tooltip::after {
+    right: auto;
+    left: calc(50% + 10px);
+    transform: translateX(-50%);
+  }
+  body.page-id-7895 .lvf-s04 .lvf-s04-crow-info:hover .lvf-s04-tooltip,
+  body.page-id-7895 .lvf-s04 .lvf-s04-crow-info:focus .lvf-s04-tooltip,
+  body.page-id-7895 .lvf-s04 .lvf-s04-crow-info:focus-visible .lvf-s04-tooltip {
+    transform: translate(calc(-50% - 10px), 0);
+  }
+
+  .lvf-landing-modal,
+  .lvf-video-modal { padding: 14px; }
+
+  .lvf-landing-dialog {
+    min-height: 0;
+    padding: 28px 18px 24px;
+    border-radius: 22px;
+  }
+
+  .lvf-landing-trophy { width: 58px; height: 58px; margin-bottom: 10px; }
+  .lvf-landing-title { font-size: clamp(29px, 9vw, 38px); }
+  .lvf-landing-copy { margin-top: 14px; font-size: 14px; }
+  .lvf-landing-form { margin-top: 18px; }
+  .lvf-landing-field { flex-direction: column; gap: 8px; padding: 8px; }
+  .lvf-landing-input { min-height: 48px; }
+  .lvf-landing-submit { width: 100%; min-height: 50px; }
+  .lvf-landing-note { font-size: 13px; }
+
+  .lvf-video-dialog { padding: 20px 14px 16px; border-radius: 16px; }
+  .lvf-video-close { top: 10px; right: 10px; width: 34px; height: 34px; }
+  .lvf-video-frame { border-radius: 9px; }
+}
+
+
+/* ==========================================================================
+   R3B-home-02: CTA-Karte (s10) - fleckige dunkle Wolke statt glattem Verlauf
+
+   BEFUND. Rasterpunkte relativ zur Karte (live x260..1500 / y9636..10181,
+   Referenz um 74 px tiefer), Blaukanal, 5x5-gemittelt:
+
+     rely 0.06  relx  0.02  0.10  0.22  0.36  0.50  0.64  0.78  0.90  0.98
+                SOLL   156    52     2     5    33    99   201   236   243
+                IST    150    54    39    37    38    39   151   222   242
+     rely 0.50  SOLL   152    58    14    14    20    23    50   143   212
+                IST    134    45    52    62    72    63    54    69   195
+     rely 0.94  SOLL   240   206   198   111    78   108   195   191   234
+                IST    193   157   235    96   103   103   236   149   192
+
+   Das Soll ist ein glatter Verlauf: dunkle Mitte (relx 0.22..0.50 im oberen
+   Drittel praktisch schwarz, RGB 2,2,2), kraeftige Leuchtkanten links und
+   rechts, und die Karte wird nach UNTEN hin insgesamt heller (linke Spalte
+   B 156 oben -> 240 unten). Live steht statt dessen eine ovale Abdunklung
+   ueber Kaans Glow-Stapel: relx 0.22..0.64 ist oben 30..37 zu HELL, in der
+   Mitte 40..52 zu hell, die Zone relx 0.64..0.78 dagegen 50..59 zu DUNKEL,
+   und die untere linke Ecke fehlt fast ganz (SOLL 74,201,240 / IST 31,133,193).
+   Der Rand dieser Abdunklung ist als Wolke sichtbar
+   (vergleich/abnahme-cta-3fach.png: Referenz | Stand vor r3-home.css | jetzt).
+
+   LOESUNG: Die Ebene wird deckend gemacht und beschreibt den Kartengrund
+   vollstaendig - dieselbe Vorgehensweise, die r3-home.css bei den
+   Plattformkarten (R3-home-04) schon anwendet. Damit entfaellt die
+   Ueberlagerung mit Kaans Glow-Stapel, die die Wolkenkante erzeugt hat.
+   Die Deko-Pfeile liegen in .lvf-s10-deco, also NACH .lvf-s10-glow im
+   Dokument, und bleiben unberuehrt sichtbar.
+   ========================================================================== */
+
+@media (min-width: 768px) {
+
+  body.page-id-7895 .lvf-s10 .lvf-s10-card > .lvf-s10-glow.lvf-s10-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-color: #01060b;
+    background-image:
+      /* Durchgang 2. Durchgang 1 war an den Oberkanten zu dunkel (linke Spalte
+         82 statt SOLL 156, relx 0.78 oben 64 statt 201), weil die Randsaeulen
+         als Radials mit zu kleinem Radius angesetzt waren. Die Referenz hat
+         dort senkrecht nahezu KONSTANTE Randspalten - deshalb jetzt lineare
+         Verlaeufe fuer die Saeulen und Radials nur fuer die vier Ecken.
+
+         untere linke Ecke (SOLL rely 0.94: relx 0.02 -> 240, 0.10 -> 206,
+         0.22 -> 198) */
+      radial-gradient(58% 52% at -6% 104%,
+        rgba(170, 232, 253, 0.98) 0%,
+        rgba(96, 205, 247, 0.90) 26%,
+        rgba(24, 140, 205, 0.52) 52%,
+        rgba(5, 70, 115, 0.18) 76%,
+        rgba(2, 40, 70, 0) 96%),
+      /* untere rechte Ecke (SOLL rely 0.94: relx 0.98 -> 234, 0.90 -> 191) */
+      radial-gradient(48% 50% at 106% 104%,
+        rgba(150, 224, 252, 0.94) 0%,
+        rgba(70, 192, 243, 0.84) 28%,
+        rgba(16, 124, 190, 0.42) 56%,
+        rgba(3, 58, 96, 0.12) 80%,
+        rgba(2, 40, 70, 0) 96%),
+      /* obere rechte Bluete, reicht bis relx 0.64 (SOLL rely 0.06: 0.98 -> 243,
+         0.90 -> 236, 0.78 -> 201, 0.64 -> 99, 0.50 -> 33) */
+      radial-gradient(46% 62% at 102% -4%,
+        rgba(160, 228, 252, 0.99) 9%,
+        rgba(120, 215, 250, 0.94) 26%,
+        rgba(44, 172, 236, 0.80) 52%,
+        rgba(10, 104, 165, 0.37) 83%,
+        rgba(3, 52, 88, 0.10) 100%,
+        rgba(2, 40, 70, 0) 116%),
+      /* linke Randspalte, senkrecht konstant
+         (SOLL relx 0.02 -> 152, 0.10 -> 50, 0.22 -> 8) */
+      linear-gradient(90deg,
+        rgba(35, 155, 225, 0.74) 0px,
+        rgba(32, 150, 220, 0.66) 25px,
+        rgba(22, 120, 185, 0.34) 70px,
+        rgba(18, 112, 176, 0.19) 124px,
+        rgba(8, 70, 118, 0.05) 200px,
+        rgba(2, 40, 70, 0) 300px),
+      /* rechte Randspalte, senkrecht konstant
+         (SOLL relx 0.98 -> 212, 0.90 -> 143, 0.78 -> 50, 0.64 -> 23) */
+      linear-gradient(270deg,
+        rgba(40, 165, 232, 0.88) 0px,
+        rgba(38, 160, 228, 0.84) 25px,
+        rgba(26, 132, 200, 0.55) 124px,
+        rgba(12, 86, 140, 0.15) 273px,
+        rgba(4, 50, 84, 0.03) 400px,
+        rgba(2, 40, 70, 0) 520px),
+      /* Aufhellung der Unterkante ueber die Kartenmitte
+         (SOLL rely 0.94: relx 0.36 -> 111, 0.50 -> 78, 0.64 -> 108).
+         Durchgang 4/5: nach dem Abschalten von Kaans ::after-Band fehlte hier
+         dessen Beitrag, die Unterkante fiel auf 42..52 statt 81..138. Radius
+         und Deckkraft angehoben, Mittelpunkt wieder naeher an die Karte; der Doppelhoecker (aussen heller als in der
+         Mitte) kommt aus den beiden Eckbluenten, deshalb bleibt diese Ebene
+         in der Mitte bewusst schwaecher. */
+      radial-gradient(78% 42% at 50% 110%,
+        rgba(36, 152, 216, 0.80) 0%,
+        rgba(22, 116, 178, 0.46) 40%,
+        rgba(8, 64, 104, 0.18) 68%,
+        rgba(2, 40, 70, 0) 92%),
+      /* Grundton: oben Mitte praktisch schwarz (SOLL 2,2,2) */
+      linear-gradient(180deg,
+        #01050a 0%,
+        #01070d 48%,
+        #01101a 80%,
+        #021a29 100%);
+  }
+
+  /* Durchgang 3. Nach Durchgang 2 blieb die Kartenmitte 30..45 zu hell
+     (rely 0.50, relx 0.36..0.64: SOLL 14..23, gemessen 55..66), obwohl die
+     Ebene oben deckend ist. Ursache gefunden: Kaan legt mit
+     `.lvf-s10-glow::after` (lvlup-home.css Z. 6374 ff.) ein zusaetzliches
+     helles Mittelband UEBER den Glow - ::after zeichnet nach ::before.
+     Da die Ebene oben den Kartengrund jetzt vollstaendig beschreibt
+     (einschliesslich der Aufhellung der Unterkante), wird dieses Band hier
+     abgeschaltet. Kaans Datei bleibt unveraendert. */
+  body.page-id-7895 .lvf-s10 .lvf-s10-card > .lvf-s10-glow.lvf-s10-glow::after {
+    background: none;
+  }
+
+}
+
+
+/* ==========================================================================
+   R3B-home-03: Hero-Randschein fehlt MOBIL fast vollstaendig
+
+   BEFUND (Frame 440, Werte im 512er Schnipselraster auf CSS-px umgerechnet,
+   Blaukanal, linke Bildhaelfte; rechts spiegelbildlich gleich):
+
+     x (CSS)      4    20    40    60    90   120   160   200
+     y170  SOLL 251   240   220   192   148   102    66    52
+           IST   90    76    60    46    29    17    10     7
+     y220  SOLL 229   207   177   147    75    19    10     7
+           IST   69    58    45    33    13     3     2     1
+     y340  SOLL  96    75    57    46    26     -     -     -
+           IST   12    10     7     5     3     -     -     -
+     y420  SOLL  34    28    23    28    13     -     -     -
+           IST    4     3     2     1     1     -     -     -
+     y820  SOLL 121    88    66    46    21     -     -     -
+           IST   10     7     4     3     -     -     -     -
+
+   Der Schein ist also mobil rund um den ganzen Hero zwischen zwei- und
+   zehnfach zu schwach.
+
+   URSACHE (nachgerechnet an der Live-Geometrie, 390 px): .lvf-s02-glow ist
+   `width: 170%` und zentriert, liegt also bei x -136 .. 527 in einem 390 px
+   breiten Bild. Der linke Bildrand entspricht damit 136/663 = 20.6 % des
+   Elements, der rechte 79.4 %. Kaans Mobil-Blobs sitzen aber bei 4 % und 96 %
+   des Elements (lvlup-home.css Z. 177 ff.), also bei Bild-x -110 und +501 -
+   weit AUSSERHALB des Bildes. Sichtbar ist nur ihr Auslauf. Auf dem Desktop
+   faellt das nicht auf, weil dort andere Werte gelten.
+
+   LOESUNG: gleiche Bauart wie Kaan (drei Blobpaare oben / Mitte / unten,
+   Rand-Vignette), aber auf die Bildraender gesetzt und auf die Soll-Werte
+   gebracht. Kaans Regel bleibt in seiner Datei unveraendert; hier steht nur
+   der Override.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+  body.page-id-7895 .lvf-s02 .lvf-s02-glow {
+    background:
+      /* Durchgang 2. Durchgang 1 war am Bildrand zu dunkel (y170: 179 statt
+         251), lief waagerecht zu flach aus (x120: 111 statt 102 bei nur 179
+         am Rand) und hatte auf halber Hoehe eine zusaetzliche Beule
+         (y420: 82 statt 34). Deshalb jetzt nur noch ZWEI Zonen - oben und
+         unten - mit aus dem Soll zurueckgerechneten Radien:
+           oben  Mitte Seiten-y 155, senkrechter Radius 300 px
+                 (SOLL 251/229/178/96/34 bei y 170/220/280/340/420)
+           unten Mitte Seiten-y 980, senkrechter Radius 420 px
+                 (SOLL 32/65/121 bei y 620/720/820)
+         waagerechter Radius 215 px = 29 % der Elementbreite (Durchgang 3:
+         mit 35 % lief der Schein zu flach aus, x120 kam auf 139 statt 102).
+         Elementbreite 170 %, Bildrand also bei 20.6 % / 79.4 %. */
+      radial-gradient(29% 17.6% at 20.6% 15%,
+        rgba(236, 250, 255, 1) 0%,
+        rgba(186, 234, 254, 0.95) 18%,
+        rgba(96, 205, 250, 0.78) 38%,
+        rgba(0, 162, 255, 0.44) 60%,
+        rgba(0, 150, 235, 0.16) 82%,
+        rgba(0, 145, 228, 0) 100%),
+      radial-gradient(29% 17.6% at 79.4% 15%,
+        rgba(236, 250, 255, 1) 0%,
+        rgba(186, 234, 254, 0.95) 18%,
+        rgba(96, 205, 250, 0.78) 38%,
+        rgba(0, 162, 255, 0.44) 60%,
+        rgba(0, 150, 235, 0.16) 82%,
+        rgba(0, 145, 228, 0) 100%),
+      radial-gradient(27% 24.7% at 20.6% 63.5%,
+        rgba(0, 168, 255, 0.86) 0%,
+        rgba(0, 160, 246, 0.62) 32%,
+        rgba(0, 150, 232, 0.34) 62%,
+        rgba(0, 145, 226, 0.12) 86%,
+        rgba(0, 140, 220, 0) 100%),
+      radial-gradient(27% 24.7% at 79.4% 63.5%,
+        rgba(0, 168, 255, 0.86) 0%,
+        rgba(0, 160, 246, 0.62) 32%,
+        rgba(0, 150, 232, 0.34) 62%,
+        rgba(0, 145, 226, 0.12) 86%,
+        rgba(0, 140, 220, 0) 100%),
+      /* Kaans Bogen ueber der Sektionsoberkante bleibt erhalten */
+      radial-gradient(70% 14% at 50% 3%,
+        rgba(0, 162, 255, 1) 0%,
+        rgba(0, 162, 255, 0) 78%);
+  }
+
+}
+
+
+/* ==========================================================================
+   R3B-home-04: Testimonial-Sektion (s07) mobil ohne blauen Grund
+
+   BEFUND (512er Raster, Zeilen 7760..8160, Referenz um 99 px versetzt), RGB:
+
+     x=8 (linker Bildrand)      x=252 (Spalte zwischen den Karten)
+     y7760 SOLL 11,115,168      SOLL  4, 70,104
+           IST   8, 42, 66      IST   7, 20, 34
+     y7860 SOLL 67,181,216      SOLL  9, 77,116
+           IST   7, 37, 60      IST   6, 19, 34
+     y7960 SOLL 169,211,235     SOLL  3, 59, 89
+           IST   7, 34, 55      IST   6, 17, 32
+     y8160 SOLL 73,179,218      SOLL  2, 43, 67
+           IST   5, 26, 43      IST   6, 16, 29
+
+   Im Soll liegt hinter den Testimonial-Karten ein deutlicher blauer Grund,
+   live ist er nahezu schwarz. Kaan hat die Desktop-Wash mobil ausdruecklich
+   abgeschwaecht (lvlup-home.css Z. 4721 ff., Kommentar "mobil gab es keinen
+   Hintergrund-Befund"); der neue Mobil-Schnipsel 7 widerspricht dem.
+
+   LOESUNG: Mobil-Wash auf die Soll-Werte anheben. Desktop bleibt unberuehrt.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+  body.page-id-7895 .lvf-s07 .lvf-s07-glow {
+    background:
+      /* Durchgang 2: Durchgang 1 kam am Bildrand nur auf B 98..135 statt
+         168..235 und fiel nach unten zu schnell ab. Deckkraft angehoben,
+         senkrechte Ausdehnung auf die volle Sektionshoehe gezogen. */
+      radial-gradient(62% 100% at 0% 50%,
+        rgba(70, 190, 246, 0.92) 0%,
+        rgba(24, 128, 186, 0.60) 34%,
+        rgba(9, 74, 116, 0.26) 64%,
+        rgba(4, 40, 65, 0) 100%),
+      radial-gradient(62% 100% at 100% 50%,
+        rgba(70, 190, 246, 0.92) 0%,
+        rgba(24, 128, 186, 0.60) 34%,
+        rgba(9, 74, 116, 0.26) 64%,
+        rgba(4, 40, 65, 0) 100%),
+      radial-gradient(92% 96% at 50% 50%,
+        rgba(12, 92, 140, 0.72) 0%,
+        rgba(8, 60, 96, 0.36) 54%,
+        rgba(4, 30, 50, 0) 100%);
+  }
+
+}
+
+
+/* ==========================================================================
+   R3B-home-05: Deko-Pfeile der CTA-Karte stehen zu hart auf dem Grund
+
+   BEFUND. Nicht die Groesse (dazu hat r3-home.css nach eigenem Drei-Fach-
+   Vergleich bewusst nichts geaendert), sondern die Deckkraft. Gemessen wird
+   der Kontrast des Pfeils gegen den Grund unmittelbar daneben, gleiche Zeile,
+   Blaukanal:
+
+     REFERENZ  y10113: im Pfeil (11,114,172) / daneben (4,53,82)  -> 90
+     LIVE      y10039: im Pfeil  (4,134,208) / daneben (6,48,74)  -> 134
+
+   Im Soll sind die Pfeile also durchscheinend und gehen im hellen
+   Kartengrund fast unter; live sind sie deckend und treten hervor.
+
+   RECHNUNG: Kaan setzt `.lvf-s10-arrow { opacity: 0.85 }` (lvlup-home.css
+   Z. 6314 ff.). Aus 208 = 0.85 * C + 0.15 * 74 folgt fuer die Vollfarbe
+   C = 232. Fuer den Soll-Kontrast 90 (Pfeilwert 74 + 90 = 164) ergibt sich
+   0.57. Gegenprobe an der zweiten Messstelle (Grund 146): 0.57 ergibt 195,
+   Referenz dort 181.
+   Nur Desktop - mobil zeigt die Karte andere Pfeilgrafiken
+   (.lvf-s10-arrowhead / .lvf-s10-arrow3d), die hier nicht angefasst werden.
+   ========================================================================== */
+
+@media (min-width: 768px) {
+
+  body.page-id-7895 .lvf-s10 .lvf-s10-deco .lvf-s10-arrow {
+    opacity: 0.57;
+  }
+
+}
+
+
+/* Softly blend the platform glow with the section above. */
+body.page-id-7895 .lvf-s06 > .lvf-s06-glow::after {
+  content: "";
+  position: absolute;
+  top: -56px;
+  right: 0;
+  left: 0;
+  height: 112px;
+  pointer-events: none;
+  background: rgba(0, 12, 18, 0.01);
+  -webkit-backdrop-filter: blur(22px);
+          backdrop-filter: blur(22px);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 30%, #000 70%, transparent 100%);
+          mask-image: linear-gradient(180deg, transparent 0%, #000 30%, #000 70%, transparent 100%);
+}
+
+body.page-id-7895 .lvf-s06 .lvf-s06-title {
+  line-height: calc(var(--s06-h2-lh) + 5px);
+}
+
+/* Softly blend the final CTA section with the section above. */
+body.page-id-7895 .lvf-s10::after {
+  content: "";
+  position: absolute;
+  top: -56px;
+  right: 0;
+  left: 0;
+  height: 112px;
+  pointer-events: none;
+  background: rgba(0, 12, 18, 0.01);
+  -webkit-backdrop-filter: blur(22px);
+          backdrop-filter: blur(22px);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 30%, #000 70%, transparent 100%);
+          mask-image: linear-gradient(180deg, transparent 0%, #000 30%, #000 70%, transparent 100%);
+}
+
+/* Matching Build Your Plan pills above S04 and S05. */
+body.page-id-7895 .lvf-s04 .lvf-s04-kicker-t,
+body.page-id-7895 .lvf-s05 .lvf-s05-kicker-t {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(154px, 10.682vw, 188px);
+  height: clamp(34px, 2.273vw, 40px);
+  padding: 0 20px;
+  border: 1px solid rgba(53, 174, 244, 0.2);
+  border-radius: 999px;
+  background: #00121c;
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.34),
+    inset 0 0 16px rgba(0, 134, 204, 0.08);
+  color: #ffffff;
+  font-size: clamp(15px, 1.023vw, 18px);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+body.page-id-7895 .lvf-s05 .lvf-s05-kicker-t::before {
+  content: none;
+}
+
+/* Keep the result info popups visible, matching the Plan popup behavior. */
+body.page-id-7895 .lvf-s05 .lvf-s05-panel {
+  overflow: visible;
+}
+
+body.page-id-7895 .lvf-s05 .lvf-s05-panel::before {
+  border-radius: inherit;
+}
+
+body.page-id-7895 .lvf-s05 .lvf-s05-res {
+  overflow: visible;
+}
+
+body.page-id-7895 .lvf-s05 .lvf-s05-res:hover,
+body.page-id-7895 .lvf-s05 .lvf-s05-res:focus-within {
+  z-index: 10;
+}
+
+/* Match the desktop footer card's blue-gray fill. */
+@media (min-width: 1024px) {
+  body.page-id-7895 .lvf-page .lvf-s11-cardbg {
+    background:
+      linear-gradient(#000000, #000000) padding-box,
+      linear-gradient(90deg,
+        rgba(52, 176, 248, 0) 0%,
+        #35aef4 52%,
+        rgba(49, 169, 238, 0) 100%) border-box;
+  }
+}
+
+/* Keep the complete Elite composition visible on wide, short desktops. */
+@media (min-width: 1024px) {
+  body.page-id-7895 .lvf-s08 {
+    --u: clamp(0.79px, min(0.078125vw, 0.098vh), 1px);
+    min-height: calc((856 * var(--u)) - 80px);
+    margin-top: 0;
+    padding-top: calc(var(--n-pt) * var(--u));
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+
+  body.page-id-7895 .lvf-s08 .lvf-s08-visual {
+    top: 0;
+    transform: none;
+    background: none;
+  }
+
+  body.page-id-7895 .lvf-s08 .lvf-s08-visual-img {
+    position: relative;
+    top: 50px;
+    z-index: 1;
+  }
+}
