@@ -1057,60 +1057,60 @@ export default function Page() {
               <a className="lvev-e4-pill" href="rules.html">Rules You Should Know</a>
             </div>
           </div>
-        </section>
-        {/* e5-steps */}
-        {/* Sektion e5-steps: "One Structure Across Every Evaluation", 6 Feature-Karten
+          {/* </section> */}
+          {/* e5-steps */}
+          {/* Sektion e5-steps: "One Structure Across Every Evaluation", 6 Feature-Karten
      im 3x2-Raster. Desktop exakt nach Figma (Frame 1760, Band y=4930..5840),
      Mobile gestapelt. Hintergrund transparent, lokale Glows laufen weich aus. */}
-        <section className="lvev-e5" id="structure">
-          <div className="lvev-e5-glow lvev-e5-glow--left" aria-hidden="true" />
+          {/* <div className="lvev-e5" id="structure"> */}
+          <div className=" lvev-e5-glow lvev-e5-glow--left" aria-hidden="true" />
           <div className="lvev-e5-glow lvev-e5-glow--right" aria-hidden="true" />
           <div className="lvev-e5-glow lvev-e5-glow--bottom" aria-hidden="true" />
           <div className="lvf-container">
-            <div className="lvev-e5-head">
-              <h2 className="lvev-e5-title">One Structure Across <span className="lvev-e5-title-accent">Every Evaluation</span></h2>
+            <div className=" lvev-e5-head" style={{ paddingBottom: '30px', paddingTop: '50px' }}>
+              <h2 className="lvev-e5-title" style={{ color: '#ffffff', marginBottom: '15px' }}>One Structure Across <span className="lvev-e5-title-accent" style={{ fontWeight: 600 }}>Every Evaluation</span></h2>
               <p className="lvev-e5-sub">The account size changes. The core trading framework remains consistent.</p>
             </div>
             <div className="lvev-e5-panel">
               <div className="lvev-e5-grid">
                 <article className="lvev-e5-card">
-                  <span className="lvev-e5-num" aria-hidden="true">01</span>
+                  <span className="lvev-e5-num" aria-hidden="true" style={{ background: 'linear-gradient(45deg, rgba(140, 213, 255, 0) 3%, rgba(140, 213, 255, 0.38) 50%, #2db2ffff 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>01</span>
                   <div className="lvev-e5-icon" aria-hidden="true">
                     <svg viewBox="0 0 32 32" width={32} height={32} fill="currentColor"><path fillRule="evenodd" d="M8.33 4.27 8.15 5.86 5.68 7.27 3.92 10.27 3.92 23.49 4.98 25.79 8.15 27.73 22.97 27.73 26.14 26.32 27.73 23.14 27.73 10.62 26.32 7.62 23.85 6.21 22.61 3.92 21.56 4.27 20.67 6.04 17.15 6.04 16.62 4.27 15.38 3.92 14.32 6.04 10.97 6.21 10.27 5.68 9.92 4.1ZM20.32 15.38 19.62 17.15 15.74 21.03 14.68 21.03 11.68 17.85 12.21 16.79 13.44 16.62 15.21 18.03 18.56 14.85 19.44 14.68Z" /></svg>
                   </div>
                   <div className="lvev-e5-text">
-                    <h3 className="lvev-e5-card-title">No <span className="lvev-e5-card-title-accent">Daily Loss</span> Limit</h3>
+                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}>No <span className="lvev-e5-card-title-accent">Daily Loss</span> Limit</h3>
                     <p className="lvev-e5-card-desc">Trade without a separate daily loss limit while staying within your maximum drawdown.</p>
                   </div>
                 </article>
                 <article className="lvev-e5-card">
-                  <span className="lvev-e5-num" aria-hidden="true">02</span>
+                  <span className="lvev-e5-num" aria-hidden="true" style={{ background: 'linear-gradient(45deg, rgba(140, 213, 255, 0) 3%, rgba(140, 213, 255, 0.38) 50%, #2db2ffff 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>02</span>
                   <div className="lvev-e5-icon" aria-hidden="true">
                     <svg viewBox="0 0 32 32" width={32} height={32} fill="currentColor"><path fillRule="evenodd" d="M7.98 19.79 4.1 22.97 4.1 27.55 4.63 27.9 8.15 27.55ZM10.62 19.62 10.44 27.55 14.32 27.73 14.68 22.97 13.44 22.44ZM20.85 18.2 20.32 18.2 16.62 22.08 16.62 27.37 17.32 27.9 20.85 27.37ZM27.02 11.86 22.97 15.56 22.97 27.37 23.67 27.9 27.2 27.37ZM30.02 4.45 29.49 3.92 23.49 4.27 23.14 5.15 24.55 7.09 15.03 16.79 10.09 12.21 8.86 12.03 2.86 17.85 1.98 19.26 2.86 20.85 4.63 20.67 9.03 16.09 9.56 16.09 13.8 20.32 15.38 20.67 26.85 9.21 28.79 10.62 29.67 10.09Z" /></svg>
                   </div>
                   <div className="lvev-e5-text">
-                    <h3 className="lvev-e5-card-title"><span className="lvev-e5-card-title-accent">40%</span> Consistency Rule</h3>
+                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}><span className="lvev-e5-card-title-accent">40%</span> Consistency Rule</h3>
                     <p className="lvev-e5-card-desc">Your best trading day cannot account for more than 40% of your total accumulated profit. Applies during the Evaluation Stage only. Funded Starter Accounts have no consistency rule.</p>
                   </div>
                 </article>
                 <article className="lvev-e5-card">
-                  <span className="lvev-e5-num" aria-hidden="true">03</span>
+                  <span className="lvev-e5-num" aria-hidden="true" style={{ background: 'linear-gradient(45deg, rgba(140, 213, 255, 0) 3%, rgba(140, 213, 255, 0.38) 50%, #2db2ffff 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>03</span>
                   <div className="lvev-e5-icon" aria-hidden="true">
                     <svg viewBox="0 0 32 32" width={32} height={32} fill="currentColor"><path fillRule="evenodd" d="M19.97 17.5 19.79 20.32 21.56 22.08 27.02 22.26 28.08 21.2 28.26 17.32 27.02 15.91 21.56 16.09ZM22.26 18.03 23.32 18.03 24.02 18.91 22.97 20.32 21.56 19.26ZM21.2 4.1 18.91 4.1 8.33 10.44 5.68 10.44 4.63 11.15 4.27 25.79 4.98 27.2 5.86 27.73 25.61 27.73 26.85 26.67 26.67 23.49 21.38 23.32 18.38 20.5 18.38 17.85 19.97 15.56 22.08 14.5 27.02 14.15 26.67 11.15 24.73 9.92ZM23.85 9.92 23.32 10.44 19.62 10.09 22.08 8.33 22.61 8.33ZM20.67 4.98 20.14 6.21 12.74 10.44 10.97 10.09 19.79 4.8Z" /></svg>
                   </div>
                   <div className="lvev-e5-text">
-                    <h3 className="lvev-e5-card-title">Payouts Every <span className="lvev-e5-card-title-accent">5 Days</span></h3>
+                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}>Payouts Every <span className="lvev-e5-card-title-accent">5 Days</span></h3>
                     <p className="lvev-e5-card-desc">Eligible funded traders can request payouts every 14 days on Lvlup Accounts and every 5 profitable days on Starter Accounts.</p>
                   </div>
                 </article>
                 <article className="lvev-e5-card">
-                  <span className="lvev-e5-num" aria-hidden="true">04</span>
+                  <span className="lvev-e5-num" aria-hidden="true" style={{ background: 'linear-gradient(45deg, rgba(140, 213, 255, 0) 3%, rgba(140, 213, 255, 0.38) 50%, #2db2ffff 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>04</span>
                   <div className="lvev-e5-icon" aria-hidden="true">
                     <svg viewBox="0 0 32 32" width={32} height={32} fill="currentColor"><path fillRule="evenodd" d="M22.08 14.5 20.85 14.68 13.09 19.79 12.56 20.5 12.56 22.79 14.68 24.91 16.79 24.91 18.56 23.67 22.26 16.09ZM26.32 12.03 24.2 14.15 24.55 15.38 23.14 18.03 23.85 21.56 29.84 21.56 30.02 18.03 29.31 15.91 27.2 12.38ZM5.15 11.86 4.1 12.74 1.98 16.44 1.27 19.44 1.63 21.56 7.98 21.2 8.15 19.09 9.56 16.26ZM16.79 7.27 17.15 13.8 18.73 13.97 21.38 12.56 22.97 12.74 25.08 10.8 24.38 9.74 21.91 8.33ZM14.68 7.27 13.62 7.09 9.39 8.33 7.09 9.74 6.57 10.8 10.62 14.85 14.85 13.27Z" /></svg>
                   </div>
                   <div className="lvev-e5-text">
                     <div className="lvev-e5-card-title-row">
-                      <h3 className="lvev-e5-card-title"><span className="lvev-e5-card-title-accent">10%</span> Payout Cap</h3>
+                      <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}><span className="lvev-e5-card-title-accent" >10%</span> Payout Cap</h3>
                       <span className="lvev-e5-badge">
                         <svg viewBox="0 0 24 24" width={10} height={10} fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" /></svg>
                         Industries Biggest
@@ -1120,22 +1120,22 @@ export default function Page() {
                   </div>
                 </article>
                 <article className="lvev-e5-card">
-                  <span className="lvev-e5-num" aria-hidden="true">05</span>
+                  <span className="lvev-e5-num" aria-hidden="true" style={{ background: 'linear-gradient(45deg, rgba(140, 213, 255, 0) 3%, rgba(140, 213, 255, 0.38) 50%, #2db2ffff 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>05</span>
                   <div className="lvev-e5-icon" aria-hidden="true">
                     <svg viewBox="0 0 32 32" width={32} height={32} fill="currentColor"><path fillRule="evenodd" d="M5.68 9.92 5.15 11.33 9.74 27.55 10.97 27.9 11.33 26.49 6.57 10.09ZM24.02 6.57 20.67 8.33 11.33 8.15 9.92 8.33 7.8 9.74 10.62 20.67 12.56 19.44 15.38 18.91 22.97 19.44 25.43 18.56 26.85 17.15 26.49 16.26 22.79 13.44Z" /></svg>
                   </div>
                   <div className="lvev-e5-text">
-                    <h3 className="lvev-e5-card-title"><span className="lvev-e5-card-title-accent">EOD</span> Trailing Drawdown</h3>
+                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}><span className="lvev-e5-card-title-accent">EOD</span> Trailing Drawdown</h3>
                     <p className="lvev-e5-card-desc">Your maximum drawdown trails based on your end-of-day account balance.</p>
                   </div>
                 </article>
                 <article className="lvev-e5-card">
-                  <span className="lvev-e5-num" aria-hidden="true">06</span>
+                  <span className="lvev-e5-num" aria-hidden="true" style={{ background: 'linear-gradient(45deg, rgba(140, 213, 255, 0) 3%, rgba(140, 213, 255, 0.38) 50%, #2db2ffff 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>06</span>
                   <div className="lvev-e5-icon" aria-hidden="true">
                     <svg viewBox="0 0 32 32" width={32} height={32} fill="currentColor"><path fillRule="evenodd" d="M4.63 7.62 3.92 8.51 3.92 25.26 4.63 26.49 6.21 27.02 7.8 25.79 7.8 7.98ZM9.74 5.15 9.03 26.85 25.08 27.02 27.37 25.79 27.9 24.2 27.9 5.68 27.02 4.98ZM13.27 21.38 13.97 20.5 23.49 20.5 24.2 21.2 23.32 21.91 13.8 21.91ZM13.27 17.15 13.8 16.62 23.67 16.62 24.02 17.5 23.49 18.03 13.97 18.2ZM13.44 13.8 13.8 12.74 23.32 12.74 24.2 13.44 23.32 14.15ZM13.27 9.39 13.8 8.86 23.67 8.86 24.02 9.74 23.49 10.27 14.15 10.44Z" /></svg>
                   </div>
                   <div className="lvev-e5-text">
-                    <h3 className="lvev-e5-card-title">Hold Through <span className="lvev-e5-card-title-accent">News</span></h3>
+                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}>Hold Through <span className="lvev-e5-card-title-accent">News</span></h3>
                     <p className="lvev-e5-card-desc">Trade through scheduled economic news without a news trading restriction.</p>
                   </div>
                 </article>
@@ -1159,7 +1159,7 @@ export default function Page() {
           <div className="lvev-e6-glow lvev-e6-glow--bottom" aria-hidden="true" />
           <div className="lvf-container">
             <div className="lvev-e6-head">
-              <h2 className="lvev-e6-title">Know What Happens Beyond the Evaluation</h2>
+              <h2 className="lvev-e6-title" style={{ paddingTop: 40, paddingBottom: 40 }}>Know What Happens Beyond the Evaluation</h2>
               <p className="lvev-e6-sub">Understand the payment, funded-account and operational conditions that complete your Lvlup journey.</p>
             </div>
             <div className="lvev-e6-features">
@@ -1222,7 +1222,7 @@ export default function Page() {
                   <div className="lvev-e6-icon" aria-hidden="true">
                     <svg viewBox="0 0 32 32" width={32} height={32} fill="currentColor"><path fillRule="evenodd" d="M19.97 6.57 19.26 7.27 19.44 24.73 20.14 25.43 26.32 25.43 28.08 24.55 29.67 22.26 29.49 9.03 26.85 6.57ZM4.8 6.57 3.21 7.62 1.8 10.44 1.8 21.38 2.33 22.97 5.15 25.43 11.68 25.43 12.21 24.73 12.21 7.09 11.86 6.57 9.74 6.39ZM15.38 3.92 14.68 4.8 14.85 27.2 16.09 27.9 16.97 27.2 16.97 4.63Z" /></svg>
                   </div>
-                  <h3 className="lvev-e6-item-title">80% Base Profit Split</h3>
+                  <h3 className="lvev-e6-item-title">100% Base Profit Split</h3>
                   <p className="lvev-e6-item-desc">Keep up to 100% of eligible profits generated on your funded Starter Account and an 80% base profit split on Lvlup Accounts.</p>
                 </article>
                 <article className="lvev-e6-item">
@@ -1242,9 +1242,9 @@ export default function Page() {
               </div>
             </div>
             <div className="lvev-e6-cta">
-              <a className="lvev-e6-btn lvev-e6-btn--primary" href="#pricing">
+              <a className="lvev-e6-btn lvev-e6-btn--primary" href="#pricing" style={{ boxShadow: '0 7px 16px -5px rgba(0,0,0,.35), 0 0 9px rgba(0,150,255,.22), inset 0 2px 2px rgba(255,255,255,.5), 0 0 0 2px rgba(0,0,0,.17), inset -1px -2px 10px #52b8f1, inset -1px -2px 5px #00a4ff' }}>
                 <span className="lvev-e6-btn-tile" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width={18} height={18} fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7" /><path d="M9 7h8v8" /></svg>
+                  <svg viewBox="0 0 24 24" width={18} height={18} fill="white" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7" /><path d="M9 7h8v8" /></svg>
                 </span>
                 Choose Your Evaluation
               </a>
@@ -1499,17 +1499,17 @@ export default function Page() {
               <a className="lvev-e7-link" href="rules.html">Open Full Trading Rules →</a>
             </div>
           </div>
-        </section>
-        {/* e8-cta */}
-        {/* Sektion e8-cta (Evaluation-Seite): Abschluss-CTA-Karte "Choose $25K-$150K /
+          {/* </section> */}
+          {/* e8-cta */}
+          {/* Sektion e8-cta (Evaluation-Seite): Abschluss-CTA-Karte "Choose $25K-$150K /
      Build Toward $1M" mit Subline, 4 Kennzahlen (100% Profit Split, $1M Max Funding,
      10% Payout Access, Five Min Trading Day) und 2 Buttons ("Choose Your Evaluation",
      "View the Rules"). Desktop exakt nach Figma (Frame 1760, Karte box 261,8298,
      1239x547, Radius 45, 10px Aussenkontur als Verlauf), Mobile gestapelt.
      Hintergrund transparent, lokale Glows laufen weich in die Nachbarsektionen aus.
      Footer-Leiste (Logo/Social) gehoert zum gemeinsamen Footer-Fragment, nicht hierher. */}
-        <section className="lvev-e8" id="get-started" aria-labelledby="lvev-e8-title" style={{ paddingTop: 40, paddingBottom: 40 }}>
-          <div className="lvf-container lvev-e8-inner" style={{ maxWidth: 1152, margin: '0 auto', width: '100%', padding: '0 1rem' }}>
+          {/* <section className="lvev-e8" id="get-started" aria-labelledby="lvev-e8-title" style={{ paddingTop: 40, paddingBottom: 40 }}> */}
+          <div className="lvf-container lvev-e8-inner" style={{ maxWidth: 1152, margin: '0 auto', width: '100%', padding: '0 1rem', paddingTop: 40, paddingBottom: 40 }}>
             <div style={{ position: 'relative', width: '100%' }}>
               <img src="assets/media/CTA_frame.png" alt="Choose Your Evaluation - Build Toward $1M" style={{ width: '100%', height: 'auto', objectFit: 'contain', borderRadius: 40, display: 'block', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }} />
               {/* Transparent functional links mapped over the baked-in image buttons */}
