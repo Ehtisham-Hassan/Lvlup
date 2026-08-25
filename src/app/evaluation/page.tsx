@@ -875,16 +875,17 @@ export default function Page() {
                 {/* Accepted payment methods shown in the Figma reference. */}
                 <div className="lvev-e3-pay" aria-label="Accepted payment methods">
                   <div className="lvev-e3-pay-row">
-                    <img className="lvev-e3-pay-logo lvev-e3-pay-logo--visa" src="assets/images/payment-methods/visa.svg" alt="Visa" />
-                    <img className="lvev-e3-pay-logo lvev-e3-pay-logo--mc" src="assets/images/payment-methods/mastercard.svg" alt="Mastercard" />
+                    <img className="lvev-e3-pay-logo lvev-e3-pay-logo--visa" style={{ height: '50px' }} src="assets/images/payment-methods/visa.png" alt="Visa" />
+                    {/* <img className="lvev-e3-pay-logo lvev-e3-pay-logo--visa" style={{ height: '24px', filter: 'brightness(0) invert(1)' }} src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" /> */}
+                    <img className="lvev-e3-pay-logo lvev-e3-pay-logo--mc" style={{ height: '32px', filter: 'grayscale(1) brightness(1.2)' }} src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="Mastercard" />
                   </div>
-                  <div className="lvev-e3-pay-row">
-                    <img className="lvev-e3-pay-logo lvev-e3-pay-logo--paypal" src="assets/images/payment-methods/paypal.svg" alt="PayPal" />
-                    <span className="lvev-e3-pay-crypto">
-                      <span className="lvev-e3-pay-coin"><img src="assets/images/payment-methods/binance.svg" alt="Binance" /></span>
-                      <span className="lvev-e3-pay-coin"><img src="assets/images/payment-methods/bitcoin.svg" alt="Bitcoin" /></span>
-                      <span className="lvev-e3-pay-coin"><img src="assets/images/payment-methods/ethereum.svg" alt="Ethereum" /></span>
-                      <span className="lvev-e3-pay-coin"><img src="assets/images/payment-methods/solana.svg" alt="Solana" /></span>
+                  <div className="lvev-e3-pay-row" style={{ marginTop: '20px' }}>
+                    <img className="lvev-e3-pay-logo lvev-e3-pay-logo--paypal" style={{ height: '24px', filter: 'brightness(0) invert(1)' }} src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" />
+                    <span className="lvev-e3-pay-crypto" style={{ display: 'flex' }}>
+                      <span className="lvev-e3-pay-coin" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#192531', borderRadius: '50%', border: '2px solid #020405', boxSizing: 'border-box' }}><img style={{ width: '60%', height: '60%', objectFit: 'contain' }} src="assets/images/payment-methods/binance.png" alt="Binance" /></span>
+                      <span className="lvev-e3-pay-coin" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#192531', borderRadius: '50%', border: '2px solid #020405', boxSizing: 'border-box' }}><img style={{ filter: 'brightness(0) invert(1)', width: '60%', height: '60%', objectFit: 'contain' }} src="assets/images/payment-methods/bitcoin.svg" alt="Bitcoin" /></span>
+                      <span className="lvev-e3-pay-coin" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#192531', borderRadius: '50%', border: '2px solid #020405', boxSizing: 'border-box' }}><img style={{ filter: 'brightness(0) invert(1)', width: '60%', height: '60%', objectFit: 'contain' }} src="https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg" alt="Ethereum" /></span>
+                      <span className="lvev-e3-pay-coin" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#192531', borderRadius: '50%', border: '2px solid #020405', boxSizing: 'border-box' }}><img style={{ width: '60%', height: '60%', objectFit: 'contain' }} src="https://upload.wikimedia.org/wikipedia/en/b/b9/Solana_logo.png" alt="Solana" /></span>
                     </span>
                   </div>
                 </div>
