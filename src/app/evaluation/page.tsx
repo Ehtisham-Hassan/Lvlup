@@ -939,10 +939,10 @@ export default function Page() {
                 <tbody>
                   <tr className="lvev-e4-row lvev-e4-row--tall">
                     <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Evaluation Payment</th>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span>One-Time</span><span className="lvev-e4-grad">OR</span><span>Monthly</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span>One-Time</span><span className="lvev-e4-grad">OR</span><span>Monthly</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span>One-Time</span><span className="lvev-e4-grad">OR</span><span>Monthly</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span>One-Time</span><span className="lvev-e4-grad">OR</span><span>Monthly</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span>One-Time</span><span className="lvev-e4-grad" style={{ fontWeight: '600' }}>OR</span><span>Monthly</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span>One-Time</span><span className="lvev-e4-grad" style={{ fontWeight: '600' }}>OR</span><span>Monthly</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span>One-Time</span><span className="lvev-e4-grad" style={{ fontWeight: '600' }}>OR</span><span>Monthly</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span>One-Time</span><span className="lvev-e4-grad" style={{ fontWeight: '600' }}>OR</span><span>Monthly</span></span></td>
                     <td className="lvev-e4-cell">One-Time</td>
                     <td className="lvev-e4-cell">One-Time</td>
                     <td className="lvev-e4-cell">One-Time</td>
@@ -972,36 +972,36 @@ export default function Page() {
                   </tr>
                   <tr className="lvev-e4-row">
                     <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Profit Target</th>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">6%</span><span className="lvev-e4-note">($1,500)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">6%</span><span className="lvev-e4-note">($3,000)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">7%</span><span className="lvev-e4-note">($7,000)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">8%</span><span className="lvev-e4-note">($12,000)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">6%</span><span className="lvev-e4-note">($1,500)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">6%</span><span className="lvev-e4-note">($3,000)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">7%</span><span className="lvev-e4-note">($7,000)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">8%</span><span className="lvev-e4-note">($12,000)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>6%</span><span className="lvev-e4-note">($1,500)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>6%</span><span className="lvev-e4-note">($3,000)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>7%</span><span className="lvev-e4-note">($7,000)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>8%</span><span className="lvev-e4-note">($12,000)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>6%</span><span className="lvev-e4-note">($1,500)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>6%</span><span className="lvev-e4-note">($3,000)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>7%</span><span className="lvev-e4-note">($7,000)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>8%</span><span className="lvev-e4-note">($12,000)</span></span></td>
                   </tr>
                   <tr className="lvev-e4-row">
                     <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Maximum Drawdown</th>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">5%</span><span className="lvev-e4-note">($1,250)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">5%</span><span className="lvev-e4-note">($2,500)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">5%</span><span className="lvev-e4-note">($5,000)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">5%</span><span className="lvev-e4-note">($7,500)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">4%</span><span className="lvev-e4-note">($1,000)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">4%</span><span className="lvev-e4-note">($2,000)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">3%</span><span className="lvev-e4-note">($3,000)</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold">3%</span><span className="lvev-e4-note">($4,500)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>5%</span><span className="lvev-e4-note">($1,250)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>5%</span><span className="lvev-e4-note">($2,500)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>5%</span><span className="lvev-e4-note">($5,000)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>5%</span><span className="lvev-e4-note">($7,500)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>4%</span><span className="lvev-e4-note">($1,000)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>4%</span><span className="lvev-e4-note">($2,000)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>3%</span><span className="lvev-e4-note">($3,000)</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>3%</span><span className="lvev-e4-note">($4,500)</span></span></td>
                   </tr>
                   <tr className="lvev-e4-row">
                     <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Drawdown Type</th>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold">EOD</span> Trailing</td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold">EOD</span> Trailing</td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold">EOD</span> Trailing</td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold">EOD</span> Trailing</td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold">EOD</span> Trailing</td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold">EOD</span> Trailing</td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold">EOD</span> Trailing</td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold">EOD</span> Trailing</td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>EOD</span> Trailing</td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>EOD</span> Trailing</td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>EOD</span> Trailing</td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>EOD</span> Trailing</td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>EOD</span> Trailing</td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>EOD</span> Trailing</td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>EOD</span> Trailing</td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>EOD</span> Trailing</td>
                   </tr>
                   <tr className="lvev-e4-row">
                     <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Min. Trading Days</th>
@@ -1038,14 +1038,14 @@ export default function Page() {
                   </tr>
                   <tr className="lvev-e4-row">
                     <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Payout Terms</th>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold">10%</span> Cap</td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold">10%</span> Cap</td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold">10%</span> Cap</td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold">10%</span> Cap</td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span><span className="lvev-e4-grad lvev-e4-grad--bold">4%</span> Cap</span><span className="lvev-e4-note">Up to 50% Profit</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span><span className="lvev-e4-grad lvev-e4-grad--bold">4%</span> Cap</span><span className="lvev-e4-note">Up to 50% Profit</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span><span className="lvev-e4-grad lvev-e4-grad--bold">2.5%</span> Cap</span><span className="lvev-e4-note">Up to 50% Profit</span></span></td>
-                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span><span className="lvev-e4-grad lvev-e4-grad--bold">2%</span> Cap</span><span className="lvev-e4-note">Up to 50% Profit</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>10%</span> Cap</td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>10%</span> Cap</td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>10%</span> Cap</td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>10%</span> Cap</td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>4%</span> Cap</span><span className="lvev-e4-note">Up to 50% Profit</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>4%</span> Cap</span><span className="lvev-e4-note">Up to 50% Profit</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>2.5%</span> Cap</span><span className="lvev-e4-note">Up to 50% Profit</span></span></td>
+                    <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>2%</span> Cap</span><span className="lvev-e4-note">Up to 50% Profit</span></span></td>
                   </tr>
                   <tr className="lvev-e4-row">
                     <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Payout Cycle</th>
