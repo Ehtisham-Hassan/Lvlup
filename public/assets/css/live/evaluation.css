@@ -41,7 +41,12 @@
   padding-bottom: var(--lvev-e1-pb);
 }
 
-.lvev-e1-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.lvev-e1-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 
 /* ---------------------------------------------------------------- Hintergrund */
 
@@ -216,9 +221,18 @@
   transition: filter 0.18s ease, transform 0.18s ease;
 }
 
-.lvev-e1-btn:hover { filter: brightness(1.08); }
-.lvev-e1-btn:active { transform: translateY(1px); }
-.lvev-e1-btn:focus-visible { outline: 2px solid #8cd5ff; outline-offset: 3px; }
+.lvev-e1-btn:hover {
+  filter: brightness(1.08);
+}
+
+.lvev-e1-btn:active {
+  transform: translateY(1px);
+}
+
+.lvev-e1-btn:focus-visible {
+  outline: 2px solid #8cd5ff;
+  outline-offset: 3px;
+}
 
 .lvev-e1-btn--primary {
   gap: 8px;
@@ -335,7 +349,9 @@
 }
 
 /* 0.5px Verlaufsrand um die Chips */
-.lvev-e1-chip { position: relative; }
+.lvev-e1-chip {
+  position: relative;
+}
 
 .lvev-e1-chip::before {
   content: "";
@@ -363,12 +379,35 @@
   filter: drop-shadow(0 1px 2px rgba(91, 188, 232, 0.55));
 }
 
-.lvev-e1-chip-ico--split { width: 33px; height: 31px; }
-.lvev-e1-chip-ico--funding { width: 31px; height: 29px; }
-.lvev-e1-chip-ico--drawdown { width: 22px; height: 23px; }
-.lvev-e1-chip-ico--payout { width: 27px; height: 27px; }
-.lvev-e1-chip-ico--days { width: 25px; height: 25px; }
-.lvev-e1-chip-ico--support { width: 29px; height: 29px; }
+.lvev-e1-chip-ico--split {
+  width: 33px;
+  height: 31px;
+}
+
+.lvev-e1-chip-ico--funding {
+  width: 31px;
+  height: 29px;
+}
+
+.lvev-e1-chip-ico--drawdown {
+  width: 22px;
+  height: 23px;
+}
+
+.lvev-e1-chip-ico--payout {
+  width: 27px;
+  height: 27px;
+}
+
+.lvev-e1-chip-ico--days {
+  width: 25px;
+  height: 25px;
+}
+
+.lvev-e1-chip-ico--support {
+  width: 29px;
+  height: 29px;
+}
 
 .lvev-e1-chip-num {
   font-family: var(--lvf-font-display);
@@ -383,7 +422,11 @@
   color: transparent;
 }
 
-.lvev-e1-chip-num--five { font-size: 33px; line-height: 41px; letter-spacing: -0.99px; }
+.lvev-e1-chip-num--five {
+  font-size: 33px;
+  line-height: 41px;
+  letter-spacing: -0.99px;
+}
 
 .lvev-e1-chip-label {
   font-family: var(--lvf-font-display);
@@ -446,7 +489,10 @@
 
 /* Die Sektion ist eine Flex-Spalte, damit Chips und Pille im Fluss unter dem
    Hero-Inhalt liegen (Mobile/Tablet). */
-.lvev-e1 { display: flex; flex-direction: column; }
+.lvev-e1 {
+  display: flex;
+  flex-direction: column;
+}
 
 /* ================================================================ Tablet ab 768px */
 
@@ -471,7 +517,9 @@
     flex-direction: row;
   }
 
-  .lvev-e1-btn { width: auto; }
+  .lvev-e1-btn {
+    width: auto;
+  }
 
   .lvev-e1-chips {
     grid-template-columns: repeat(3, auto);
@@ -481,9 +529,13 @@
 /* ================================================================ Desktop ab 1024px */
 
 @media (min-width: 1024px) {
-  .lvev-e1-bg { height: 860px; }
+  .lvev-e1-bg {
+    height: 860px;
+  }
 
-  .lvev-e1-panel { display: block; }
+  .lvev-e1-panel {
+    display: block;
+  }
 
   .lvev-e1-btn {
     min-height: 46px;
@@ -522,10 +574,10 @@
      daher der durchgehende hellblaue Balken an der Oberkante. */
   .lvev-e1 .lvev-e1-chip::before {
     background: linear-gradient(157deg,
-      rgba(0, 170, 255, 0.5) -39%,
-      rgba(0, 65, 103, 0) 11%,
-      rgba(0, 94, 141, 0.5) 74%,
-      rgba(0, 51, 88, 0) 148%);
+        rgba(0, 170, 255, 0.5) -39%,
+        rgba(0, 65, 103, 0) 11%,
+        rgba(0, 94, 141, 0.5) 74%,
+        rgba(0, 51, 88, 0) 148%);
   }
 }
 
@@ -549,19 +601,51 @@
   }
 
   /* Figma-Koordinaten (Frame 1760), Chips leicht rotiert wie im Soll */
-  .lvev-e1-chip--split    { left: 12.78%; top: 193px; transform: rotate(-4deg); }
-  .lvev-e1-chip--funding  { left: 10%;    top: 387px; transform: rotate(-8deg); }
-  .lvev-e1-chip--drawdown { left: 18.4%;  top: 520px; transform: rotate(-5deg); }
-  .lvev-e1-chip--payout   { left: 77.78%; top: 197px; transform: rotate(3deg); }
-  .lvev-e1-chip--days     { left: 72.67%; top: 513px; transform: rotate(-4deg); }
-  .lvev-e1-chip--support  { left: 80.4%;  top: 374px; transform: rotate(7deg); }
+  .lvev-e1-chip--split {
+    left: 12.78%;
+    top: 193px;
+    transform: rotate(-4deg);
+  }
+
+  .lvev-e1-chip--funding {
+    left: 10%;
+    top: 387px;
+    transform: rotate(-8deg);
+  }
+
+  .lvev-e1-chip--drawdown {
+    left: 18.4%;
+    top: 520px;
+    transform: rotate(-5deg);
+  }
+
+  .lvev-e1-chip--payout {
+    left: 77.78%;
+    top: 197px;
+    transform: rotate(3deg);
+  }
+
+  .lvev-e1-chip--days {
+    left: 72.67%;
+    top: 513px;
+    transform: rotate(-4deg);
+  }
+
+  .lvev-e1-chip--support {
+    left: 80.4%;
+    top: 374px;
+    transform: rotate(7deg);
+  }
 }
 
 /* ================================================================ Mobile Feinschliff */
 
 @media (max-width: 767px) {
+
   /* Umbruch entfaellt, die Headline fliesst */
-  .lvev-e1-title-br { display: none; }
+  .lvev-e1-title-br {
+    display: none;
+  }
 
   /* Blauer Schein als weiche Rand-Vignette um die Sektion */
   .lvev-e1-glow {
@@ -608,8 +692,13 @@
 }
 
 @keyframes lvev-r3-marquee-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-968px); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-968px);
+  }
 }
 
 /* == e2-pricing == */
@@ -708,8 +797,17 @@
   padding-bottom: var(--lvev-e2-pb);
 }
 
-.lvev-e2 .lvev-e2-inner { position: relative; z-index: 1; }
-.lvev-e2 .lvev-e2-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.lvev-e2 .lvev-e2-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.lvev-e2 .lvev-e2-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 
 /* ---------- Deko: weiche Glows, Glas-Rauten, Streak unten ---------- */
 .lvev-e2 .lvev-e2-glow {
@@ -718,6 +816,7 @@
   border-radius: 50%;
   pointer-events: none;
 }
+
 .lvev-e2 .lvev-e2-glow--l {
   top: -180px;
   left: -14%;
@@ -726,6 +825,7 @@
   background: radial-gradient(closest-side, rgba(0, 162, 255, 0.16) 0%, rgba(0, 162, 255, 0) 100%);
   filter: blur(70px);
 }
+
 .lvev-e2 .lvev-e2-glow--r {
   top: -140px;
   right: -16%;
@@ -734,6 +834,7 @@
   background: radial-gradient(closest-side, rgba(167, 223, 255, 0.1) 0%, rgba(167, 223, 255, 0) 100%);
   filter: blur(80px);
 }
+
 /* horizontaler Lichtstreifen im Fussbereich (Band y~1110..1260), laeuft weich aus */
 .lvev-e2::before {
   content: "";
@@ -750,6 +851,7 @@
   filter: blur(38px);
   pointer-events: none;
 }
+
 .lvev-e2 .lvev-e2-shard {
   position: absolute;
   z-index: 0;
@@ -759,11 +861,26 @@
   transform: rotate(45deg);
   pointer-events: none;
 }
-.lvev-e2 .lvev-e2-shard--l { top: 420px; left: -260px; width: 700px; height: 740px; }
-.lvev-e2 .lvev-e2-shard--r { top: 380px; right: -280px; width: 720px; height: 760px; }
+
+.lvev-e2 .lvev-e2-shard--l {
+  top: 420px;
+  left: -260px;
+  width: 700px;
+  height: 740px;
+}
+
+.lvev-e2 .lvev-e2-shard--r {
+  top: 380px;
+  right: -280px;
+  width: 720px;
+  height: 760px;
+}
 
 /* ---------- Kopfbereich ---------- */
-.lvev-e2 .lvev-e2-head { text-align: center; }
+.lvev-e2 .lvev-e2-head {
+  text-align: center;
+}
+
 .lvev-e2 .lvev-e2-title {
   font-size: clamp(38px, 4.5vw + 8px, 65px);
   font-weight: 500;
@@ -776,6 +893,7 @@
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+
 .lvev-e2 .lvev-e2-title-hl {
   background-image: var(--lvev-e2-grad-blue);
   -webkit-background-clip: text;
@@ -783,6 +901,7 @@
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+
 .lvev-e2 .lvev-e2-sub {
   max-width: 671px;
   margin: var(--lvev-e2-sub-mt) auto 0;
@@ -810,6 +929,7 @@
     linear-gradient(100deg, rgba(52, 176, 248, 0) 50%, #35aef4 75%, rgba(49, 169, 238, 0) 100%) border-box;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(0, 0, 0, 0.25);
 }
+
 .lvev-e2 .lvev-e2-tab {
   position: relative;
   display: inline-flex;
@@ -824,9 +944,17 @@
   line-height: 20px;
   transition: color 0.18s ease, background 0.18s ease;
 }
+
 /* Touch-Ziel >= 44px ohne Optik-Aenderung */
-.lvev-e2 .lvev-e2-tab::before { content: ""; position: absolute; inset: -9px -2px; }
-.lvev-e2 .lvev-e2-tab:hover { color: #cfeaff; }
+.lvev-e2 .lvev-e2-tab::before {
+  content: "";
+  position: absolute;
+  inset: -9px -2px;
+}
+
+.lvev-e2 .lvev-e2-tab:hover {
+  color: #cfeaff;
+}
 
 .lvev-e2 .lvev-e2-tab.is-active {
   width: 200px;
@@ -843,8 +971,15 @@
   color: #000000;
   font-weight: 550;
 }
-.lvev-e2 .lvev-e2-tab.is-active::before { inset: -3px -2px; }
-.lvev-e2 .lvev-e2-tab:focus-visible { outline: 2px solid #8cd5ff; outline-offset: 3px; }
+
+.lvev-e2 .lvev-e2-tab.is-active::before {
+  inset: -3px -2px;
+}
+
+.lvev-e2 .lvev-e2-tab:focus-visible {
+  outline: 2px solid #8cd5ff;
+  outline-offset: 3px;
+}
 
 /* ---------- Kartenraster ---------- */
 .lvev-e2 .lvev-e2-cards {
@@ -853,7 +988,10 @@
   gap: var(--lvev-e2-cards-gap);
   margin-top: var(--lvev-e2-cards-mt);
 }
-.lvev-e2 .lvev-e2-cards[hidden] { display: none; }
+
+.lvev-e2 .lvev-e2-cards[hidden] {
+  display: none;
+}
 
 /* ---------- Karte ---------- */
 .lvev-e2 .lvev-e2-card {
@@ -864,6 +1002,7 @@
   border-radius: var(--lvev-e2-card-r);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 53%, rgba(16, 25, 33, 0.4) 100%);
 }
+
 .lvev-e2 .lvev-e2-card-in {
   position: relative;
   display: flex;
@@ -881,6 +1020,7 @@
   -webkit-backdrop-filter: blur(26px);
   backdrop-filter: blur(26px);
 }
+
 /* Haarlinie oben (RECTANGLE "Line") */
 .lvev-e2 .lvev-e2-card-in::before {
   content: "";
@@ -907,6 +1047,7 @@
   filter: blur(28px);
   pointer-events: none;
 }
+
 /* blauer Schimmer unten, nur auf der Pop-Karte */
 .lvev-e2 .lvev-e2-card--pop .lvev-e2-card-in::after {
   content: "";
@@ -926,7 +1067,10 @@
 .lvev-e2 .lvev-e2-sep,
 .lvev-e2 .lvev-e2-specs,
 .lvev-e2 .lvev-e2-cta,
-.lvev-e2 .lvev-e2-card-note { position: relative; z-index: 1; }
+.lvev-e2 .lvev-e2-card-note {
+  position: relative;
+  z-index: 1;
+}
 
 /* ---------- Kartenkopf ---------- */
 .lvev-e2 .lvev-e2-card-kind {
@@ -936,6 +1080,7 @@
   letter-spacing: 0.02em;
   color: rgba(246, 248, 250, 0.5);
 }
+
 .lvev-e2 .lvev-e2-card-size {
   margin-top: var(--lvev-e2-size-mt);
   font-size: var(--lvev-e2-size-fs);
@@ -944,6 +1089,7 @@
   letter-spacing: -0.03em;
   color: #ffffff;
 }
+
 .lvev-e2 .lvev-e2-card--pop .lvev-e2-card-size {
   font-weight: 543;
   background-image: var(--lvev-e2-grad-blue);
@@ -982,7 +1128,12 @@
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
-.lvev-e2 .lvev-e2-pop-ico { width: 10px; height: 10px; flex: none; }
+
+.lvev-e2 .lvev-e2-pop-ico {
+  width: 10px;
+  height: 10px;
+  flex: none;
+}
 
 /* ---------- Preisbox (Chip links, beide Optionen rechts) ---------- */
 .lvev-e2 .lvev-e2-plan {
@@ -1001,6 +1152,7 @@
     linear-gradient(221deg, rgba(0, 0, 0, 0.34) 0%, #000000 100%);
   box-shadow: 0 5px 12px -4px rgba(0, 0, 0, 0.35), 0 0 0 2px rgba(0, 0, 0, 0.17);
 }
+
 .lvev-e2 .lvev-e2-chip {
   grid-row: 1 / span 2;
   align-self: start;
@@ -1024,6 +1176,7 @@
   letter-spacing: 0.02em;
   white-space: nowrap;
 }
+
 .lvev-e2 .lvev-e2-chip-t {
   background-image: var(--lvev-e2-grad-chip);
   -webkit-background-clip: text;
@@ -1031,6 +1184,7 @@
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+
 .lvev-e2 .lvev-e2-chip-dot {
   flex: none;
   width: 18px;
@@ -1040,6 +1194,7 @@
   box-shadow: inset 0 0 0 0.4px rgba(255, 255, 255, 0.25), 0 0 0 3px rgba(0, 0, 0, 0.16);
   transition: background 0.18s ease, box-shadow 0.18s ease;
 }
+
 .lvev-e2 .lvev-e2-chip.is-selected .lvev-e2-chip-dot {
   background:
     radial-gradient(circle at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 42%),
@@ -1051,14 +1206,25 @@
     0 0 0 3px rgba(0, 0, 0, 0.16),
     inset 0 1px 3px #40baff;
 }
-.lvev-e2 .lvev-e2-chip:focus-visible { outline: 2px solid #8cd5ff; outline-offset: 3px; border-radius: 4px; }
 
-.lvev-e2 .lvev-e2-opt { text-align: center; }
+.lvev-e2 .lvev-e2-chip:focus-visible {
+  outline: 2px solid #8cd5ff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.lvev-e2 .lvev-e2-opt {
+  text-align: center;
+}
+
 /* Kein Abstand zwischen den beiden Tarifzeilen: im Entwurf sitzt "$117/mo"
    direkt unter dem Kaestchen von "Option 2", die Mitten der beiden Preise
    liegen 57 px auseinander, live waren es 70. Genau diese 13 px sind der
    Grund, warum der Tarifkasten 157 statt 141 px hoch ist. */
-.lvev-e2 .lvev-e2-opt + .lvev-e2-opt { margin-top: 0; }
+.lvev-e2 .lvev-e2-opt+.lvev-e2-opt {
+  margin-top: 0;
+}
+
 .lvev-e2 .lvev-e2-opt-price {
   color: #ffffff;
   font-size: var(--lvev-e2-price-fs);
@@ -1067,6 +1233,7 @@
   letter-spacing: 0.03em;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
 }
+
 .lvev-e2 .lvev-e2-opt-note {
   display: inline-block;
   margin-top: 2px;
@@ -1090,12 +1257,14 @@
   height: 13px;
   margin-top: var(--lvev-e2-sep-mt);
 }
+
 .lvev-e2 .lvev-e2-sep-l {
   flex: 1;
   height: 0;
   border-top: 1.17px solid var(--lvev-e2-hair);
   box-shadow: 0 1px 1px rgba(255, 255, 255, 0.11);
 }
+
 .lvev-e2 .lvev-e2-sep-t {
   flex: none;
   font-size: var(--lvev-e2-sep-fs);
@@ -1113,17 +1282,20 @@
   gap: var(--lvev-e2-specs-gap);
   margin-top: var(--lvev-e2-specs-mt);
 }
+
 .lvev-e2 .lvev-e2-srow {
   display: flex;
   align-items: center;
   gap: 9px;
   min-height: var(--lvev-e2-row-ico);
 }
+
 .lvev-e2 .lvev-e2-srow-ico {
   flex: none;
   width: var(--lvev-e2-row-ico);
   height: var(--lvev-e2-row-ico);
 }
+
 .lvev-e2 .lvev-e2-srow-k {
   font-size: var(--lvev-e2-row-fs);
   font-weight: 400;
@@ -1131,6 +1303,7 @@
   letter-spacing: 0.01em;
   color: #ffffff;
 }
+
 .lvev-e2 .lvev-e2-srow-v {
   margin-left: auto;
   padding-left: 6px;
@@ -1166,6 +1339,7 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(0, 0, 0, 0.25);
   transition: filter 0.18s ease, transform 0.18s ease;
 }
+
 .lvev-e2 .lvev-e2-cta-t {
   font-size: var(--lvev-e2-cta-fs);
   font-weight: 500;
@@ -1177,9 +1351,20 @@
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
-.lvev-e2 .lvev-e2-cta:hover { filter: brightness(1.25); }
-.lvev-e2 .lvev-e2-cta:active { transform: translateY(1px); }
-.lvev-e2 .lvev-e2-cta:focus-visible { outline: 2px solid #8cd5ff; outline-offset: 3px; }
+
+.lvev-e2 .lvev-e2-cta:hover {
+  filter: brightness(1.25);
+}
+
+.lvev-e2 .lvev-e2-cta:active {
+  transform: translateY(1px);
+}
+
+.lvev-e2 .lvev-e2-cta:focus-visible {
+  outline: 2px solid #8cd5ff;
+  outline-offset: 3px;
+}
+
 .lvev-e2 .lvev-e2-cta--active {
   border-color: rgba(255, 255, 255, 0.06);
   background:
@@ -1190,6 +1375,7 @@
     inset 0 2px 3px -1px rgba(255, 255, 255, 0.3),
     inset 0 1px 24px #5bbce8;
 }
+
 .lvev-e2 .lvev-e2-cta--active .lvev-e2-cta-t {
   background-image: none;
   color: #000000;
@@ -1215,6 +1401,7 @@
   justify-content: center;
   margin-top: var(--lvev-e2-foot-mt);
 }
+
 .lvev-e2 .lvev-e2-build {
   display: inline-flex;
   align-items: center;
@@ -1234,8 +1421,15 @@
   letter-spacing: 0.06em;
   transition: filter 0.18s ease;
 }
-.lvev-e2 .lvev-e2-build:hover { filter: brightness(1.3); }
-.lvev-e2 .lvev-e2-build:focus-visible { outline: 2px solid #8cd5ff; outline-offset: 4px; }
+
+.lvev-e2 .lvev-e2-build:hover {
+  filter: brightness(1.3);
+}
+
+.lvev-e2 .lvev-e2-build:focus-visible {
+  outline: 2px solid #8cd5ff;
+  outline-offset: 4px;
+}
 
 /* ============================================================
    Tablet 768-1023: zwei Spalten, Kartenmasse wie Desktop
@@ -1245,7 +1439,10 @@
     grid-template-columns: repeat(2, minmax(0, 296px));
     justify-content: center;
   }
-  .lvev-e2 { --lvev-e2-foot-mt: 140px; }
+
+  .lvev-e2 {
+    --lvev-e2-foot-mt: 140px;
+  }
 }
 
 /* ============================================================
@@ -1284,29 +1481,107 @@
     --lvev-e2-foot-mt: 110px;
     --lvev-e2-build-fs: 16px;
   }
-  .lvev-e2::before { bottom: 10px; height: 220px; filter: blur(30px); }
-  .lvev-e2 .lvev-e2-shard--l { top: 300px; left: -320px; width: 480px; height: 520px; border-radius: 48px; }
-  .lvev-e2 .lvev-e2-shard--r { top: 700px; right: -340px; width: 500px; height: 540px; border-radius: 48px; }
 
-  .lvev-e2 .lvev-e2-sub { max-width: 340px; line-height: 1.4; }
+  .lvev-e2::before {
+    bottom: 10px;
+    height: 220px;
+    filter: blur(30px);
+  }
 
-  .lvev-e2 .lvev-e2-toggle { width: 100%; max-width: 420px; padding: 6px; gap: 6px; }
-  .lvev-e2 .lvev-e2-tab { flex: 1; width: auto; min-width: 0; height: 44px; font-size: 16px; }
-  .lvev-e2 .lvev-e2-tab::before { inset: 0; }
-  .lvev-e2 .lvev-e2-tab.is-active { width: auto; height: 44px; border-radius: 10px; }
-  .lvev-e2 .lvev-e2-tab.is-active::before { inset: 0; }
+  .lvev-e2 .lvev-e2-shard--l {
+    top: 300px;
+    left: -320px;
+    width: 480px;
+    height: 520px;
+    border-radius: 48px;
+  }
 
-  .lvev-e2 .lvev-e2-cards { grid-template-columns: minmax(0, 1fr); max-width: 460px; margin-inline: auto; }
+  .lvev-e2 .lvev-e2-shard--r {
+    top: 700px;
+    right: -340px;
+    width: 500px;
+    height: 540px;
+    border-radius: 48px;
+  }
 
-  .lvev-e2 .lvev-e2-pop { top: 18px; right: 18px; height: 28px; padding: 0 12px 0 9px; font-size: 16px; }
-  .lvev-e2 .lvev-e2-pop-ico { width: 13px; height: 13px; }
+  .lvev-e2 .lvev-e2-sub {
+    max-width: 340px;
+    line-height: 1.4;
+  }
 
-  .lvev-e2 .lvev-e2-plan { min-height: 0; padding: 18px 14px; }
-  .lvev-e2 .lvev-e2-chip { min-height: 44px; margin-top: 0; align-self: center; }
-  .lvev-e2 .lvev-e2-opt-note { padding: 6px 12px; line-height: 1.2; white-space: normal; }
+  .lvev-e2 .lvev-e2-toggle {
+    width: 100%;
+    max-width: 420px;
+    padding: 6px;
+    gap: 6px;
+  }
 
-  .lvev-e2 .lvev-e2-cta { min-height: 48px; }
-  .lvev-e2 .lvev-e2-build { min-height: 44px; padding-inline: 24px; }
+  .lvev-e2 .lvev-e2-tab {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .lvev-e2 .lvev-e2-tab::before {
+    inset: 0;
+  }
+
+  .lvev-e2 .lvev-e2-tab.is-active {
+    width: auto;
+    height: 44px;
+    border-radius: 10px;
+  }
+
+  .lvev-e2 .lvev-e2-tab.is-active::before {
+    inset: 0;
+  }
+
+  .lvev-e2 .lvev-e2-cards {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 460px;
+    margin-inline: auto;
+  }
+
+  .lvev-e2 .lvev-e2-pop {
+    top: 18px;
+    right: 18px;
+    height: 28px;
+    padding: 0 12px 0 9px;
+    font-size: 16px;
+  }
+
+  .lvev-e2 .lvev-e2-pop-ico {
+    width: 13px;
+    height: 13px;
+  }
+
+  .lvev-e2 .lvev-e2-plan {
+    min-height: 0;
+    padding: 18px 14px;
+  }
+
+  .lvev-e2 .lvev-e2-chip {
+    min-height: 44px;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .lvev-e2 .lvev-e2-opt-note {
+    padding: 6px 12px;
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  .lvev-e2 .lvev-e2-cta {
+    min-height: 48px;
+  }
+
+  .lvev-e2 .lvev-e2-build {
+    min-height: 44px;
+    padding-inline: 24px;
+  }
 }
 
 
@@ -1317,7 +1592,9 @@
    elite; der Entwurf verwendet ueberall denselben Grad. Nur ab 1024 px,
    darunter faellt der Grad per clamp kleiner aus und die Zeile bricht um. */
 @media (min-width: 1024px) {
-  .lvev-e2 .lvev-e2-title { line-height: 0.677; }
+  .lvev-e2 .lvev-e2-title {
+    line-height: 0.677;
+  }
 }
 
 /* ============================================================
@@ -1343,6 +1620,7 @@
    tragen denselben Verlauf mit Deckkraft 0 und bleiben deshalb weiss.
    ============================================================ */
 @media (min-width: 1024px) {
+
   /* nicht gewaehlt: Radiokreis grau. Messreihe von oben nach unten
      172 -> 134, extrapoliert auf die Kreiskanten. */
   .lvev-e2 .lvev-e2-plan .lvev-e2-chip-dot {
@@ -1367,6 +1645,7 @@
   .lvev-e2 .lvev-e2-chip.is-selected .lvev-e2-chip-dot {
     background: linear-gradient(180deg, rgb(158, 222, 249) 0%, rgb(28, 172, 253) 100%);
   }
+
   .lvev-e2 .lvev-e2-chip.is-selected .lvev-e2-chip-t {
     background-image: var(--lvev-e2-grad-chip);
   }
@@ -1375,7 +1654,7 @@
      Tinte, nicht auf dem Zeilenkasten: die Tinte laeuft im 32 px hohen
      Kasten von 6 px (19 %) bis 22 px (69 %). Zeilenweise nachgemessen,
      SOLL oben (204,246,255) unten (54,201,255). */
-  .lvev-e2 .lvev-e2-chip.is-selected ~ .lvev-e2-opt .lvev-e2-opt-price {
+  .lvev-e2 .lvev-e2-chip.is-selected~.lvev-e2-opt .lvev-e2-opt-price {
     background-image: linear-gradient(180deg, rgb(206, 247, 255) 19%, rgb(52, 200, 255) 69%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -1427,7 +1706,12 @@
   padding-bottom: var(--lvev-e3-pb);
 }
 
-.lvev-e3-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.lvev-e3-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 
 /* ---------------------------------------------------------------- Hintergrund */
 
@@ -1503,17 +1787,22 @@
     inset: 0;
     pointer-events: none;
     background: radial-gradient(78% 32% at 50% 0%,
-      rgba(0, 162, 255, 0.5) 0%,
-      rgba(0, 162, 255, 0.22) 45%,
-      rgba(0, 162, 255, 0) 82%);
+        rgba(0, 162, 255, 0.5) 0%,
+        rgba(0, 162, 255, 0.22) 45%,
+        rgba(0, 162, 255, 0) 82%);
   }
 }
 
-.lvev-e3 .lvf-container { position: relative; z-index: 1; }
+.lvev-e3 .lvf-container {
+  position: relative;
+  z-index: 1;
+}
 
 /* ---------------------------------------------------------------- Kopf */
 
-.lvev-e3-head { text-align: center; }
+.lvev-e3-head {
+  text-align: center;
+}
 
 .lvev-e3-title {
   font-family: var(--lvf-font-display);
@@ -1583,10 +1872,14 @@
   pointer-events: none;
 }
 
-.lvev-e3-card--platform { background: linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)), rgba(0, 0, 0, 0.51); }
+.lvev-e3-card--platform {
+  background: linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)), rgba(0, 0, 0, 0.51);
+}
 
 .lvev-e3-card--addons,
-.lvev-e3-card--summary { background: rgba(255, 255, 255, 0.05); }
+.lvev-e3-card--summary {
+  background: rgba(255, 255, 255, 0.05);
+}
 
 .lvev-e3-label {
   font-family: var(--lvf-font-display);
@@ -1615,7 +1908,9 @@
   gap: 14px;
 }
 
-.lvev-e3-eval-titles .lvev-e3-card-title { margin-top: 6.4px; }
+.lvev-e3-eval-titles .lvev-e3-card-title {
+  margin-top: 6.4px;
+}
 
 .lvev-e3-change {
   display: inline-flex;
@@ -1638,7 +1933,9 @@
   color: transparent;
 }
 
-.lvev-e3-change:hover .lvev-e3-change-text { filter: brightness(1.15); }
+.lvev-e3-change:hover .lvev-e3-change-text {
+  filter: brightness(1.15);
+}
 
 /* Runde Orbs (Radio/Switch/Link-Punkt), Figma: gluehender blauer Kern */
 .lvev-e3-orb {
@@ -1651,7 +1948,10 @@
   transition: box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
 }
 
-.lvev-e3-orb--lg { width: 24px; height: 24px; }
+.lvev-e3-orb--lg {
+  width: 24px;
+  height: 24px;
+}
 
 .lvev-e3-change .lvev-e3-orb,
 .lvev-e3-opt--on .lvev-e3-orb {
@@ -1672,7 +1972,9 @@
   gap: 1px;
 }
 
-.lvev-e3-card--eval .lvev-e3-rows { margin-top: 27.4px; }
+.lvev-e3-card--eval .lvev-e3-rows {
+  margin-top: 27.4px;
+}
 
 .lvev-e3-row {
   display: flex;
@@ -1685,8 +1987,13 @@
   box-shadow: inset 0 0 0 0.4px rgba(255, 255, 255, 0.02);
 }
 
-.lvev-e3-row--top { border-radius: 8px 8px 0 0; }
-.lvev-e3-row--bot { border-radius: 0 0 8px 8px; }
+.lvev-e3-row--top {
+  border-radius: 8px 8px 0 0;
+}
+
+.lvev-e3-row--bot {
+  border-radius: 0 0 8px 8px;
+}
 
 .lvev-e3-row-label {
   font-family: var(--lvf-font-display);
@@ -1709,7 +2016,11 @@
 }
 
 /* Erste Zeile der Eval-Karte: Preis gross und blau */
-.lvev-e3-row--hl .lvev-e3-row-label { font-weight: 500; letter-spacing: 0.34px; color: var(--lvf-white); }
+.lvev-e3-row--hl .lvev-e3-row-label {
+  font-weight: 500;
+  letter-spacing: 0.34px;
+  color: var(--lvf-white);
+}
 
 .lvev-e3-row--hl .lvev-e3-row-val {
   font-size: 20px;
@@ -1723,14 +2034,25 @@
 }
 
 /* Summary: erste Zeile weiss statt blau */
-.lvev-e3-rows--sum { background: none; }
+.lvev-e3-rows--sum {
+  background: none;
+}
 
 .lvev-e3-rows--sum .lvev-e3-row {
   background: linear-gradient(231deg, rgba(0, 0, 0, 0.17) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
-.lvev-e3-row--lead .lvev-e3-row-label { font-weight: 400; letter-spacing: 0.34px; color: var(--lvf-white); }
-.lvev-e3-row--lead .lvev-e3-row-val { font-weight: 400; letter-spacing: 0.02em; color: var(--lvf-white); }
+.lvev-e3-row--lead .lvev-e3-row-label {
+  font-weight: 400;
+  letter-spacing: 0.34px;
+  color: var(--lvf-white);
+}
+
+.lvev-e3-row--lead .lvev-e3-row-val {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--lvf-white);
+}
 
 /* ---------------------------------------------------------------- Optionen (Plattform / Add-on) */
 
@@ -1741,7 +2063,9 @@
   gap: 9px;
 }
 
-.lvev-e3-card--addons .lvev-e3-opt { margin-top: 30px; }
+.lvev-e3-card--addons .lvev-e3-opt {
+  margin-top: 30px;
+}
 
 .lvev-e3-opt {
   display: flex;
@@ -1757,9 +2081,14 @@
   transition: box-shadow 0.18s ease, background 0.18s ease;
 }
 
-.lvev-e3-opt:hover { box-shadow: inset 0 0 0 1px rgba(0, 162, 255, 0.35); }
+.lvev-e3-opt:hover {
+  box-shadow: inset 0 0 0 1px rgba(0, 162, 255, 0.35);
+}
 
-.lvev-e3-opt:focus-visible { outline: 2px solid #8cd5ff; outline-offset: 2px; }
+.lvev-e3-opt:focus-visible {
+  outline: 2px solid #8cd5ff;
+  outline-offset: 2px;
+}
 
 .lvev-e3-opts .lvev-e3-opt--on.lvev-e3-opt--on {
   background:
@@ -1774,7 +2103,11 @@
 
 /* DX-Futuretech-Logo: zwei Ausschnitte (Symbol + Wortmarke) aus derselben
    Mediendatei, wie im Figma via STRETCH-Fuellung */
-.lvev-e3-dx { display: inline-flex; align-items: center; gap: 10px; }
+.lvev-e3-dx {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
 
 .lvev-e3-dx-icon,
 .lvev-e3-dx-word {
@@ -1820,11 +2153,15 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.lvev-e3-opt--on .lvev-e3-vol-name { color: rgba(255, 255, 255, 0.75); }
+.lvev-e3-opt--on .lvev-e3-vol-name {
+  color: rgba(255, 255, 255, 0.75);
+}
 
 /* ---------------------------------------------------------------- Add-on-Zeile */
 
-.lvev-e3-addon { gap: 18px; }
+.lvev-e3-addon {
+  gap: 18px;
+}
 
 .lvev-e3-addon-body {
   display: flex;
@@ -1885,14 +2222,23 @@
   color: transparent;
 }
 
-.lvev-e3-opt:not(.lvev-e3-opt--on) .lvev-e3-addon-val { opacity: 0.45; }
-.lvev-e3-opt:not(.lvev-e3-opt--on) .lvev-e3-addon-body { opacity: 0.55; }
+.lvev-e3-opt:not(.lvev-e3-opt--on) .lvev-e3-addon-val {
+  opacity: 0.45;
+}
+
+.lvev-e3-opt:not(.lvev-e3-opt--on) .lvev-e3-addon-body {
+  opacity: 0.55;
+}
 
 /* ---------------------------------------------------------------- Summary-Karte */
 
-.lvev-e3-card--summary .lvev-e3-rows { margin-top: 16px; }
+.lvev-e3-card--summary .lvev-e3-rows {
+  margin-top: 16px;
+}
 
-.lvev-e3-offer { margin-top: 31px; }
+.lvev-e3-offer {
+  margin-top: 31px;
+}
 
 .lvev-e3-offer-row {
   margin-top: 12px;
@@ -1915,8 +2261,15 @@
   color: var(--lvf-white);
 }
 
-.lvev-e3-offer-input::placeholder { color: rgba(255, 255, 255, 0.55); opacity: 1; }
-.lvev-e3-offer-input:focus-visible { outline: 2px solid #00a2ff; outline-offset: 1px; }
+.lvev-e3-offer-input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+  opacity: 1;
+}
+
+.lvev-e3-offer-input:focus-visible {
+  outline: 2px solid #00a2ff;
+  outline-offset: 1px;
+}
 
 .lvev-e3-offer-btn {
   display: inline-flex;
@@ -1949,7 +2302,9 @@
   transition: filter 0.18s ease;
 }
 
-.lvev-e3-offer-btn:hover { filter: brightness(1.08); }
+.lvev-e3-offer-btn:hover {
+  filter: brightness(1.08);
+}
 
 .lvev-e3-notes {
   margin-top: 30px;
@@ -2044,9 +2399,18 @@
   transition: filter 0.18s ease, transform 0.18s ease;
 }
 
-.lvev-e3-continue:hover { filter: brightness(1.08); }
-.lvev-e3-continue:active { transform: translateY(1px); }
-.lvev-e3-continue:focus-visible { outline: 2px solid #8cd5ff; outline-offset: 3px; }
+.lvev-e3-continue:hover {
+  filter: brightness(1.08);
+}
+
+.lvev-e3-continue:active {
+  transform: translateY(1px);
+}
+
+.lvev-e3-continue:focus-visible {
+  outline: 2px solid #8cd5ff;
+  outline-offset: 3px;
+}
 
 .lvev-e3-secure {
   margin-top: 16px;
@@ -2063,7 +2427,11 @@
   gap: 6px;
 }
 
-.lvev-e3-secure-ico { width: 15px; height: 15px; display: block; }
+.lvev-e3-secure-ico {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
 
 .lvev-e3-secure-text {
   font-family: var(--lvf-font-display);
@@ -2095,8 +2463,15 @@
   gap: 14px 30px;
 }
 
-.lvev-e3-pay-logo { display: block; height: 26px; width: auto; }
-.lvev-e3-pay-row:first-child .lvev-e3-pay-logo { height: 24px; }
+.lvev-e3-pay-logo {
+  display: block;
+  height: 26px;
+  width: auto;
+}
+
+.lvev-e3-pay-row:first-child .lvev-e3-pay-logo {
+  height: 24px;
+}
 
 .lvev-e3-pay-crypto {
   display: inline-flex;
@@ -2109,9 +2484,13 @@
   display: block;
 }
 
-.lvev-e3-pay-coin + .lvev-e3-pay-coin { margin-left: -11px; }
+.lvev-e3-pay-coin+.lvev-e3-pay-coin {
+  margin-left: -11px;
+}
 
-.lvev-e3-pay-coin text { font-family: var(--lvf-font-display); }
+.lvev-e3-pay-coin text {
+  font-family: var(--lvf-font-display);
+}
 
 /* ---------------------------------------------------------------- Pille */
 
@@ -2157,7 +2536,9 @@
   pointer-events: none;
 }
 
-.lvev-e3-pill:hover { filter: brightness(1.15); }
+.lvev-e3-pill:hover {
+  filter: brightness(1.15);
+}
 
 /* ================================================================ Tablet ab 768px */
 
@@ -2174,13 +2555,38 @@
     --lvev-e3-pill-mt: 90px;
   }
 
-  .lvev-e3-row { padding-inline: 30px; }
-  .lvev-e3-opt { min-height: 76px; padding: 12px 29px; gap: 24px; }
-  .lvev-e3-offer-row { flex-direction: row; gap: 0; align-items: stretch; }
-  .lvev-e3-offer-input { flex: 1 1 auto; border-radius: 10px 0 0 10px; padding-left: 23px; }
-  .lvev-e3-offer-btn { flex: 0 0 175px; border-radius: 0 10px 10px 0; }
+  .lvev-e3-row {
+    padding-inline: 30px;
+  }
 
-  .lvev-e3-total { flex-direction: row; gap: 77px; min-height: 140px; }
+  .lvev-e3-opt {
+    min-height: 76px;
+    padding: 12px 29px;
+    gap: 24px;
+  }
+
+  .lvev-e3-offer-row {
+    flex-direction: row;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .lvev-e3-offer-input {
+    flex: 1 1 auto;
+    border-radius: 10px 0 0 10px;
+    padding-left: 23px;
+  }
+
+  .lvev-e3-offer-btn {
+    flex: 0 0 175px;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .lvev-e3-total {
+    flex-direction: row;
+    gap: 77px;
+    min-height: 140px;
+  }
 }
 
 /* ================================================================ Desktop ab 1024px */
@@ -2188,7 +2594,8 @@
 @media (min-width: 1024px) {
   .lvev-e3 {
     --lvev-e3-pt: 110px;
-    --lvev-e3-pb: 20px; /* Review R3: Label-Pille sass ~90px zu weit von der naechsten H2 */
+    --lvev-e3-pb: 20px;
+    /* Review R3: Label-Pille sass ~90px zu weit von der naechsten H2 */
     --lvev-e3-title-fs: 65px;
     /* 44 statt 60: im Entwurf ist die Zeile der Ueberschrift 44 px hoch
        (Figma-TEXT "Configure Your Evaluation", y 2199..2243). Der Abstand
@@ -2201,7 +2608,9 @@
     --lvev-e3-pill-mt: 196px;
   }
 
-  .lvev-e3-title { letter-spacing: -1.3px; }
+  .lvev-e3-title {
+    letter-spacing: -1.3px;
+  }
 
   .lvev-e3-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2213,46 +2622,115 @@
      darin: Innenabstand 34 oben, Beschriftung, 6,4 bis zum Kartentitel,
      27,4 bis zum Zeilenblock, dessen 335 px exakt stimmen, dann 34 unten.
      Die drei Fugen zusammen ergeben genau die fehlenden 26 px. */
-  .lvev-e3-card { padding-block: 34px; }
+  .lvev-e3-card {
+    padding-block: 34px;
+  }
 
-  .lvev-e3-row-val { font-size: 19px; line-height: 24px; letter-spacing: 1.56px; }
+  .lvev-e3-row-val {
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: 1.56px;
+  }
 
-  .lvev-e3-row--hl .lvev-e3-row-val { font-size: 24px; line-height: 30px; letter-spacing: 0.49px; }
+  .lvev-e3-row--hl .lvev-e3-row-val {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.49px;
+  }
 
-  .lvev-e3-addon-name { font-size: 17px; line-height: 22px; }
+  .lvev-e3-addon-name {
+    font-size: 17px;
+    line-height: 22px;
+  }
 
-  .lvev-e3-addon-val { font-size: 29px; line-height: 35px; }
+  .lvev-e3-addon-val {
+    font-size: 29px;
+    line-height: 35px;
+  }
 
-  .lvev-e3-dx-icon { width: 51px; height: 29px; background-size: 51px auto; }
-  .lvev-e3-dx-word { width: 164px; height: 21px; background-size: 164px auto; }
+  .lvev-e3-dx-icon {
+    width: 51px;
+    height: 29px;
+    background-size: 51px auto;
+  }
 
-  .lvev-e3-offer-btn { font-size: 19px; line-height: 28px; letter-spacing: -0.37px; }
+  .lvev-e3-dx-word {
+    width: 164px;
+    height: 21px;
+    background-size: 164px auto;
+  }
 
-  .lvev-e3-total { min-height: 160px; }
+  .lvev-e3-offer-btn {
+    font-size: 19px;
+    line-height: 28px;
+    letter-spacing: -0.37px;
+  }
 
-  .lvev-e3-total-label { font-size: 24px; }
-  .lvev-e3-total-val { font-size: 43px; line-height: 40px; letter-spacing: -0.86px; }
+  .lvev-e3-total {
+    min-height: 160px;
+  }
 
-  .lvev-e3-continue { min-height: 73px; font-size: 22px; }
+  .lvev-e3-total-label {
+    font-size: 24px;
+  }
 
-  .lvev-e3-pay { margin-top: 40px; gap: 20px; }
-  .lvev-e3-pay-row { gap: 14px 60px; }
-  .lvev-e3-pay-row:first-child { column-gap: 75px; }
-  .lvev-e3-pay-logo { height: 26px; }
-  .lvev-e3-pay-row:first-child .lvev-e3-pay-logo { height: 25px; }
+  .lvev-e3-total-val {
+    font-size: 43px;
+    line-height: 40px;
+    letter-spacing: -0.86px;
+  }
 
-  .lvev-e3-pill { min-height: 31px; padding: 6px 14px; }
+  .lvev-e3-continue {
+    min-height: 73px;
+    font-size: 22px;
+  }
+
+  .lvev-e3-pay {
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  .lvev-e3-pay-row {
+    gap: 14px 60px;
+  }
+
+  .lvev-e3-pay-row:first-child {
+    column-gap: 75px;
+  }
+
+  .lvev-e3-pay-logo {
+    height: 26px;
+  }
+
+  .lvev-e3-pay-row:first-child .lvev-e3-pay-logo {
+    height: 25px;
+  }
+
+  .lvev-e3-pill {
+    min-height: 31px;
+    padding: 6px 14px;
+  }
 }
 
 /* ================================================================ Mobile Feinschliff */
 
 @media (max-width: 767px) {
+
   /* Kein horizontaler Ueberlauf durch die Glows */
-  .lvev-e3 { overflow: clip; }
+  .lvev-e3 {
+    overflow: clip;
+  }
 
-  .lvev-e3-eval-head { align-items: flex-start; }
+  .lvev-e3-eval-head {
+    align-items: flex-start;
+  }
 
-  .lvev-e3-change { flex-direction: column; align-items: flex-end; gap: 4px; text-align: right; }
+  .lvev-e3-change {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    text-align: right;
+  }
 }
 
 
@@ -2281,7 +2759,11 @@
   max-width: 100%;
   padding-right: 8px;
 }
-.lvev-e3-addon .lvev-e3-addon-body { flex: 1 1 auto; }
+
+.lvev-e3-addon .lvev-e3-addon-body {
+  flex: 1 1 auto;
+}
+
 /* Add-On-Auswahl dezenter (Abnahme: +42% zu stark) */
 .lvev-e3-opts .lvev-e3-addon.lvev-e3-opt--on {
   background: rgba(6, 14, 22, 0.85);
@@ -2301,7 +2783,8 @@
 }
 
 /* Abnahme: Zahlungslogos monochrom wie im Design */
-.lvev-e3-pay-logo, .lvev-e3-pay-coin {
+.lvev-e3-pay-logo,
+.lvev-e3-pay-coin {
   filter: grayscale(1) brightness(1.35);
 }
 
@@ -2316,7 +2799,10 @@
    margin-bottom nimmt sie aus dem Layout wieder heraus. Die Seitenhoehe
    aendert sich dadurch nicht. */
 @media (min-width: 1024px) {
-  .lvev-e3-title { padding-bottom: 14px; margin-bottom: -14px; }
+  .lvev-e3-title {
+    padding-bottom: 14px;
+    margin-bottom: -14px;
+  }
 }
 
 
@@ -2338,6 +2824,7 @@
   background-image: var(--lvf-grad-blue-btn);
   box-shadow: none;
 }
+
 .lvev-e3 a.lvev-e3-continue.lvev-e3-continue {
   box-shadow: none;
 }
@@ -2467,7 +2954,9 @@
   font-family: var(--lvf-font-display);
 }
 
-.lvev-e4-col-feature { width: 223px; }
+.lvev-e4-col-feature {
+  width: 223px;
+}
 
 .lvev-e4-cell {
   padding: 8px 10px;
@@ -2490,10 +2979,16 @@
   color: #ffffff;
 }
 
-.lvev-e4-cell--feature-strong { font-weight: 425; }
+.lvev-e4-cell--feature-strong {
+  font-weight: 425;
+}
 
 /* Kopfzeilen */
-.lvev-e4-row-groups .lvev-e4-cell { height: 68px; padding-top: 0; padding-bottom: 0; }
+.lvev-e4-row-groups .lvev-e4-cell {
+  height: 68px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 .lvev-e4-cell--group {
   background: rgba(0, 0, 0, 0.6);
@@ -2510,7 +3005,11 @@
   color: transparent;
 }
 
-.lvev-e4-row-sizes .lvev-e4-cell { height: 68px; padding-top: 0; padding-bottom: 0; }
+.lvev-e4-row-sizes .lvev-e4-cell {
+  height: 68px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 .lvev-e4-cell--feature-head {
   font-size: 14px;
@@ -2528,10 +3027,17 @@
 }
 
 /* Koerperzeilen */
-.lvev-e4-row .lvev-e4-cell { height: 59px; }
-.lvev-e4-row--tall .lvev-e4-cell { height: 83px; }
+.lvev-e4-row .lvev-e4-cell {
+  height: 59px;
+}
 
-.lvev-e4-row--hi .lvev-e4-cell { background: var(--lvev-e4-hi-bg); }
+.lvev-e4-row--tall .lvev-e4-cell {
+  height: 83px;
+}
+
+.lvev-e4-row--hi .lvev-e4-cell {
+  background: var(--lvev-e4-hi-bg);
+}
 
 .lvev-e4-cell--price {
   font-size: 12px;
@@ -2552,13 +3058,25 @@
 }
 
 /* Gestapelte Zellinhalte (z.B. "One-Time / OR / Monthly", "6% / ($1,500)") */
-.lvev-e4-stack { display: block; }
-.lvev-e4-stack > span { display: block; }
-.lvev-e4-stack > span + span { margin-top: 7px; }
+.lvev-e4-stack {
+  display: block;
+}
 
-.lvev-e4-grad--bold { font-weight: 510; }
+.lvev-e4-stack>span {
+  display: block;
+}
 
-.lvev-e4-note { color: rgba(248, 253, 255, 0.6); }
+.lvev-e4-stack>span+span {
+  margin-top: 7px;
+}
+
+.lvev-e4-grad--bold {
+  font-weight: 510;
+}
+
+.lvev-e4-note {
+  color: rgba(248, 253, 255, 0.6);
+}
 
 /* Screenreader-Text (die echte "Feature"-Spaltenbeschriftung steht in Zeile 2) */
 .lvev-e4-vh {
@@ -2603,14 +3121,25 @@
   transition: filter 0.2s ease;
 }
 
-.lvev-e4-pill:hover { filter: brightness(1.12); }
+.lvev-e4-pill:hover {
+  filter: brightness(1.12);
+}
 
 /* ---------------------------------------------------------------- Tablet */
 
 @media (max-width: 1023px) {
-  .lvev-e4-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .lvev-e4-table { min-width: 940px; }
-  .lvev-e4-cta { margin-top: 90px; }
+  .lvev-e4-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .lvev-e4-table {
+    min-width: 940px;
+  }
+
+  .lvev-e4-cta {
+    margin-top: 90px;
+  }
 
   /* Mobil-Reparatur 11.08.2026, Befund 4: beim waagerechten Schieben lief
      die erste Spalte mit weg, man sah nur noch Zahlen ohne Zeilenbeschriftung.
@@ -2618,7 +3147,12 @@
      scheinen die wegscrollenden Zellen durch: #12131b entspricht der bisher
      durchscheinenden Fuellung (Kartenweiss 0.05 auf Seitengrund #05060f),
      #122232 dasselbe mit dem Blauanteil der hi-Zeilen. (390-1023) */
-  .lvev-e4-cell--feature { position: sticky; left: 0; z-index: 1; }
+  .lvev-e4-cell--feature {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+  }
+
   /* Die Fuellung braucht drei Klassen, sonst kommt sie nicht an: das Theme
      hello-elementor streift Tabellen in seiner reset.css mit
      `table tbody > tr:nth-child(2n+1) > td` und Spezifitaet 0-2-8. Mit nur
@@ -2627,13 +3161,21 @@
      Schieben liefen die Datenspalten dann sichtbar unter der Beschriftung
      durch, Text auf Text. Betroffen waren Evaluation Payment, Maximum
      Drawdown, Min. Trading Days, Profit Split und Payout Cycle. */
-  .lvev-e4 .lvev-e4-table .lvev-e4-cell--feature { background: #12131b; }
-  .lvev-e4 .lvev-e4-table .lvev-e4-row--hi .lvev-e4-cell--feature { background: #122232; }
+  .lvev-e4 .lvev-e4-table .lvev-e4-cell--feature {
+    background: #12131b;
+  }
+
+  .lvev-e4 .lvev-e4-table .lvev-e4-row--hi .lvev-e4-cell--feature {
+    background: #122232;
+  }
 
   /* Schiebehinweis am rechten Rand: ohne Verlauf merkt man nicht, dass die
      Tabelle weitergeht. Der Verlauf sitzt auf dem ausseren Rahmen, nicht im
      Scrollbehaelter, sonst wuerde er mit dem Inhalt wegrollen. (390-1023) */
-  .lvev-e4-table-outer { position: relative; }
+  .lvev-e4-table-outer {
+    position: relative;
+  }
+
   .lvev-e4-table-outer::after {
     content: "";
     position: absolute;
@@ -2651,7 +3193,9 @@
    2x20 Container-Innenabstand plus 2x1 Kartenrahmen). Ohne Schiebweg waere
    der Verlauf dort ein falscher Hinweis. */
 @media (min-width: 982px) and (max-width: 1023px) {
-  .lvev-e4-table-outer::after { display: none; }
+  .lvev-e4-table-outer::after {
+    display: none;
+  }
 }
 
 /* ---------------------------------------------------------------- Mobile
@@ -2659,24 +3203,64 @@
    im Rahmen horizontal scrollbar, kein Seiten-Ueberlauf. */
 
 @media (max-width: 767px) {
-  .lvev-e4 { padding-top: 8px; padding-bottom: 64px; }
+  .lvev-e4 {
+    padding-top: 8px;
+    padding-bottom: 64px;
+  }
 
-  .lvev-e4-title { letter-spacing: -0.6px; line-height: 1.05; }
-  .lvev-e4-sub { margin-top: 16px; font-size: 16px; line-height: 24px; }
+  .lvev-e4-title {
+    letter-spacing: -0.6px;
+    line-height: 1.05;
+  }
 
-  .lvev-e4-table-wrap { margin-top: 40px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .lvev-e4-table { min-width: 780px; }
-  .lvev-e4-col-feature { width: 150px; }
+  .lvev-e4-sub {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .lvev-e4-table-wrap {
+    margin-top: 40px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .lvev-e4-table {
+    min-width: 780px;
+  }
+
+  .lvev-e4-col-feature {
+    width: 150px;
+  }
+
   /* Befund 4, 11.08.2026: Zellenschrift 11 -> 12 px, unter 12 px ist die
      Tabelle auf dem Telefon unnoetig anstrengend. (390-767) */
-  .lvev-e4-cell { font-size: 12px; }
-  .lvev-e4-cell--feature { padding-left: 14px; }
+  .lvev-e4-cell {
+    font-size: 12px;
+  }
 
-  .lvev-e4-cta { margin-top: 48px; }
-  .lvev-e4-pill { min-height: 44px; padding: 12px 20px; }
+  .lvev-e4-cell--feature {
+    padding-left: 14px;
+  }
 
-  .lvev-e4-glow--left { left: -45%; width: 110%; }
-  .lvev-e4-glow--right { right: -45%; width: 110%; }
+  .lvev-e4-cta {
+    margin-top: 48px;
+  }
+
+  .lvev-e4-pill {
+    min-height: 44px;
+    padding: 12px 20px;
+  }
+
+  .lvev-e4-glow--left {
+    left: -45%;
+    width: 110%;
+  }
+
+  .lvev-e4-glow--right {
+    right: -45%;
+    width: 110%;
+  }
 }
 
 /* ============================================================
@@ -2721,7 +3305,9 @@
       nicht sichtbar. Deshalb hier ausdruecklich abgeschaltet.
    ============================================================ */
 @media (min-width: 1024px) {
-  .lvev-e4 .lvev-e4-table-wrap { background: #031019; }
+  .lvev-e4 .lvev-e4-table-wrap {
+    background: #031019;
+  }
 
   /* 6. Die blaue Lichtlinie auf der Tabellenoberkante hat der Entwurf nicht.
      Der Figma-Rahmen (Frame 2121452600, box 261/3824/1238/868) traegt nur
@@ -2733,7 +3319,9 @@
      rgba(255,255,255,0.1), gemessen rgb(29,40,48)); die Zusatzlinie kam
      einfach obendrauf. Die Breite des Rahmens bleibt bei 1 px, damit sich
      die abgenommene Hoehe nicht aendert. */
-  .lvev-e4 .lvev-e4-table-wrap::before { background: none; }
+  .lvev-e4 .lvev-e4-table-wrap::before {
+    background: none;
+  }
 
   /* Punkt 5: nur die waagerechte Haarlinie bleibt */
   .lvev-e4 .lvev-e4-table .lvev-e4-cell {
@@ -2745,10 +3333,11 @@
   /* Punkt 1: Wechselfuellung. Kind 1 ist die Beschriftungsspalte, die
      Datenspalten sind Kind 2 bis 9. Ungerade Datenspalten (1, 3, 5, 7)
      sind damit die geradzahligen Kinder. */
-  .lvev-e4 .lvev-e4-table tbody .lvev-e4-row > .lvev-e4-cell {
+  .lvev-e4 .lvev-e4-table tbody .lvev-e4-row>.lvev-e4-cell {
     background: transparent;
   }
-  .lvev-e4 .lvev-e4-table tbody .lvev-e4-row > td.lvev-e4-cell:nth-child(even) {
+
+  .lvev-e4 .lvev-e4-table tbody .lvev-e4-row>td.lvev-e4-cell:nth-child(even) {
     background: var(--lvev-e4-cell-bg);
   }
 
@@ -2756,14 +3345,16 @@
   .lvev-e4 .lvev-e4-table tbody .lvev-e4-row--hi {
     background: var(--lvev-e4-hi-bg);
   }
-  .lvev-e4 .lvev-e4-table tbody .lvev-e4-row--hi > td.lvev-e4-cell:not(.lvev-e4-cell--dim) {
+
+  .lvev-e4 .lvev-e4-table tbody .lvev-e4-row--hi>td.lvev-e4-cell:not(.lvev-e4-cell--dim) {
     background: var(--lvev-e4-hi-bg);
   }
+
   /* Die beiden Ausnahmen brauchen dieselbe Spezifitaet wie die
      Wechselfuellung oben (0-5-2 gegen 0-5-1), sonst faerbt der
      nth-child-Wechsel die "Not Applicable"-Zellen mit ein. */
-  .lvev-e4 .lvev-e4-table tbody .lvev-e4-row--hi > .lvev-e4-cell--feature,
-  .lvev-e4 .lvev-e4-table tbody .lvev-e4-row--hi > td.lvev-e4-cell.lvev-e4-cell--dim {
+  .lvev-e4 .lvev-e4-table tbody .lvev-e4-row--hi>.lvev-e4-cell--feature,
+  .lvev-e4 .lvev-e4-table tbody .lvev-e4-row--hi>td.lvev-e4-cell.lvev-e4-cell--dim {
     background: transparent;
   }
 }
@@ -2776,7 +3367,9 @@
    elite; der Entwurf verwendet ueberall denselben Grad. Nur ab 1024 px,
    darunter faellt der Grad per clamp kleiner aus und die Zeile bricht um. */
 @media (min-width: 1024px) {
-  .lvev-e4-title { line-height: 0.677; }
+  .lvev-e4-title {
+    line-height: 0.677;
+  }
 }
 
 
@@ -2790,7 +3383,10 @@
    margin-bottom nimmt sie aus dem Layout wieder heraus. Die Seitenhoehe
    aendert sich dadurch nicht. */
 @media (min-width: 1024px) {
-  .lvev-e4-title { padding-bottom: 14px; margin-bottom: -14px; }
+  .lvev-e4-title {
+    padding-bottom: 14px;
+    margin-bottom: -14px;
+  }
 }
 
 /* == e5-steps == */
@@ -2849,7 +3445,9 @@
 
 /* ---------------------------------------------------------------- Kopf */
 
-.lvev-e5-head { text-align: center; }
+.lvev-e5-head {
+  text-align: center;
+}
 
 .lvev-e5-title {
   font-family: var(--lvf-font-display);
@@ -3056,13 +3654,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 9px;
-  min-height: 31px;
+  padding: 10px 15px;
+  min-height: 40px;
   border-radius: 78px;
   background: var(--lvf-grad-btn);
   box-shadow:
-    0 0 0 0.5px rgba(53, 174, 244, 0.65),
-    0 24px 60px rgba(121, 206, 255, 0.45),
+    0 0 0 0.5px rgba(13, 39, 54, 0.65),
+    0 24px 60px rgba(11, 30, 41, 0.45),
     2px 2px 7px rgba(0, 0, 0, 0.1);
   font-family: var(--lvf-font-display);
   font-size: 14px;
@@ -3073,14 +3671,24 @@
   transition: filter 0.2s ease;
 }
 
-.lvev-e5-pill:hover { filter: brightness(1.12); }
+.lvev-e5-pill:hover {
+  filter: brightness(1.12);
+}
 
 /* ---------------------------------------------------------------- Tablet */
 
 @media (max-width: 1023px) {
-  .lvev-e5-grid { grid-template-columns: repeat(2, 1fr); }
-  .lvev-e5-num { font-size: 104px; }
-  .lvev-e5-cta { margin-top: 80px; }
+  .lvev-e5-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lvev-e5-num {
+    font-size: 104px;
+  }
+
+  .lvev-e5-cta {
+    margin-top: 80px;
+  }
 }
 
 /* ---------------------------------------------------------------- Mobile
@@ -3088,10 +3696,21 @@
    Pille mit Touch-Ziel >= 44px, kein horizontaler Ueberlauf. */
 
 @media (max-width: 767px) {
-  .lvev-e5 { padding-top: 8px; padding-bottom: 72px; }
+  .lvev-e5 {
+    padding-top: 8px;
+    padding-bottom: 72px;
+  }
 
-  .lvev-e5-title { letter-spacing: -0.6px; line-height: 1.05; }
-  .lvev-e5-sub { margin-top: 16px; font-size: 16px; line-height: 24px; }
+  .lvev-e5-title {
+    letter-spacing: -0.6px;
+    line-height: 1.05;
+  }
+
+  .lvev-e5-sub {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   .lvev-e5-panel {
     margin-top: 44px;
@@ -3100,23 +3719,61 @@
     border-radius: 26px;
   }
 
-  .lvev-e5-grid { grid-template-columns: 1fr; gap: 12px; }
+  .lvev-e5-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
-  .lvev-e5-card { min-height: 0; padding: 22px; }
+  .lvev-e5-card {
+    min-height: 0;
+    padding: 22px;
+  }
 
-  .lvev-e5-num { font-size: 92px; top: 10px; right: 14px; letter-spacing: -5px; }
+  .lvev-e5-num {
+    font-size: 92px;
+    top: 10px;
+    right: 14px;
+    letter-spacing: -5px;
+  }
 
-  .lvev-e5-text { margin-top: 28px; gap: 8px; }
-  .lvev-e5-card-title { font-size: 18px; }
-  .lvev-e5-card-desc { font-size: 16px; line-height: 22px; max-width: none; }
+  .lvev-e5-text {
+    margin-top: 28px;
+    gap: 8px;
+  }
 
-  .lvev-e5-badge { font-size: 10px; padding: 5px 10px 5px 8px; }
+  .lvev-e5-card-title {
+    font-size: 18px;
+  }
 
-  .lvev-e5-cta { margin-top: 52px; }
-  .lvev-e5-pill { min-height: 44px; padding: 12px 20px; }
+  .lvev-e5-card-desc {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: none;
+  }
 
-  .lvev-e5-glow--left { left: -50%; width: 120%; }
-  .lvev-e5-glow--right { right: -50%; width: 120%; }
+  .lvev-e5-badge {
+    font-size: 10px;
+    padding: 5px 10px 5px 8px;
+  }
+
+  .lvev-e5-cta {
+    margin-top: 52px;
+  }
+
+  .lvev-e5-pill {
+    min-height: 44px;
+    padding: 12px 20px;
+  }
+
+  .lvev-e5-glow--left {
+    left: -50%;
+    width: 120%;
+  }
+
+  .lvev-e5-glow--right {
+    right: -50%;
+    width: 120%;
+  }
 }
 
 
@@ -3133,14 +3790,21 @@
      - Pille -> Sektionsende: Soll 16 px, war 45 */
 
 @media (min-width: 1024px) {
+
   /* Soll 16 px zwischen Pille und Sektionsende, gemessen waren 45 */
-  .lvev-e5 { padding-bottom: 16px; }
+  .lvev-e5 {
+    padding-bottom: 16px;
+  }
 
   /* Soll 72 px zwischen Unterzeile und Panel, gemessen waren 86 */
-  .lvev-e5-panel { margin-top: 72px; }
+  .lvev-e5-panel {
+    margin-top: 72px;
+  }
 
   /* Soll 216 px Luft zwischen Panel-Unterkante und Pille, gemessen waren 120 */
-  .lvev-e5-cta { margin-top: 216px; }
+  .lvev-e5-cta {
+    margin-top: 216px;
+  }
 }
 
 
@@ -3164,7 +3828,9 @@
    elite; der Entwurf verwendet ueberall denselben Grad. Nur ab 1024 px,
    darunter faellt der Grad per clamp kleiner aus und die Zeile bricht um. */
 @media (min-width: 1024px) {
-  .lvev-e5-title { line-height: 0.677; }
+  .lvev-e5-title {
+    line-height: 0.677;
+  }
 }
 
 
@@ -3190,6 +3856,7 @@
       von oben nach unten rechts, Grundton dunkler ((3,6,12) -> (1,2,4)).
    ============================================================ */
 @media (min-width: 1024px) {
+
   /* Ziffern: Ist 130px/-8, Soll 161,6px/-8,08 (Figma); top/right so,
      dass die Tinte auf Soll (Oberkante card-rel 25, rechts 30) faellt */
   .lvev-e5-num {
@@ -3236,6 +3903,7 @@
     -webkit-background-clip: text;
     background-clip: text;
   }
+
   /* Fuehrende "0" flach dunkel: Soll (260,40)=(8,16,20), r3b-Referenz
      unten links (11,18,24); mit rgb(14,28,36) gemessen (14,28,36),
      deshalb auf rgb(10,17,22) nachgeduneklt */
@@ -3287,13 +3955,14 @@
    Ebenen mit 0-2-0 setzen.
    ============================================================ */
 @media (min-width: 1024px) {
+
   /* eigenes Feld von e5 ueber die letzten 300 px ausblenden */
   .lvf-page .lvev-e5 .lvev-e5-glow--left,
   .lvf-page .lvev-e5 .lvev-e5-glow--right {
     -webkit-mask-image: linear-gradient(180deg,
-      #000 0, #000 calc(100% - 300px), rgba(0, 0, 0, 0) 100%);
+        #000 0, #000 calc(100% - 300px), rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(180deg,
-      #000 0, #000 calc(100% - 300px), rgba(0, 0, 0, 0) 100%);
+        #000 0, #000 calc(100% - 300px), rgba(0, 0, 0, 0) 100%);
   }
 
   /* Lichtsaeule von e6, Anker 1282 = e5-Hoehe 898 plus e6-Anker 384.
@@ -3316,12 +3985,12 @@
     pointer-events: none;
     border-radius: 0;
     background:
-      radial-gradient(300px 2600px at 0px 1282px, rgba(254,254,255,1) 0%,rgba(250,253,255,1) 8%,rgba(216,240,254,1) 15%,rgba(161,220,253,1) 23%,rgba(128,204,244,1) 31%,rgba(80,178,226,1) 38%,rgba(50,150,201,.97) 46%,rgba(38,128,178,.94) 54%,rgba(26,100,142,.88) 62%,rgba(18,78,112,.78) 69%,rgba(10,62,92,.62) 77%,rgba(5,46,70,.36) 86%,rgba(2,30,48,0) 100%),
-      radial-gradient(300px 2600px at 100% 1282px, rgba(254,254,255,1) 0%,rgba(250,253,255,1) 8%,rgba(216,240,254,1) 15%,rgba(161,220,253,1) 23%,rgba(128,204,244,1) 31%,rgba(80,178,226,1) 38%,rgba(50,150,201,.97) 46%,rgba(38,128,178,.94) 54%,rgba(26,100,142,.88) 62%,rgba(18,78,112,.78) 69%,rgba(10,62,92,.62) 77%,rgba(5,46,70,.36) 86%,rgba(2,30,48,0) 100%);
+      radial-gradient(300px 2600px at 0px 1282px, rgba(254, 254, 255, 1) 0%, rgba(250, 253, 255, 1) 8%, rgba(216, 240, 254, 1) 15%, rgba(161, 220, 253, 1) 23%, rgba(128, 204, 244, 1) 31%, rgba(80, 178, 226, 1) 38%, rgba(50, 150, 201, .97) 46%, rgba(38, 128, 178, .94) 54%, rgba(26, 100, 142, .88) 62%, rgba(18, 78, 112, .78) 69%, rgba(10, 62, 92, .62) 77%, rgba(5, 46, 70, .36) 86%, rgba(2, 30, 48, 0) 100%),
+      radial-gradient(300px 2600px at 100% 1282px, rgba(254, 254, 255, 1) 0%, rgba(250, 253, 255, 1) 8%, rgba(216, 240, 254, 1) 15%, rgba(161, 220, 253, 1) 23%, rgba(128, 204, 244, 1) 31%, rgba(80, 178, 226, 1) 38%, rgba(50, 150, 201, .97) 46%, rgba(38, 128, 178, .94) 54%, rgba(26, 100, 142, .88) 62%, rgba(18, 78, 112, .78) 69%, rgba(10, 62, 92, .62) 77%, rgba(5, 46, 70, .36) 86%, rgba(2, 30, 48, 0) 100%);
     -webkit-mask-image: linear-gradient(180deg,
-      rgba(0, 0, 0, 0) calc(100% - 300px), #000 100%);
+        rgba(0, 0, 0, 0) calc(100% - 300px), #000 100%);
     mask-image: linear-gradient(180deg,
-      rgba(0, 0, 0, 0) calc(100% - 300px), #000 100%);
+        rgba(0, 0, 0, 0) calc(100% - 300px), #000 100%);
   }
 
   /* Querband von e6, Anker 1332 = 898 plus 434, wie dort mit screen.
@@ -3348,21 +4017,22 @@
     opacity: 1;
     mix-blend-mode: screen;
     background:
-      radial-gradient(100% 1400px at 0px 1332px, rgba(255,255,255,1) 0%,rgba(250,253,255,1) 16%,rgba(215,240,255,1) 30%,rgba(175,226,255,.98) 42%,rgba(110,205,250,.92) 54%,rgba(70,185,240,.85) 64%,rgba(30,150,215,.7) 76%,rgba(10,90,140,.36) 88%,rgba(4,40,64,0) 100%),
-      radial-gradient(100% 1400px at 100% 1332px, rgba(255,255,255,1) 0%,rgba(250,253,255,1) 16%,rgba(215,240,255,1) 30%,rgba(175,226,255,.98) 42%,rgba(110,205,250,.92) 54%,rgba(70,185,240,.85) 64%,rgba(30,150,215,.7) 76%,rgba(10,90,140,.36) 88%,rgba(4,40,64,0) 100%);
+      radial-gradient(100% 1400px at 0px 1332px, rgba(255, 255, 255, 1) 0%, rgba(250, 253, 255, 1) 16%, rgba(215, 240, 255, 1) 30%, rgba(175, 226, 255, .98) 42%, rgba(110, 205, 250, .92) 54%, rgba(70, 185, 240, .85) 64%, rgba(30, 150, 215, .7) 76%, rgba(10, 90, 140, .36) 88%, rgba(4, 40, 64, 0) 100%),
+      radial-gradient(100% 1400px at 100% 1332px, rgba(255, 255, 255, 1) 0%, rgba(250, 253, 255, 1) 16%, rgba(215, 240, 255, 1) 30%, rgba(175, 226, 255, .98) 42%, rgba(110, 205, 250, .92) 54%, rgba(70, 185, 240, .85) 64%, rgba(30, 150, 215, .7) 76%, rgba(10, 90, 140, .36) 88%, rgba(4, 40, 64, 0) 100%);
     -webkit-mask-image: linear-gradient(180deg,
-      rgba(0, 0, 0, 0) calc(100% - 300px), #000 100%);
+        rgba(0, 0, 0, 0) calc(100% - 300px), #000 100%);
     mask-image: linear-gradient(180deg,
-      rgba(0, 0, 0, 0) calc(100% - 300px), #000 100%);
+        rgba(0, 0, 0, 0) calc(100% - 300px), #000 100%);
   }
+
   .lvf-page .lvev-e5 .lvev-e5-glow--bottom::before {
     content: "";
     position: absolute;
     inset: 0;
     pointer-events: none;
     background:
-      radial-gradient(1350px 1400px at 0px 1332px, rgba(255,255,255,1) 0%,rgba(250,253,255,1) 16%,rgba(215,240,255,1) 30%,rgba(175,226,255,.98) 42%,rgba(110,205,250,.92) 54%,rgba(70,185,240,.85) 64%,rgba(30,150,215,.7) 76%,rgba(10,90,140,.36) 88%,rgba(4,40,64,0) 100%),
-      radial-gradient(1350px 1400px at 100% 1332px, rgba(255,255,255,1) 0%,rgba(250,253,255,1) 16%,rgba(215,240,255,1) 30%,rgba(175,226,255,.98) 42%,rgba(110,205,250,.92) 54%,rgba(70,185,240,.85) 64%,rgba(30,150,215,.7) 76%,rgba(10,90,140,.36) 88%,rgba(4,40,64,0) 100%);
+      radial-gradient(1350px 1400px at 0px 1332px, rgba(255, 255, 255, 1) 0%, rgba(250, 253, 255, 1) 16%, rgba(215, 240, 255, 1) 30%, rgba(175, 226, 255, .98) 42%, rgba(110, 205, 250, .92) 54%, rgba(70, 185, 240, .85) 64%, rgba(30, 150, 215, .7) 76%, rgba(10, 90, 140, .36) 88%, rgba(4, 40, 64, 0) 100%),
+      radial-gradient(1350px 1400px at 100% 1332px, rgba(255, 255, 255, 1) 0%, rgba(250, 253, 255, 1) 16%, rgba(215, 240, 255, 1) 30%, rgba(175, 226, 255, .98) 42%, rgba(110, 205, 250, .92) 54%, rgba(70, 185, 240, .85) 64%, rgba(30, 150, 215, .7) 76%, rgba(10, 90, 140, .36) 88%, rgba(4, 40, 64, 0) 100%);
   }
 }
 
@@ -3404,7 +4074,7 @@
      (y6820-7040 quer 147-249), unsere Ellipsen liefen zu frueh aus */
   height: 132%;
   transform: translateX(-50%);
-  background: radial-gradient(closest-side, rgba(120, 205, 255, 0.95) 0%, rgba(80, 185, 250, 0.75) 55%, rgba(0, 162, 255, 0.4) 80%, rgba(0, 162, 255, 0) 100%);
+  background: radial-gradient(closest-side, rgba(120, 205, 255, 0.95) 0%, rgba(80, 185, 250, 0.75) 55%, rgba(18, 168, 254, 0.4) 80%, rgba(18, 169, 255, 0) 100%);
 }
 
 .lvev-e6-glow--left {
@@ -3436,7 +4106,9 @@
 
 /* ---------------------------------------------------------------- Kopf */
 
-.lvev-e6-head { text-align: center; }
+.lvev-e6-head {
+  text-align: center;
+}
 
 /* Element + 2 Klassen (0-2-1), gleiche Spezifitaet wie die Heading-Regel der
    Shell (.lvf-page.lvf-page h2/h3), aber spaeter geladen -> gewinnt. */
@@ -3487,14 +4159,20 @@
   height: 100%;
 }
 
-.lvev-e6-col--left { width: 248px; }
+.lvev-e6-col--left {
+  width: 248px;
+}
+
 .lvev-e6-col--mid {
   width: 304px;
   padding-top: 123px;
   gap: 211px;
   justify-content: flex-start;
 }
-.lvev-e6-col--right { width: 252px; }
+
+.lvev-e6-col--right {
+  width: 252px;
+}
 
 .lvev-e6-item {
   display: flex;
@@ -3526,7 +4204,9 @@
   color: #000000;
 }
 
-.lvev-e6-item-title--2l { line-height: 21.5px; }
+.lvev-e6-item-title--2l {
+  line-height: 21.5px;
+}
 
 .lvev-e6-item-desc {
   max-width: 207px;
@@ -3568,16 +4248,59 @@
   pointer-events: none;
 }
 
-.lvev-e6-line { position: absolute; background: rgba(0, 0, 0, 0.08); }
+.lvev-e6-line {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.08);
+}
 
-.lvev-e6-line--v1 { left: calc(100% * 363 / 1140); top: 23px; width: 1px; height: 757px; }
-.lvev-e6-line--v2 { left: calc(100% * 775 / 1140); top: 23px; width: 1px; height: 757px; }
+.lvev-e6-line--v1 {
+  left: calc(100% * 363 / 1140);
+  top: 23px;
+  width: 1px;
+  height: 757px;
+}
 
-.lvev-e6-line--h1 { left: calc(100% * 50 / 1140);  top: 230px; width: calc(100% * 264 / 1140); height: 1px; }
-.lvev-e6-line--h2 { left: calc(100% * 836 / 1140); top: 230px; width: calc(100% * 264 / 1140); height: 1px; }
-.lvev-e6-line--h3 { left: calc(100% * 50 / 1140);  top: 561px; width: calc(100% * 264 / 1140); height: 1px; }
-.lvev-e6-line--h4 { left: calc(100% * 836 / 1140); top: 561px; width: calc(100% * 264 / 1140); height: 1px; }
-.lvev-e6-line--h5 { left: calc(100% * 435 / 1140); top: 401px; width: calc(100% * 264 / 1140); height: 1px; }
+.lvev-e6-line--v2 {
+  left: calc(100% * 775 / 1140);
+  top: 23px;
+  width: 1px;
+  height: 757px;
+}
+
+.lvev-e6-line--h1 {
+  left: calc(100% * 50 / 1140);
+  top: 230px;
+  width: calc(100% * 264 / 1140);
+  height: 1px;
+}
+
+.lvev-e6-line--h2 {
+  left: calc(100% * 836 / 1140);
+  top: 230px;
+  width: calc(100% * 264 / 1140);
+  height: 1px;
+}
+
+.lvev-e6-line--h3 {
+  left: calc(100% * 50 / 1140);
+  top: 561px;
+  width: calc(100% * 264 / 1140);
+  height: 1px;
+}
+
+.lvev-e6-line--h4 {
+  left: calc(100% * 836 / 1140);
+  top: 561px;
+  width: calc(100% * 264 / 1140);
+  height: 1px;
+}
+
+.lvev-e6-line--h5 {
+  left: calc(100% * 435 / 1140);
+  top: 401px;
+  width: calc(100% * 264 / 1140);
+  height: 1px;
+}
 
 .lvev-e6-dot {
   position: absolute;
@@ -3591,15 +4314,38 @@
 /* Die beiden mittleren Punkte sitzen auf ihrer Senkrechten, deshalb der halbe
    Durchmesser Abzug: sonst wandert ihre Mitte beim Schrumpfen von der Linie
    weg. Bei 1140px ergibt das wieder 354 und 766. */
-.lvev-e6-dot--1 { left: 0; top: 221px; }
-.lvev-e6-dot--2 { left: 0; top: 552px; }
-.lvev-e6-dot--3 { left: calc(100% * 363 / 1140 - 9px); top: 392px; }
-.lvev-e6-dot--4 { left: calc(100% * 775 / 1140 - 9px); top: 392px; }
+.lvev-e6-dot--1 {
+  left: 0;
+  top: 221px;
+}
+
+.lvev-e6-dot--2 {
+  left: 0;
+  top: 552px;
+}
+
+.lvev-e6-dot--3 {
+  left: calc(100% * 363 / 1140 - 9px);
+  top: 392px;
+}
+
+.lvev-e6-dot--4 {
+  left: calc(100% * 775 / 1140 - 9px);
+  top: 392px;
+}
+
 /* Rechte Punkte am rechten Rand verankert. Figma setzt sie auf x1123, also
    1px ueber die Rahmenkante hinaus; right:-1px haelt genau das bei voller
    Breite und laesst sie darunter mitwandern statt aus dem Bild zu laufen. */
-.lvev-e6-dot--5 { right: -1px; top: 222px; }
-.lvev-e6-dot--6 { right: -1px; top: 552px; }
+.lvev-e6-dot--5 {
+  right: -1px;
+  top: 222px;
+}
+
+.lvev-e6-dot--6 {
+  right: -1px;
+  top: 552px;
+}
 
 /* ---------------------------------------------------------------- CTAs
    Figma Frame 65 y=6931: Primaer-Button mit Verlauf, schwarzer Icon-Kachel und
@@ -3626,7 +4372,9 @@
   transition: filter 0.2s ease;
 }
 
-.lvev-e6-btn:hover { filter: brightness(1.1); }
+.lvev-e6-btn:hover {
+  filter: brightness(1.1);
+}
 
 .lvev-e6-btn--primary {
   padding: 8px 12px 8px 5px;
@@ -3676,10 +4424,17 @@
     gap: 48px 24px;
   }
 
-  .lvev-e6-col { display: contents; }
-  .lvev-e6-deco { display: none; }
+  .lvev-e6-col {
+    display: contents;
+  }
 
-  .lvev-e6-cta { margin-top: 64px; }
+  .lvev-e6-deco {
+    display: none;
+  }
+
+  .lvev-e6-cta {
+    margin-top: 64px;
+  }
 }
 
 /* ---------------------------------------------------------------- Mobile
@@ -3687,10 +4442,21 @@
    Touch-Ziele >= 44px, kein horizontaler Ueberlauf. */
 
 @media (max-width: 767px) {
-  .lvev-e6 { padding-top: 8px; padding-bottom: 90px; }
+  .lvev-e6 {
+    padding-top: 8px;
+    padding-bottom: 90px;
+  }
 
-  .lvev-e6-title { letter-spacing: -0.6px; line-height: 1.05; }
-  .lvev-e6-sub { margin-top: 16px; font-size: 16px; line-height: 24px; }
+  .lvev-e6-title {
+    letter-spacing: -0.6px;
+    line-height: 1.05;
+  }
+
+  .lvev-e6-sub {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   .lvev-e6-features {
     margin-top: 48px;
@@ -3698,11 +4464,29 @@
     gap: 44px;
   }
 
-  .lvev-e6-item { gap: 14px; }
-  .lvev-e6-icon { width: 52px; height: 52px; }
-  .lvev-e6-item-title { font-size: 20px; line-height: 26px; }
-  .lvev-e6-item-title--2l { line-height: 24px; }
-  .lvev-e6-item-desc { max-width: 300px; font-size: 16px; line-height: 22px; }
+  .lvev-e6-item {
+    gap: 14px;
+  }
+
+  .lvev-e6-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .lvev-e6-item-title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .lvev-e6-item-title--2l {
+    line-height: 24px;
+  }
+
+  .lvev-e6-item-desc {
+    max-width: 300px;
+    font-size: 16px;
+    line-height: 22px;
+  }
 
   .lvev-e6-cta {
     margin-top: 52px;
@@ -3716,9 +4500,19 @@
     min-height: 48px;
   }
 
-  .lvev-e6-glow--left { left: -60%; width: 130%; }
-  .lvev-e6-glow--right { right: -60%; width: 130%; }
-  .lvev-e6-glow--center { width: 160%; }
+  .lvev-e6-glow--left {
+    left: -60%;
+    width: 130%;
+  }
+
+  .lvev-e6-glow--right {
+    right: -60%;
+    width: 130%;
+  }
+
+  .lvev-e6-glow--center {
+    width: 160%;
+  }
 }
 
 /* ---------------------------------------------------------------- Desktop
@@ -3743,11 +4537,15 @@
   }
 
   /* Soll 74 px zwischen Unterzeile und Spaltengruppe, gemessen waren 86 */
-  .lvev-e6-features { margin-top: 74px; }
+  .lvev-e6-features {
+    margin-top: 74px;
+  }
 
   /* Soll 46 px Buttonhoehe wie beim Ghost-Button daneben; mit 8 px oben und
      unten kam die 36-px-Kachel auf 52 und zog die ganze Zeile mit. */
-  .lvev-e6-btn--primary { padding: 5px 12px 5px 5px; }
+  .lvev-e6-btn--primary {
+    padding: 5px 12px 5px 5px;
+  }
 }
 
 
@@ -3803,13 +4601,14 @@
    Ebenen mit 0-2-0 setzt.
    ============================================================ */
 @media (min-width: 1024px) {
+
   /* eigenes Feld von e6 ueber die letzten 300 px ausblenden */
   .lvf-page .lvev-e6 .lvev-e6-glow--center,
   .lvf-page .lvev-e6 .lvev-e6-glow--left {
     -webkit-mask-image: linear-gradient(180deg,
-      #000 0, #000 calc(100% - 300px), rgba(0, 0, 0, 0) 100%);
+        #000 0, #000 calc(100% - 300px), rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(180deg,
-      #000 0, #000 calc(100% - 300px), rgba(0, 0, 0, 0) 100%);
+        #000 0, #000 calc(100% - 300px), rgba(0, 0, 0, 0) 100%);
   }
 
   /* zwei stillgelegte Ebenen tragen im selben Bereich das Feld von e7 herein */
@@ -3824,16 +4623,16 @@
     filter: none;
     opacity: 1;
     -webkit-mask-image: linear-gradient(180deg,
-      rgba(0, 0, 0, 0) calc(100% - 300px), rgba(0, 0, 0, 0.967) 100%);
+        rgba(0, 0, 0, 0) calc(100% - 300px), rgba(0, 0, 0, 0.967) 100%);
     mask-image: linear-gradient(180deg,
-      rgba(0, 0, 0, 0) calc(100% - 300px), rgba(0, 0, 0, 0.967) 100%);
+        rgba(0, 0, 0, 0) calc(100% - 300px), rgba(0, 0, 0, 0.967) 100%);
   }
 
   /* Lichtsaeule von e7, Anker 320 = e6-Hoehe 1245 minus e7-Anker 925 */
   .lvf-page .lvev-e6 .lvev-e6-glow--right {
     background:
-      radial-gradient(300px 2600px at 0px 320px, rgba(254,254,255,1) 0%,rgba(250,253,255,1) 8%,rgba(216,240,254,1) 15%,rgba(161,220,253,1) 23%,rgba(128,204,244,1) 31%,rgba(80,178,226,1) 38%,rgba(50,150,201,.97) 46%,rgba(38,128,178,.94) 54%,rgba(26,100,142,.88) 62%,rgba(18,78,112,.78) 69%,rgba(10,62,92,.62) 77%,rgba(5,46,70,.36) 86%,rgba(2,30,48,0) 100%),
-      radial-gradient(300px 3400px at 100% 320px, rgba(254,254,255,1) 0%,rgba(250,253,255,1) 8%,rgba(216,240,254,1) 15%,rgba(161,220,253,1) 23%,rgba(128,204,244,1) 31%,rgba(80,178,226,1) 38%,rgba(50,150,201,.97) 46%,rgba(38,128,178,.94) 54%,rgba(26,100,142,.88) 62%,rgba(18,78,112,.78) 69%,rgba(10,62,92,.62) 77%,rgba(5,46,70,.36) 86%,rgba(2,30,48,0) 100%);
+      radial-gradient(300px 2600px at 0px 320px, rgba(254, 254, 255, 1) 0%, rgba(250, 253, 255, 1) 8%, rgba(216, 240, 254, 1) 15%, rgba(161, 220, 253, 1) 23%, rgba(128, 204, 244, 1) 31%, rgba(80, 178, 226, 1) 38%, rgba(50, 150, 201, .97) 46%, rgba(38, 128, 178, .94) 54%, rgba(26, 100, 142, .88) 62%, rgba(18, 78, 112, .78) 69%, rgba(10, 62, 92, .62) 77%, rgba(5, 46, 70, .36) 86%, rgba(2, 30, 48, 0) 100%),
+      radial-gradient(300px 3400px at 100% 320px, rgba(254, 254, 255, 1) 0%, rgba(250, 253, 255, 1) 8%, rgba(216, 240, 254, 1) 15%, rgba(161, 220, 253, 1) 23%, rgba(128, 204, 244, 1) 31%, rgba(80, 178, 226, 1) 38%, rgba(50, 150, 201, .97) 46%, rgba(38, 128, 178, .94) 54%, rgba(26, 100, 142, .88) 62%, rgba(18, 78, 112, .78) 69%, rgba(10, 62, 92, .62) 77%, rgba(5, 46, 70, .36) 86%, rgba(2, 30, 48, 0) 100%);
   }
 
   /* Querband von e7, Anker 370 = 1245 minus 875, wie dort mit screen.
@@ -3847,11 +4646,12 @@
   .lvf-page .lvev-e6 .lvev-e6-glow--bottom {
     mix-blend-mode: screen;
     background:
-      radial-gradient(700px 1400px at 0px 370px, rgba(255,255,255,1) 0%,rgba(250,253,255,1) 16%,rgba(215,240,255,1) 30%,rgba(175,226,255,.98) 42%,rgba(110,205,250,.92) 54%,rgba(70,185,240,.85) 64%,rgba(30,150,215,.7) 76%,rgba(10,90,140,.36) 88%,rgba(4,40,64,0) 100%),
-      radial-gradient(500px 1700px at 100% 370px, rgba(255,255,255,1) 0%,rgba(250,253,255,1) 16%,rgba(215,240,255,1) 30%,rgba(175,226,255,.98) 42%,rgba(110,205,250,.92) 54%,rgba(70,185,240,.85) 64%,rgba(30,150,215,.7) 76%,rgba(10,90,140,.36) 88%,rgba(4,40,64,0) 100%),
-      linear-gradient(180deg, rgba(7,49,72,1) 0%, rgba(7,49,72,1) 100%);
+      radial-gradient(700px 1400px at 0px 370px, rgba(255, 255, 255, 1) 0%, rgba(250, 253, 255, 1) 16%, rgba(215, 240, 255, 1) 30%, rgba(175, 226, 255, .98) 42%, rgba(110, 205, 250, .92) 54%, rgba(70, 185, 240, .85) 64%, rgba(30, 150, 215, .7) 76%, rgba(10, 90, 140, .36) 88%, rgba(4, 40, 64, 0) 100%),
+      radial-gradient(500px 1700px at 100% 370px, rgba(255, 255, 255, 1) 0%, rgba(250, 253, 255, 1) 16%, rgba(215, 240, 255, 1) 30%, rgba(175, 226, 255, .98) 42%, rgba(110, 205, 250, .92) 54%, rgba(70, 185, 240, .85) 64%, rgba(30, 150, 215, .7) 76%, rgba(10, 90, 140, .36) 88%, rgba(4, 40, 64, 0) 100%),
+      linear-gradient(180deg, rgba(7, 49, 72, 1) 0%, rgba(7, 49, 72, 1) 100%);
   }
 }
+
 /* Der alte Weisssaum .lvev-e6::after ist ersatzlos entfallen, er war
    selbst Teil der Kante (Grund 3 oben). Kein anderer Stil setzt ihn. */
 
@@ -3910,6 +4710,7 @@
    0-2-0 setzt (Plugin lvlup-fixes, Prioritaet 1200).
    ============================================================ */
 @media (min-width: 1024px) {
+
   /* 17.08.2026 Kundenbefund (Zoom raus / sehr breiter Viewport): die
      sichtbaren ::before/::after unten haben einen FESTEN 1350px-Radius,
      verankert an den Sektionsraendern (0px/100% der vollen Sektionsbreite,
@@ -3933,8 +4734,8 @@
      Nachschub bleibt beim normalen Zoom also unsichtbar. */
   .lvf-page .lvev-e6 .lvev-e6-glow--left {
     background:
-      radial-gradient(100% 1400px at 0px 434px, rgba(255,255,255,1) 0%,rgba(250,253,255,1) 16%,rgba(215,240,255,1) 30%,rgba(175,226,255,.98) 42%,rgba(110,205,250,.92) 54%,rgba(70,185,240,.85) 64%,rgba(30,150,215,.7) 76%,rgba(10,90,140,.36) 88%,rgba(4,40,64,0) 100%),
-      radial-gradient(100% 1400px at 100% 434px, rgba(255,255,255,1) 0%,rgba(250,253,255,1) 16%,rgba(215,240,255,1) 30%,rgba(175,226,255,.98) 42%,rgba(110,205,250,.92) 54%,rgba(70,185,240,.85) 64%,rgba(30,150,215,.7) 76%,rgba(10,90,140,.36) 88%,rgba(4,40,64,0) 100%);
+      radial-gradient(100% 1400px at 0px 434px, rgba(255, 255, 255, 1) 0%, rgba(250, 253, 255, 1) 16%, rgba(215, 240, 255, 1) 30%, rgba(175, 226, 255, .98) 42%, rgba(110, 205, 250, .92) 54%, rgba(70, 185, 240, .85) 64%, rgba(30, 150, 215, .7) 76%, rgba(10, 90, 140, .36) 88%, rgba(4, 40, 64, 0) 100%),
+      radial-gradient(100% 1400px at 100% 434px, rgba(255, 255, 255, 1) 0%, rgba(250, 253, 255, 1) 16%, rgba(215, 240, 255, 1) 30%, rgba(175, 226, 255, .98) 42%, rgba(110, 205, 250, .92) 54%, rgba(70, 185, 240, .85) 64%, rgba(30, 150, 215, .7) 76%, rgba(10, 90, 140, .36) 88%, rgba(4, 40, 64, 0) 100%);
     background-blend-mode: screen;
   }
 
@@ -3945,8 +4746,8 @@
     inset: 0;
     pointer-events: none;
     background:
-      radial-gradient(1350px 1400px at 0px 434px, rgba(255,255,255,1) 0%,rgba(250,253,255,1) 16%,rgba(215,240,255,1) 30%,rgba(175,226,255,.98) 42%,rgba(110,205,250,.92) 54%,rgba(70,185,240,.85) 64%,rgba(30,150,215,.7) 76%,rgba(10,90,140,.36) 88%,rgba(4,40,64,0) 100%),
-      radial-gradient(1350px 1400px at 100% 434px, rgba(255,255,255,1) 0%,rgba(250,253,255,1) 16%,rgba(215,240,255,1) 30%,rgba(175,226,255,.98) 42%,rgba(110,205,250,.92) 54%,rgba(70,185,240,.85) 64%,rgba(30,150,215,.7) 76%,rgba(10,90,140,.36) 88%,rgba(4,40,64,0) 100%);
+      radial-gradient(1350px 1400px at 0px 434px, rgba(255, 255, 255, 1) 0%, rgba(250, 253, 255, 1) 16%, rgba(215, 240, 255, 1) 30%, rgba(175, 226, 255, .98) 42%, rgba(110, 205, 250, .92) 54%, rgba(70, 185, 240, .85) 64%, rgba(30, 150, 215, .7) 76%, rgba(10, 90, 140, .36) 88%, rgba(4, 40, 64, 0) 100%),
+      radial-gradient(1350px 1400px at 100% 434px, rgba(255, 255, 255, 1) 0%, rgba(250, 253, 255, 1) 16%, rgba(215, 240, 255, 1) 30%, rgba(175, 226, 255, .98) 42%, rgba(110, 205, 250, .92) 54%, rgba(70, 185, 240, .85) 64%, rgba(30, 150, 215, .7) 76%, rgba(10, 90, 140, .36) 88%, rgba(4, 40, 64, 0) 100%);
   }
 
   /* ::before bleibt der bisherige, normal gestapelte Zustand und traegt
@@ -3969,7 +4770,9 @@
    elite; der Entwurf verwendet ueberall denselben Grad. Nur ab 1024 px,
    darunter faellt der Grad per clamp kleiner aus und die Zeile bricht um. */
 @media (min-width: 1024px) {
-  .lvev-e6 h2.lvev-e6-title { line-height: 0.677; }
+  .lvev-e6 h2.lvev-e6-title {
+    line-height: 0.677;
+  }
 }
 
 
@@ -3984,10 +4787,16 @@
    spalte landet per space-between auf x731,5 (Soll x731).
    ============================================================ */
 @media (min-width: 1024px) {
+
   /* Soll x367, gemessen x310 */
-  .lvev-e6-col--left { margin-left: 57px; }
+  .lvev-e6-col--left {
+    margin-left: 57px;
+  }
+
   /* Soll rechte Kante x1404, gemessen x1450 */
-  .lvev-e6-col--right { margin-right: 46px; }
+  .lvev-e6-col--right {
+    margin-right: 46px;
+  }
 }
 
 
@@ -4158,6 +4967,7 @@
     radial-gradient(46% 42% at 94% 24%, rgba(40, 180, 255, 0.46) 0%, rgba(18, 169, 255, 0.2) 42%, rgba(18, 169, 255, 0) 72%),
     radial-gradient(70% 46% at 50% 108%, rgba(167, 223, 255, 0.2) 0%, rgba(4, 48, 74, 0) 72%);
 }
+
 @media (max-width: 767px) {
   .lvev-e7 .lvev-e7-bg {
     background:
@@ -4205,7 +5015,9 @@
 
 /* Mobile: Zeilenfall "Frequently Asked" / "Questions" */
 @media (max-width: 767px) {
-  .lvev-e7 .lvev-e7-title-accent { display: block; }
+  .lvev-e7 .lvev-e7-title-accent {
+    display: block;
+  }
 }
 
 .lvev-e7 .lvev-e7-sub {
@@ -4271,11 +5083,12 @@
   z-index: 0;
   pointer-events: none;
   background: radial-gradient(ellipse 70% 260px at 62% 6px,
-    rgba(0, 162, 255, 0.06) 0%, rgba(0, 162, 255, 0) 68%);
+      rgba(0, 162, 255, 0.06) 0%, rgba(0, 162, 255, 0) 68%);
 }
+
 .lvev-e7 .lvev-e7-item.is-open .lvev-e7-glow {
   background: radial-gradient(ellipse 71% 285px at 22% 2px,
-    rgba(0, 162, 255, 0.16) 0%, rgba(0, 162, 255, 0) 70%);
+      rgba(0, 162, 255, 0.16) 0%, rgba(0, 162, 255, 0) 70%);
 }
 
 /* Zwei Licht-Striche auf der Oberkante der offenen Karte */
@@ -4290,10 +5103,20 @@
   pointer-events: none;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 50%, rgba(255, 255, 255, 0) 100%);
 }
-.lvev-e7 .lvev-e7-line--a { left: var(--e7-line-a); }
-.lvev-e7 .lvev-e7-line--b { left: var(--e7-line-b); }
 
-.lvev-e7 .lvev-e7-qh { margin: 0; font: inherit; font-weight: inherit; }
+.lvev-e7 .lvev-e7-line--a {
+  left: var(--e7-line-a);
+}
+
+.lvev-e7 .lvev-e7-line--b {
+  left: var(--e7-line-b);
+}
+
+.lvev-e7 .lvev-e7-qh {
+  margin: 0;
+  font: inherit;
+  font-weight: inherit;
+}
 
 .lvev-e7 .lvev-e7-q {
   position: relative;
@@ -4342,9 +5165,18 @@
   width: var(--e7-ico);
   height: var(--e7-ico);
 }
-.lvev-e7 .lvev-e7-ico--minus { display: none; }
-.lvev-e7 .lvev-e7-item.is-open .lvev-e7-ico--plus { display: none; }
-.lvev-e7 .lvev-e7-item.is-open .lvev-e7-ico--minus { display: block; }
+
+.lvev-e7 .lvev-e7-ico--minus {
+  display: none;
+}
+
+.lvev-e7 .lvev-e7-item.is-open .lvev-e7-ico--plus {
+  display: none;
+}
+
+.lvev-e7 .lvev-e7-item.is-open .lvev-e7-ico--minus {
+  display: block;
+}
 
 .lvev-e7 .lvev-e7-panel {
   position: relative;
@@ -4354,11 +5186,13 @@
   visibility: hidden;
   transition: grid-template-rows 0.32s ease, visibility 0s linear 0.32s;
 }
+
 .lvev-e7 .lvev-e7-item.is-open .lvev-e7-panel {
   grid-template-rows: 1fr;
   visibility: visible;
   transition: grid-template-rows 0.32s ease, visibility 0s linear 0s;
 }
+
 .lvev-e7 .lvev-e7-panel-in {
   min-height: 0;
   overflow: hidden;
@@ -4374,12 +5208,21 @@
   letter-spacing: 0.06em;
   color: #858585;
 }
-.lvev-e7 .lvev-e7-answer p + p { margin-top: calc(1em * var(--e7-a-lh)); }
+
+.lvev-e7 .lvev-e7-answer p+p {
+  margin-top: calc(1em * var(--e7-a-lh));
+}
 
 /* Zustaende */
 .lvev-e7 .lvev-e7-q:hover .lvev-e7-btn,
-.lvev-e7 .lvev-e7-q:focus-visible .lvev-e7-btn { filter: brightness(1.12); }
-.lvev-e7 .lvev-e7-item:hover::after { opacity: 0.75; }
+.lvev-e7 .lvev-e7-q:focus-visible .lvev-e7-btn {
+  filter: brightness(1.12);
+}
+
+.lvev-e7 .lvev-e7-item:hover::after {
+  opacity: 0.75;
+}
+
 .lvev-e7 .lvev-e7-q:focus-visible {
   outline: 2px solid var(--lvf-blue-light);
   outline-offset: -3px;
@@ -4418,6 +5261,7 @@
   backdrop-filter: blur(41px);
   transition: filter 0.2s ease;
 }
+
 /* Touch-Ziel >= 44px, ohne die gezeichnete Hoehe zu veraendern */
 .lvev-e7 .lvev-e7-pill::before,
 .lvev-e7 .lvev-e7-link::before {
@@ -4462,8 +5306,14 @@
   transition: color 0.2s ease;
 }
 
-.lvev-e7 .lvev-e7-pill:hover { filter: brightness(1.35); }
-.lvev-e7 .lvev-e7-link:hover { color: var(--lvf-blue-light); }
+.lvev-e7 .lvev-e7-pill:hover {
+  filter: brightness(1.35);
+}
+
+.lvev-e7 .lvev-e7-link:hover {
+  color: var(--lvf-blue-light);
+}
+
 .lvev-e7 .lvev-e7-pill:focus-visible,
 .lvev-e7 .lvev-e7-link:focus-visible {
   outline: 2px solid var(--lvf-blue-light);
@@ -4473,7 +5323,9 @@
 
 /* Sehr schmale Geraete: Karten-Innenabstand leicht reduzieren */
 @media (max-width: 380px) {
-  .lvev-e7 { --e7-pad-x: 16px; }
+  .lvev-e7 {
+    --e7-pad-x: 16px;
+  }
 }
 
 
@@ -4528,18 +5380,28 @@
    ============================================================ */
 
 @media (min-width: 1024px) {
+
   /* Kopfblock: Pille -> Titel soll 11 px sein. Der Abstand kam bisher aus
      18 px Rand der Pille plus 33 px Flex-Abstand. Rand raus, Abstand 11. */
-  .lvev-e7 .lvev-e7-kicker { margin-bottom: 0; }
+  .lvev-e7 .lvev-e7-kicker {
+    margin-bottom: 0;
+  }
 
   /* Titel -> Unterzeile soll 25 px sein: 11 px Flex-Abstand plus 14 hier. */
-  .lvev-e7 .lvev-e7-sub { margin-top: 14px; }
+  .lvev-e7 .lvev-e7-sub {
+    margin-top: 14px;
+  }
 
   /* Offene Karte: im Mockup 190 px hoch, gebaut waren 202. Gemessen fehlen
      7 px zwischen Frage und Antwort und 5 px unter der Antwort. Die
      geschlossenen Karten bleiben unangetastet, ihr Raster stimmt. */
-  .lvev-e7 .lvev-e7-item.is-open .lvev-e7-q { padding-bottom: 17px; }
-  .lvev-e7 .lvev-e7-answer { padding-bottom: 19px; }
+  .lvev-e7 .lvev-e7-item.is-open .lvev-e7-q {
+    padding-bottom: 17px;
+  }
+
+  .lvev-e7 .lvev-e7-answer {
+    padding-bottom: 19px;
+  }
 }
 
 
@@ -4571,21 +5433,21 @@
 @media (min-width: 1024px) {
   .lvf-page .lvev-e7 .lvev-e7-bg {
     -webkit-mask-image: linear-gradient(180deg,
-      rgba(0, 0, 0, 0.967) 0%,
-      rgba(0, 0, 0, 0.94) 17.5%,
-      rgba(0, 0, 0, 0.89) 35%,
-      rgba(0, 0, 0, 0.77) 52.5%,
-      rgba(0, 0, 0, 0.65) 70%,
-      rgba(0, 0, 0, 0.62) 87.5%,
-      rgba(0, 0, 0, 0.66) 100%);
+        rgba(0, 0, 0, 0.967) 0%,
+        rgba(0, 0, 0, 0.94) 17.5%,
+        rgba(0, 0, 0, 0.89) 35%,
+        rgba(0, 0, 0, 0.77) 52.5%,
+        rgba(0, 0, 0, 0.65) 70%,
+        rgba(0, 0, 0, 0.62) 87.5%,
+        rgba(0, 0, 0, 0.66) 100%);
     mask-image: linear-gradient(180deg,
-      rgba(0, 0, 0, 0.967) 0%,
-      rgba(0, 0, 0, 0.94) 17.5%,
-      rgba(0, 0, 0, 0.89) 35%,
-      rgba(0, 0, 0, 0.77) 52.5%,
-      rgba(0, 0, 0, 0.65) 70%,
-      rgba(0, 0, 0, 0.62) 87.5%,
-      rgba(0, 0, 0, 0.66) 100%);
+        rgba(0, 0, 0, 0.967) 0%,
+        rgba(0, 0, 0, 0.94) 17.5%,
+        rgba(0, 0, 0, 0.89) 35%,
+        rgba(0, 0, 0, 0.77) 52.5%,
+        rgba(0, 0, 0, 0.65) 70%,
+        rgba(0, 0, 0, 0.62) 87.5%,
+        rgba(0, 0, 0, 0.66) 100%);
   }
 }
 
@@ -4646,11 +5508,11 @@
   .lvf-page .lvev-e7 .lvev-e7-bg::before {
     background:
       /* linkes Querband: rx 1350 -> 700 */
-      radial-gradient(700px 1400px at 0px -875px, rgba(255,255,255,1) 0%,rgba(250,253,255,1) 16%,rgba(215,240,255,1) 30%,rgba(175,226,255,.98) 42%,rgba(110,205,250,.92) 54%,rgba(70,185,240,.85) 64%,rgba(30,150,215,.7) 76%,rgba(10,90,140,.36) 88%,rgba(4,40,64,0) 100%),
+      radial-gradient(700px 1400px at 0px -875px, rgba(255, 255, 255, 1) 0%, rgba(250, 253, 255, 1) 16%, rgba(215, 240, 255, 1) 30%, rgba(175, 226, 255, .98) 42%, rgba(110, 205, 250, .92) 54%, rgba(70, 185, 240, .85) 64%, rgba(30, 150, 215, .7) 76%, rgba(10, 90, 140, .36) 88%, rgba(4, 40, 64, 0) 100%),
       /* rechtes Querband: rx 1350 -> 500, ry 2000 -> 1700 */
-      radial-gradient(500px 1700px at 100% -875px, rgba(255,255,255,1) 0%,rgba(250,253,255,1) 16%,rgba(215,240,255,1) 30%,rgba(175,226,255,.98) 42%,rgba(110,205,250,.92) 54%,rgba(70,185,240,.85) 64%,rgba(30,150,215,.7) 76%,rgba(10,90,140,.36) 88%,rgba(4,40,64,0) 100%),
+      radial-gradient(500px 1700px at 100% -875px, rgba(255, 255, 255, 1) 0%, rgba(250, 253, 255, 1) 16%, rgba(215, 240, 255, 1) 30%, rgba(175, 226, 255, .98) 42%, rgba(110, 205, 250, .92) 54%, rgba(70, 185, 240, .85) 64%, rgba(30, 150, 215, .7) 76%, rgba(10, 90, 140, .36) 88%, rgba(4, 40, 64, 0) 100%),
       /* Sockel der Seitenmitte, Soll (7,46,69) an der Naht bis (0,4,7) bei y 7500 */
-      linear-gradient(180deg, rgba(7,49,72,1) 0%, rgba(3,34,51,1) 9%, rgba(2,21,33,1) 22%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 100%);
+      linear-gradient(180deg, rgba(7, 49, 72, 1) 0%, rgba(3, 34, 51, 1) 9%, rgba(2, 21, 33, 1) 22%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 100%);
   }
 }
 
@@ -4698,6 +5560,7 @@
       Element MIT 2x32 Innenabstand, richtig sind 1120 + 64 = 1184.
    ============================================================ */
 @media (min-width: 1024px) {
+
   /* Pille 5 px hoeher: Soll-Oberkante y7160, gemessen y7164,8 */
   .lvev-e7 {
     --e7-pt: 60px;
@@ -4728,9 +5591,10 @@
       linear-gradient(6deg, rgba(0, 162, 255, 0) 35%, rgba(0, 162, 255, 0.07) 100%),
       rgba(0, 0, 0, 0.92);
   }
+
   .lvev-e7 .lvev-e7-item.is-open .lvev-e7-glow {
     background: radial-gradient(ellipse 71% 285px at 22% 2px,
-      rgba(0, 162, 255, 0.05) 0%, rgba(0, 162, 255, 0) 70%);
+        rgba(0, 162, 255, 0.05) 0%, rgba(0, 162, 255, 0) 70%);
   }
 }
 
@@ -4848,6 +5712,7 @@
     radial-gradient(42% 58% at 93% 52%, rgba(50, 185, 255, 0.42) 0%, rgba(18, 169, 255, 0.18) 42%, rgba(18, 169, 255, 0) 72%),
     radial-gradient(64% 42% at 50% 112%, rgba(167, 223, 255, 0.2) 0%, rgba(4, 48, 74, 0) 72%);
 }
+
 @media (max-width: 767px) {
   .lvev-e8 .lvev-e8-bg {
     background:
@@ -4923,8 +5788,15 @@
   filter: drop-shadow(0 0 34px rgba(0, 162, 255, 0.30));
   pointer-events: none;
 }
-.lvev-e8 .lvev-e8-arrow--l { left: -90px; }
-.lvev-e8 .lvev-e8-arrow--r { right: -90px; }
+
+.lvev-e8 .lvev-e8-arrow--l {
+  left: -90px;
+}
+
+.lvev-e8 .lvev-e8-arrow--r {
+  right: -90px;
+}
+
 @media (max-width: 767px) {
   .lvev-e8 .lvev-e8-arrow {
     bottom: -112px;
@@ -4932,8 +5804,14 @@
     height: 262px;
     opacity: 0.5;
   }
-  .lvev-e8 .lvev-e8-arrow--l { left: -120px; }
-  .lvev-e8 .lvev-e8-arrow--r { right: -120px; }
+
+  .lvev-e8 .lvev-e8-arrow--l {
+    left: -120px;
+  }
+
+  .lvev-e8 .lvev-e8-arrow--r {
+    right: -120px;
+  }
 }
 
 .lvev-e8 .lvev-e8-content {
@@ -5082,6 +5960,7 @@
   background: var(--lvf-grad-blue-btn);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
+
 /* Feine blaue Mittelkontur (Spec: 0.5px Verlauf, CENTER) */
 .lvev-e8 .lvev-e8-btn--primary::after {
   content: "";
@@ -5107,6 +5986,7 @@
   border-radius: 6px;
   background: #060606;
 }
+
 .lvev-e8 .lvev-e8-btn-ico svg {
   width: 18px;
   height: 18px;
@@ -5127,7 +6007,10 @@
     0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
-.lvev-e8 .lvev-e8-btn:hover { filter: brightness(1.12); }
+.lvev-e8 .lvev-e8-btn:hover {
+  filter: brightness(1.12);
+}
+
 .lvev-e8 .lvev-e8-btn:focus-visible {
   outline: 2px solid var(--lvf-blue-light);
   outline-offset: 3px;
@@ -5141,6 +6024,7 @@
     width: 100%;
     max-width: 340px;
   }
+
   .lvev-e8 .lvev-e8-btn {
     width: 100%;
     min-height: 48px;
@@ -5161,6 +6045,7 @@
    ============================================================ */
 
 @media (min-width: 1024px) {
+
   /* Oben 82, unten 89: im Mockup sitzt der Titel enger am Kartenrand als die
      Buttons. Der x-Wert bleibt --e8-card-pad-x. */
   .lvev-e8 .lvev-e8-content {
@@ -5170,7 +6055,9 @@
   /* Kennzahl: Zeilenkasten war 41 px hoch (37 x 1.1) und schob das Label
      nach unten. Im Mockup liegen Zahl und Label 9 px enger beieinander,
      die Zahl selbst ist gleich gross (Tintenhoehe 25 px hier wie dort). */
-  .lvev-e8 .lvev-e8-stat-num { line-height: 0.87; }
+  .lvev-e8 .lvev-e8-stat-num {
+    line-height: 0.87;
+  }
 }
 
 /* ============================================================
@@ -5250,8 +6137,16 @@
     opacity: 1;
     filter: none;
   }
-  .lvev-e8 .lvev-e8-card .lvev-e8-arrow--l { left: 40px; right: auto; }
-  .lvev-e8 .lvev-e8-card .lvev-e8-arrow--r { right: 40px; left: auto; }
+
+  .lvev-e8 .lvev-e8-card .lvev-e8-arrow--l {
+    left: 40px;
+    right: auto;
+  }
+
+  .lvev-e8 .lvev-e8-card .lvev-e8-arrow--r {
+    right: 40px;
+    left: auto;
+  }
 }
 
 
@@ -5281,7 +6176,11 @@
        --lvf-grad-blue-btn in shell.css. */
     background-image: var(--lvf-grad-blue-btn);
   }
-  .lvf-page .lvev-e8 .lvev-e8-btn--primary .lvev-e8-btn-text { color: rgb(6, 6, 6); }
+
+  .lvf-page .lvev-e8 .lvev-e8-btn--primary .lvev-e8-btn-text {
+    color: rgb(6, 6, 6);
+  }
+
   .lvf-page .lvev-e8 .lvev-e8-btn--ghost {
     background-color: rgba(6, 18, 24, 0.9);
     background-image: none;
@@ -5351,32 +6250,56 @@
   .lvev-e8 .lvev-e8-bg.lvev-e8-bg::before {
     background:
       radial-gradient(400px 1200px at 0% 100%,
-        rgba(5, 160, 254, 0.474) 0%,     /* x   0  Soll 121 (fortgeschrieben) */
-        rgba(5, 160, 254, 0.449) 4%,     /* x  16  Soll 114 */
-        rgba(5, 160, 254, 0.354) 12%,    /* x  48  Soll  90 */
-        rgba(5, 160, 254, 0.272) 20%,    /* x  80  Soll  69 */
-        rgba(5, 160, 254, 0.201) 28%,    /* x 112  Soll  51 */
-        rgba(5, 160, 254, 0.146) 36%,    /* x 144  Soll  37 */
-        rgba(5, 160, 254, 0.098) 44%,    /* x 176  Soll  25 */
-        rgba(5, 160, 254, 0.059) 56%,    /* x 224  Soll  15 */
-        rgba(5, 160, 254, 0.039) 68%,    /* x 272  Soll  10 */
-        rgba(5, 160, 254, 0.028) 76%,    /* x 304  Soll   7 */
-        rgba(5, 160, 254, 0.024) 84%,    /* x 336  Soll   6 */
-        rgba(5, 160, 254, 0.016) 92%,    /* x 368  Soll   4 */
+        rgba(5, 160, 254, 0.474) 0%,
+        /* x   0  Soll 121 (fortgeschrieben) */
+        rgba(5, 160, 254, 0.449) 4%,
+        /* x  16  Soll 114 */
+        rgba(5, 160, 254, 0.354) 12%,
+        /* x  48  Soll  90 */
+        rgba(5, 160, 254, 0.272) 20%,
+        /* x  80  Soll  69 */
+        rgba(5, 160, 254, 0.201) 28%,
+        /* x 112  Soll  51 */
+        rgba(5, 160, 254, 0.146) 36%,
+        /* x 144  Soll  37 */
+        rgba(5, 160, 254, 0.098) 44%,
+        /* x 176  Soll  25 */
+        rgba(5, 160, 254, 0.059) 56%,
+        /* x 224  Soll  15 */
+        rgba(5, 160, 254, 0.039) 68%,
+        /* x 272  Soll  10 */
+        rgba(5, 160, 254, 0.028) 76%,
+        /* x 304  Soll   7 */
+        rgba(5, 160, 254, 0.024) 84%,
+        /* x 336  Soll   6 */
+        rgba(5, 160, 254, 0.016) 92%,
+        /* x 368  Soll   4 */
         rgba(5, 160, 254, 0) 100%),
       radial-gradient(400px 1200px at 100% 100%,
-        rgba(5, 160, 254, 0.504) 0%,     /* rechte Rinne, Kern 7 Stufen heller */
-        rgba(5, 160, 254, 0.476) 4%,     /* Soll 121 */
-        rgba(5, 160, 254, 0.374) 12%,    /* Soll  95 */
-        rgba(5, 160, 254, 0.280) 20%,    /* Soll  71 */
-        rgba(5, 160, 254, 0.205) 28%,    /* Soll  52 */
-        rgba(5, 160, 254, 0.146) 36%,    /* Soll  37 */
-        rgba(5, 160, 254, 0.098) 44%,    /* Soll  25 */
-        rgba(5, 160, 254, 0.059) 56%,    /* Soll  15 */
-        rgba(5, 160, 254, 0.039) 68%,    /* Soll  10 */
-        rgba(5, 160, 254, 0.028) 76%,    /* Soll   7 */
-        rgba(5, 160, 254, 0.024) 84%,    /* Soll   6 */
-        rgba(5, 160, 254, 0.016) 92%,    /* Soll   4 */
+        rgba(5, 160, 254, 0.504) 0%,
+        /* rechte Rinne, Kern 7 Stufen heller */
+        rgba(5, 160, 254, 0.476) 4%,
+        /* Soll 121 */
+        rgba(5, 160, 254, 0.374) 12%,
+        /* Soll  95 */
+        rgba(5, 160, 254, 0.280) 20%,
+        /* Soll  71 */
+        rgba(5, 160, 254, 0.205) 28%,
+        /* Soll  52 */
+        rgba(5, 160, 254, 0.146) 36%,
+        /* Soll  37 */
+        rgba(5, 160, 254, 0.098) 44%,
+        /* Soll  25 */
+        rgba(5, 160, 254, 0.059) 56%,
+        /* Soll  15 */
+        rgba(5, 160, 254, 0.039) 68%,
+        /* Soll  10 */
+        rgba(5, 160, 254, 0.028) 76%,
+        /* Soll   7 */
+        rgba(5, 160, 254, 0.024) 84%,
+        /* Soll   6 */
+        rgba(5, 160, 254, 0.016) 92%,
+        /* Soll   4 */
         rgba(5, 160, 254, 0) 100%);
   }
 }

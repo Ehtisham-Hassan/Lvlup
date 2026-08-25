@@ -54,7 +54,7 @@ export default function Page() {
               </span>
               <span className="lvev-e1-chip-label">Max Funding</span>
             </li>
-            <li className="lvev-e1-chip lvev-e1-chip--drawdown">
+            {/* <li className="lvev-e1-chip lvev-e1-chip--drawdown">
               <span className="lvev-e1-chip-top">
                 <svg className="lvev-e1-chip-ico lvev-e1-chip-ico--drawdown" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" fill="url(#lvev-e1-ig)" aria-hidden="true" focusable="false">
                   <path fillRule="evenodd" clipRule="evenodd" d="M6.2 2.2h11.6a4 4 0 0 1 4 4v11.6a4 4 0 0 1-4 4H6.2a4 4 0 0 1-4-4V6.2a4 4 0 0 1 4-4Zm.2 3.6a1.6 1.6 0 0 0-1.6 1.6v3.4c0 .9.7 1.6 1.6 1.6h11.2c.9 0 1.6-.7 1.6-1.6V7.4a1.6 1.6 0 0 0-1.6-1.6H6.4Z" />
@@ -65,19 +65,34 @@ export default function Page() {
                 <span className="lvev-e1-chip-num">5%</span>
               </span>
               <span className="lvev-e1-chip-label">Drawdown</span>
-            </li>
+            </li> */}
             <li className="lvev-e1-chip lvev-e1-chip--payout">
               <span className="lvev-e1-chip-top">
                 <svg className="lvev-e1-chip-ico lvev-e1-chip-ico--payout" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" fill="url(#lvev-e1-ig)" aria-hidden="true" focusable="false">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M6.2 2.2h11.6a4 4 0 0 1 4 4v11.6a4 4 0 0 1-4 4H6.2a4 4 0 0 1-4-4V6.2a4 4 0 0 1 4-4Zm.2 3.6a1.6 1.6 0 0 0-1.6 1.6v3.4c0 .9.7 1.6 1.6 1.6h11.2c.9 0 1.6-.7 1.6-1.6V7.4a1.6 1.6 0 0 0-1.6-1.6H6.4Z" />
-                  <path d="M6.3 9.3h2.1l1.2-1.5 1.5 2.7 1.1-1.2h5.5" fill="none" stroke="url(#lvev-e1-ig)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <circle cx="6.9" cy="17.2" r="1.25" />
-                  <circle cx="10.3" cy="17.2" r="1.25" />
+                  <path d="M3 3h7v7H3V3zm11 0h7v7h-7V3zM3 14h7v7H3v-7zm13 0h3v-2h-3v-3h-2v3h-3v2h3v3h2v-3z" />
                 </svg>
-                <span className="lvev-e1-chip-num">10%</span>
+                <span className="lvev-e1-chip-num">Five</span>
               </span>
-              <span className="lvev-e1-chip-label">Payout Access</span>
+              <span className="lvev-e1-chip-label">Min Trading Day</span>
             </li>
+            <li className="lvev-e1-chip lvev-e1-chip--support">
+              <span className="lvev-e1-chip-top">
+                <svg className="lvev-e1-chip-ico lvev-e1-chip-ico--support" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" fill="url(#lvev-e1-ig)" aria-hidden="true" focusable="false">
+                  <path d="M12 2C6.48 2 2 6.48 2 12v6c0 1.1.9 2 2 2h2v-8H4v-0.65C4 7.29 7.58 4 12 4s8 3.29 8 7.35V12h-2v8h2c1.1 0 2-.9 2-2v-6c0-5.52-4.48-10-10-10Z" />
+                </svg>
+                <span className="lvev-e1-chip-num">24/7</span>
+              </span>
+              <span className="lvev-e1-chip-label">Live Support</span>
+            </li>
+            {/* <li className="lvev-e1-chip lvev-e1-chip--days">
+              <span className="lvev-e1-chip-top">
+                <svg className="lvev-e1-chip-ico lvev-e1-chip-ico--days" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" fill="url(#lvev-e1-ig)" aria-hidden="true" focusable="false">
+                  <path d="M3 3h7v7H3V3zm11 0h7v7h-7V3zM3 14h7v7H3v-7zm13 0h3v-2h-3v-3h-2v3h-3v2h3v3h2v-3z" />
+                </svg>
+                <span className="lvev-e1-chip-num lvev-e1-chip-num--five">Five</span>
+              </span>
+              <span className="lvev-e1-chip-label">Min Trading Day</span>
+            </li> */}
           </ul>
           <div className="lvf-container lvev-e1-hero">
             <p className="lvev-e1-badge">
@@ -98,7 +113,7 @@ export default function Page() {
                 </span>
                 <span className="lvev-e1-btn-label">View Account Options</span>
               </a>
-              <a className="lvev-e1-btn lvev-e1-btn--ghost" href="rules.html">Review Trading Rules</a>
+              <a className="lvev-e1-btn lvev-e1-btn--ghost" href="rules.html" style={{ padding: '12px 24px', borderRadius: '14px', background: 'rgba(0,0,0,0.2)', boxShadow: 'inset 4px 6px 12px rgba(0,0,0,0.8), inset -2px -4px 12px rgba(0,164,255,0.8), 0 1px 2px rgba(255,255,255,0.1)', color: '#ffffff', border: 'none' }}>Review Trading Rules</a>
             </div>
           </div>
           {/* R3: Marquee-Band am Hero-Fuss. Referenz: zwei versetzte Laufzeilen,
@@ -127,7 +142,7 @@ export default function Page() {
           </defs></svg>
           <div className="lvf-container lvev-e2-inner">
             <div className="lvev-e2-head">
-              <h2 className="lvev-e2-title" id="lvev-e2-title">Choose Your <span className="lvev-e2-title-hl" style={{ fontWeight: 600 }}>Evaluation</span></h2>
+              <h2 className="lvev-e2-title" style={{ paddingTop: '10px' }} id="lvev-e2-title">Choose Your <span className="lvev-e2-title-hl" style={{ fontWeight: 600 }}>Evaluation</span></h2>
               <p className="lvev-e2-sub">Select an account size to configure your evaluation.</p>
             </div>
             <div className="lvev-e2-toggle" role="tablist" aria-label="Account type">
@@ -686,9 +701,12 @@ export default function Page() {
                   </a>
                   <a className="lvev-e2-card-note" href="https://lvlupfuturesdashboard.propaccount.com/en/challenges/purchase?category=35" target="_blank" rel="noopener">Configure and continue below ↓</a>
                 </div>
+
               </article>
+              <div style={{ paddingTop: "100px" }}>
+              </div>
             </div>{/* /.lvev-e2-cards */}
-            <div className="lvev-e2-foot">
+            <div className="lvev-e2-foot" >
               <a className="lvev-e2-build" href="https://lvlupfuturesdashboard.propaccount.com/en/sign-in/" target="_blank" rel="noopener" aria-label="Build Your Plan - opens the external dashboard in a new tab">
                 <span className="lvev-e2-build-t">Build Your Plan</span>
               </a>
@@ -700,7 +718,7 @@ export default function Page() {
           {/* R3-Korrekturen (Befunde 2/4/5/9): Akzentfarbe der H2, staerkerer
  Umgebungsglow an den Raendern und engere Sektionsabstaende auf Desktop.
  fragment.css darf in Runde 3 nicht geaendert werden, daher hier. */}
-          <style dangerouslySetInnerHTML={{ __html: "\n    .lvev-e3-title-accent {\n      background-image: var(--lvf-grad-blue);\n      -webkit-background-clip: text;\n      background-clip: text;\n      color: transparent;\n    }\n\n    /* Messpass 06.08.2026: der Soll-Halo ist an den Raendern fast WEISS\n       (y2200: 199-200,238,252) - weisse Kerne an den Seitenecken statt blau.\n       Element ist 170% breit: Seitenrand x0 = 21.5%, x1760 = 78.5%. */\n    .lvev-e3-glow {\n      background:\n        radial-gradient(30% 34% at 21.5% 18%, rgba(230, 247, 255, 0.95) 0%, rgba(120, 205, 255, 0.6) 40%, rgba(0, 162, 255, 0) 72%),\n        radial-gradient(30% 34% at 78.5% 18%, rgba(230, 247, 255, 0.95) 0%, rgba(120, 205, 255, 0.6) 40%, rgba(0, 162, 255, 0) 72%),\n        radial-gradient(26% 34% at 21% 58%, rgba(60, 180, 252, 0.7) 0%, rgba(0, 162, 255, 0) 72%),\n        radial-gradient(26% 34% at 79% 58%, rgba(60, 180, 252, 0.7) 0%, rgba(0, 162, 255, 0) 72%),\n        radial-gradient(30% 18% at 50% 4%, rgba(167, 223, 255, 0.3) 0%, rgba(167, 223, 255, 0) 75%),\n        radial-gradient(34% 20% at 12% 92%, rgba(4, 48, 74, 0.85) 0%, rgba(4, 48, 74, 0) 75%),\n        radial-gradient(34% 20% at 88% 92%, rgba(4, 48, 74, 0.85) 0%, rgba(4, 48, 74, 0) 75%);\n    }\n\n    @media (min-width: 1024px) {\n      .lvev-e3 {\n        --lvev-e3-pt: 14px;\n        --lvev-e3-pb: 22px;\n      }\n    }\n  " }} />
+          <style dangerouslySetInnerHTML={{ __html: "\n    .lvev-e3-title-accent {\n      background-image: var(--lvf-grad-blue);\n      -webkit-background-clip: text;\n      background-clip: text;\n      color: transparent;\n    }\n\n    .lvev-e3-glow::before,\n    .lvev-e3-glow::after {\n      display: none !important;\n    }\n\n    @media (min-width: 1024px) {\n      .lvev-e3 {\n        --lvev-e3-pt: 14px;\n        --lvev-e3-pb: 22px;\n      }\n    }\n  " }} />
           <svg className="lvev-e3-defs" width={0} height={0} aria-hidden="true" focusable="false">
             <defs>
               <linearGradient id="lvev-e3-ig" x1={0} y1={0} x2={0} y2={1}>
@@ -712,10 +730,10 @@ export default function Page() {
           {/* Weicher blauer Umgebungsschein (Ersatz fuer die riesigen "Star"-Vektoren).
  Laueft oben und unten ueber die Sektionsgrenzen hinaus weich aus -
  keine harte Kante zu den Nachbarsektionen. */}
-          <div className="lvev-e3-glow" aria-hidden="true" />
+          <div className="lvev-e3-glow" aria-hidden="true" style={{ background: 'radial-gradient(900px 2000px at 50% 2200px, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 95%, rgba(34, 167, 255, 0.30) 102%, rgba(34, 167, 255, 0.7) 110%, rgba(232, 241, 248, 1) 120%)', WebkitMaskImage: 'none', maskImage: 'none' }} />
           <div className="lvf-container">
             <div className="lvev-e3-head">
-              <h2 className="lvev-e3-title">Configure Your <span className="lvev-e3-title-accent">Evaluation</span></h2>
+              <h2 className="lvev-e3-title">Configure Your <span className="lvev-e3-title-accent" style={{ fontWeight: '600' }}>Evaluation</span></h2>
               <p className="lvev-e3-sub">Review your selected account and choose any optional enhancements before continuing.</p>
             </div>
             <div className="lvev-e3-grid">
@@ -875,12 +893,12 @@ export default function Page() {
             {/* Kicker-Pille am Bandende, leitet zum Kontenvergleich (e4) weiter */}
             <p className="lvev-e3-pillwrap"><a className="lvev-e3-pill" href="#compare">Accounts Comparison</a></p>
           </div>
-        </section>
-        {/* e4-compare */}
-        {/* Sektion e4-compare: Vergleichstabelle "Compare Evaluation Structures"
+          {/* </section> */}
+          {/* e4-compare */}
+          {/* Sektion e4-compare: Vergleichstabelle "Compare Evaluation Structures"
      Desktop exakt nach Figma (Frame 1760, Band y=3640..4930), Mobile gestapelt bzw.
      Tabelle horizontal scrollbar. Hintergrund transparent, lokale Glows laufen weich aus. */}
-        <section className="lvev-e4" id="compare">
+          {/* <section className="lvev-e4" id="compare"> */}
           {/* R3-Korrekturen (Befunde 2/5/7/9): Label-Pille dunkel wie im SOLL,
  staerkerer Umgebungsglow und engere Sektionsabstaende. fragment.css
  darf in Runde 3 nicht geaendert werden, daher hier. */}
@@ -889,8 +907,8 @@ export default function Page() {
           <div className="lvev-e4-glow lvev-e4-glow--right" aria-hidden="true" />
           <div className="lvev-e4-glow lvev-e4-glow--bottom" aria-hidden="true" />
           <div className="lvf-container">
-            <div className="lvev-e4-head">
-              <h2 className="lvev-e4-title">Compare Evaluation <span className="lvev-e4-title-accent" style={{ fontWeight: 600 }}>Structures</span></h2>
+            <div className="lvev-e4-head" style={{ paddingTop: '30px' }}>
+              <h2 className="lvev-e4-title" style={{ color: '#ffffff' }}>Compare Evaluation <span className="lvev-e4-title-accent" style={{ fontWeight: 600 }}>Structures</span></h2>
               <p className="lvev-e4-sub">Review the main differences across the four account sizes.</p>
             </div>
             <div className="lvev-e4-table-wrap">
@@ -1079,7 +1097,7 @@ export default function Page() {
                     <svg viewBox="0 0 32 32" width={32} height={32} fill="currentColor"><path fillRule="evenodd" d="M8.33 4.27 8.15 5.86 5.68 7.27 3.92 10.27 3.92 23.49 4.98 25.79 8.15 27.73 22.97 27.73 26.14 26.32 27.73 23.14 27.73 10.62 26.32 7.62 23.85 6.21 22.61 3.92 21.56 4.27 20.67 6.04 17.15 6.04 16.62 4.27 15.38 3.92 14.32 6.04 10.97 6.21 10.27 5.68 9.92 4.1ZM20.32 15.38 19.62 17.15 15.74 21.03 14.68 21.03 11.68 17.85 12.21 16.79 13.44 16.62 15.21 18.03 18.56 14.85 19.44 14.68Z" /></svg>
                   </div>
                   <div className="lvev-e5-text">
-                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}>No <span className="lvev-e5-card-title-accent">Daily Loss</span> Limit</h3>
+                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}>No <span className="lvev-e5-card-title-accent" style={{ fontWeight: '600' }}>Daily Loss</span> Limit</h3>
                     <p className="lvev-e5-card-desc">Trade without a separate daily loss limit while staying within your maximum drawdown.</p>
                   </div>
                 </article>
@@ -1089,7 +1107,7 @@ export default function Page() {
                     <svg viewBox="0 0 32 32" width={32} height={32} fill="currentColor"><path fillRule="evenodd" d="M7.98 19.79 4.1 22.97 4.1 27.55 4.63 27.9 8.15 27.55ZM10.62 19.62 10.44 27.55 14.32 27.73 14.68 22.97 13.44 22.44ZM20.85 18.2 20.32 18.2 16.62 22.08 16.62 27.37 17.32 27.9 20.85 27.37ZM27.02 11.86 22.97 15.56 22.97 27.37 23.67 27.9 27.2 27.37ZM30.02 4.45 29.49 3.92 23.49 4.27 23.14 5.15 24.55 7.09 15.03 16.79 10.09 12.21 8.86 12.03 2.86 17.85 1.98 19.26 2.86 20.85 4.63 20.67 9.03 16.09 9.56 16.09 13.8 20.32 15.38 20.67 26.85 9.21 28.79 10.62 29.67 10.09Z" /></svg>
                   </div>
                   <div className="lvev-e5-text">
-                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}><span className="lvev-e5-card-title-accent">40%</span> Consistency Rule</h3>
+                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}><span className="lvev-e5-card-title-accent" style={{ fontWeight: '600' }}>40%</span> Consistency Rule</h3>
                     <p className="lvev-e5-card-desc">Your best trading day cannot account for more than 40% of your total accumulated profit. Applies during the Evaluation Stage only. Funded Starter Accounts have no consistency rule.</p>
                   </div>
                 </article>
@@ -1099,7 +1117,7 @@ export default function Page() {
                     <svg viewBox="0 0 32 32" width={32} height={32} fill="currentColor"><path fillRule="evenodd" d="M19.97 17.5 19.79 20.32 21.56 22.08 27.02 22.26 28.08 21.2 28.26 17.32 27.02 15.91 21.56 16.09ZM22.26 18.03 23.32 18.03 24.02 18.91 22.97 20.32 21.56 19.26ZM21.2 4.1 18.91 4.1 8.33 10.44 5.68 10.44 4.63 11.15 4.27 25.79 4.98 27.2 5.86 27.73 25.61 27.73 26.85 26.67 26.67 23.49 21.38 23.32 18.38 20.5 18.38 17.85 19.97 15.56 22.08 14.5 27.02 14.15 26.67 11.15 24.73 9.92ZM23.85 9.92 23.32 10.44 19.62 10.09 22.08 8.33 22.61 8.33ZM20.67 4.98 20.14 6.21 12.74 10.44 10.97 10.09 19.79 4.8Z" /></svg>
                   </div>
                   <div className="lvev-e5-text">
-                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}>Payouts Every <span className="lvev-e5-card-title-accent">5 Days</span></h3>
+                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}>Payouts Every <span className="lvev-e5-card-title-accent" style={{ fontWeight: '600' }}>5 Days</span></h3>
                     <p className="lvev-e5-card-desc">Eligible funded traders can request payouts every 14 days on Lvlup Accounts and every 5 profitable days on Starter Accounts.</p>
                   </div>
                 </article>
@@ -1110,7 +1128,7 @@ export default function Page() {
                   </div>
                   <div className="lvev-e5-text">
                     <div className="lvev-e5-card-title-row">
-                      <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}><span className="lvev-e5-card-title-accent" >10%</span> Payout Cap</h3>
+                      <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}><span className="lvev-e5-card-title-accent" style={{ fontWeight: '600' }}>10%</span> Payout Cap</h3>
                       <span className="lvev-e5-badge">
                         <svg viewBox="0 0 24 24" width={10} height={10} fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" /></svg>
                         Industries Biggest
@@ -1125,7 +1143,7 @@ export default function Page() {
                     <svg viewBox="0 0 32 32" width={32} height={32} fill="currentColor"><path fillRule="evenodd" d="M5.68 9.92 5.15 11.33 9.74 27.55 10.97 27.9 11.33 26.49 6.57 10.09ZM24.02 6.57 20.67 8.33 11.33 8.15 9.92 8.33 7.8 9.74 10.62 20.67 12.56 19.44 15.38 18.91 22.97 19.44 25.43 18.56 26.85 17.15 26.49 16.26 22.79 13.44Z" /></svg>
                   </div>
                   <div className="lvev-e5-text">
-                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}><span className="lvev-e5-card-title-accent">EOD</span> Trailing Drawdown</h3>
+                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}><span className="lvev-e5-card-title-accent" style={{ fontWeight: '600' }}>EOD</span> Trailing Drawdown</h3>
                     <p className="lvev-e5-card-desc">Your maximum drawdown trails based on your end-of-day account balance.</p>
                   </div>
                 </article>
@@ -1135,14 +1153,14 @@ export default function Page() {
                     <svg viewBox="0 0 32 32" width={32} height={32} fill="currentColor"><path fillRule="evenodd" d="M4.63 7.62 3.92 8.51 3.92 25.26 4.63 26.49 6.21 27.02 7.8 25.79 7.8 7.98ZM9.74 5.15 9.03 26.85 25.08 27.02 27.37 25.79 27.9 24.2 27.9 5.68 27.02 4.98ZM13.27 21.38 13.97 20.5 23.49 20.5 24.2 21.2 23.32 21.91 13.8 21.91ZM13.27 17.15 13.8 16.62 23.67 16.62 24.02 17.5 23.49 18.03 13.97 18.2ZM13.44 13.8 13.8 12.74 23.32 12.74 24.2 13.44 23.32 14.15ZM13.27 9.39 13.8 8.86 23.67 8.86 24.02 9.74 23.49 10.27 14.15 10.44Z" /></svg>
                   </div>
                   <div className="lvev-e5-text">
-                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}>Hold Through <span className="lvev-e5-card-title-accent">News</span></h3>
+                    <h3 className="lvev-e5-card-title" style={{ color: '#ffffff' }}>Hold Through <span className="lvev-e5-card-title-accent" style={{ fontWeight: '600' }}>News</span></h3>
                     <p className="lvev-e5-card-desc">Trade through scheduled economic news without a news trading restriction.</p>
                   </div>
                 </article>
               </div>
             </div>
             <div className="lvev-e5-cta">
-              <a className="lvev-e5-pill" href="#compare">Account Structure</a>
+              <a className="lvev-e5-pill" href="#compare" style={{ background: '#020405', boxShadow: 'none', padding: '10px 32px' }}>Account Structure</a>
             </div>
           </div>
         </section>

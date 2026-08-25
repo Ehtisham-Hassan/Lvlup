@@ -44,7 +44,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/root.css" />
         <link rel="stylesheet" href="/assets/css/typography.css" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <BodyManager />
         <Header />
         <main>{children}</main>
