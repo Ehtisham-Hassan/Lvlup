@@ -16,13 +16,13 @@ export default function Header() {
                     <span className="lvf-s01-pill-text">LIMITED TIME OFFER</span>
                   </span>
                   <span className="lvf-s01-offer-full">
-                    <span className="lvf-s01-offer-hl">40% off</span> all Evaluations
+                    <span className="lvf-s01-offer-hl">50% off</span> all Evaluations
                   </span>
-                  <span className="lvf-s01-offer-short">40% off</span>
+                  <span className="lvf-s01-offer-short">50% off</span>
                 </div>
 
                 <div className="lvf-s01-code">
-                  <span className="lvf-s01-code-chip"><b>PALM40</b></span>
+                  <span className="lvf-s01-code-chip"><b>COMP</b></span>
                   <button className="lvf-s01-copy" type="button" data-lvf-copy="PALM40">
                     <span className="lvf-sr" data-lvf-copy-label="true">Copy discount code PALM40</span>
                     <svg className="lvf-s01-copy-ico" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false">
