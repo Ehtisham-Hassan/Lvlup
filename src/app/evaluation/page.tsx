@@ -730,7 +730,7 @@ export default function Page() {
           {/* Weicher blauer Umgebungsschein (Ersatz fuer die riesigen "Star"-Vektoren).
  Laueft oben und unten ueber die Sektionsgrenzen hinaus weich aus -
  keine harte Kante zu den Nachbarsektionen. */}
-          <div className="lvev-e3-glow" aria-hidden="true" style={{ background: 'radial-gradient(900px 2000px at 50% 2200px, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 95%, rgba(34, 167, 255, 0.30) 102%, rgba(34, 167, 255, 0.7) 110%, rgba(232, 241, 248, 1) 120%)', WebkitMaskImage: 'none', maskImage: 'none' }} />
+          <div className="lvev-e3-glow" aria-hidden="true" style={{ background: 'radial-gradient(60vw 2000px at 50% 2200px, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 95%, rgba(34, 167, 255, 0.30) 102%, rgba(34, 167, 255, 0.7) 110%, rgba(232, 241, 248, 1) 120%)', WebkitMaskImage: 'none', maskImage: 'none' }} />
           <div className="lvf-container">
             <div className="lvev-e3-head">
               <h2 className="lvev-e3-title">Configure Your <span className="lvev-e3-title-accent" style={{ fontWeight: '600' }}>Evaluation</span></h2>
@@ -903,7 +903,7 @@ export default function Page() {
           {/* R3-Korrekturen (Befunde 2/5/7/9): Label-Pille dunkel wie im SOLL,
  staerkerer Umgebungsglow und engere Sektionsabstaende. fragment.css
  darf in Runde 3 nicht geaendert werden, daher hier. */}
-          <style dangerouslySetInnerHTML={{ __html: "\n    .lvev-e4-pill {\n      position: relative;\n      background: #00121c;\n      box-shadow:\n        7px 3px 11px rgba(0, 0, 0, 0.36),\n        0 0 0 2px rgba(0, 0, 0, 0.25),\n        0 0 0 3px rgba(0, 0, 0, 0.16);\n    }\n\n    .lvev-e4-pill::before {\n      content: \"\";\n      position: absolute;\n      inset: 0;\n      border-radius: inherit;\n      padding: 0.5px;\n      background: linear-gradient(90deg, rgba(52, 176, 248, 0) 0%, #35aef4 53%, rgba(49, 169, 238, 0) 100%);\n      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);\n      -webkit-mask-composite: xor;\n      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);\n      mask-composite: exclude;\n      pointer-events: none;\n    }\n\n    .lvev-e4-glow--left {\n      background: radial-gradient(closest-side, rgba(0, 162, 255, 0.5) 0%, rgba(18, 169, 255, 0.3) 42%, rgba(4, 48, 74, 0) 72%);\n    }\n\n    .lvev-e4-glow--right {\n      background: radial-gradient(closest-side, rgba(18, 169, 255, 0.46) 0%, rgba(18, 169, 255, 0.28) 42%, rgba(4, 48, 74, 0) 72%);\n    }\n\n    .lvev-e4-glow--bottom {\n      background: radial-gradient(closest-side, rgba(140, 213, 255, 0.28) 0%, rgba(0, 162, 255, 0.16) 40%, rgba(0, 162, 255, 0) 72%);\n    }\n\n    @media (min-width: 768px) {\n      .lvev-e4 {\n        padding-top: 14px;\n        padding-bottom: 20px;\n      }\n    }\n  " }} />
+          <style dangerouslySetInnerHTML={{ __html: "\n    .lvev-e4-pill {\n      position: relative;\n      background: #00121c;\n      box-shadow:\n        7px 3px 11px rgba(0, 0, 0, 0.36),\n        0 0 0 2px rgba(0, 0, 0, 0.25),\n        0 0 0 3px rgba(0, 0, 0, 0.16);\n    }\n\n    .lvev-e4-pill::before {\n      content: \"\";\n      position: absolute;\n      inset: 0;\n      border-radius: inherit;\n      padding: 0.5px;\n      background: linear-gradient(90deg, rgba(52, 176, 248, 0) 0%, #35aef4 53%, rgba(49, 169, 238, 0) 100%);\n      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);\n      -webkit-mask-composite: xor;\n      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);\n      mask-composite: exclude;\n      pointer-events: none;\n    }\n\n    .lvev-e4-glow--left {\n      background: radial-gradient(closest-side, rgba(0, 162, 255, 0.5) 0%, rgba(18, 169, 255, 0.3) 42%, rgba(4, 48, 74, 0) 72%);\n    }\n\n    .lvev-e4-glow--right {\n      background: radial-gradient(closest-side, rgba(18, 169, 255, 0.46) 0%, rgba(18, 169, 255, 0.28) 42%, rgba(4, 48, 74, 0) 72%);\n    }\n\n    .lvev-e4-glow--bottom {\n      background: radial-gradient(closest-side, rgba(140, 213, 255, 0.28) 0%, rgba(0, 162, 255, 0.16) 40%, rgba(0, 162, 255, 0) 72%);\n    }\n\n    /* ==================================================== */\n    /* Exact Manual Table Colors (Matching Figma Matrix)    */\n    /* ==================================================== */\n    \n    .lvev-e4-table-wrap {\n      position: relative;\n      z-index: 10;\n      border: 1px solid rgba(255,255,255,0.06) !important;\n      border-radius: 12px !important;\n      overflow: hidden;\n      background: #01050a !important;\n    }\n    .lvev-e4-table-wrap::before {\n      display: none !important;\n    }\n    \n    .lvev-e4-table {\n      width: 100%;\n      background-color: transparent !important;\n      position: relative;\n      z-index: 5;\n      border-collapse: collapse !important;\n      border-spacing: 0 !important;\n    }\n\n    /* Reset default cell backgrounds and borders */\n    .lvev-e4-table th, .lvev-e4-table td {\n      border: none !important;\n      border-bottom: 1px solid rgba(255,255,255,0.04) !important;\n      background: transparent !important;\n    }\n\n    /* ==================================================== */\n    /* 1. THEAD (Headers)                                   */\n    /* ==================================================== */\n    .lvev-e4-row-groups th,\n    .lvev-e4-row-sizes th {\n      background-color: #01050a !important;\n    }\n\n    /* ==================================================== */\n    /* 2. TBODY NORMAL ROWS (Alternating Columns)           */\n    /* ==================================================== */\n\n    /* Feature Column (Col 1) */\n    .lvev-e4-table tbody tr th:nth-child(1) {\n      background-color: #01060c !important;\n    }\n\n    /* Dark Columns (2, 4, 6, 8 -> 25K, 100K) */\n    .lvev-e4-table tbody tr td:nth-child(2),\n    .lvev-e4-table tbody tr td:nth-child(4),\n    .lvev-e4-table tbody tr td:nth-child(6),\n    .lvev-e4-table tbody tr td:nth-child(8) {\n      background-color: #02060c !important;\n    }\n\n    /* Lighter Tinted Columns (3, 5, 7, 9 -> 50K, 150K) */\n    .lvev-e4-table tbody tr td:nth-child(3),\n    .lvev-e4-table tbody tr td:nth-child(5),\n    .lvev-e4-table tbody tr td:nth-child(7),\n    .lvev-e4-table tbody tr td:nth-child(9) {\n      background-color: #05101c !important;\n    }\n\n    /* ==================================================== */\n    /* 3. PRICE ROW HIGHLIGHTS                              */\n    /* ==================================================== */\n\n    /* ROW: One-Time Price (nth-child 2 in tbody) */\n    .lvev-e4-table tbody tr:nth-child(2) th:nth-child(1),\n    .lvev-e4-table tbody tr:nth-child(2) td:nth-child(2),\n    .lvev-e4-table tbody tr:nth-child(2) td:nth-child(4) {\n      background-color: #09324e !important;\n    }\n    .lvev-e4-table tbody tr:nth-child(2) td:nth-child(3),\n    .lvev-e4-table tbody tr:nth-child(2) td:nth-child(5) {\n      background-color: #0c3e60 !important;\n    }\n\n    /* ROW: Monthly Price (nth-child 3 in tbody) */\n    .lvev-e4-table tbody tr:nth-child(3) th:nth-child(1),\n    .lvev-e4-table tbody tr:nth-child(3) td:nth-child(2),\n    .lvev-e4-table tbody tr:nth-child(3) td:nth-child(4) {\n      background-color: #062338 !important;\n    }\n    .lvev-e4-table tbody tr:nth-child(3) td:nth-child(3),\n    .lvev-e4-table tbody tr:nth-child(3) td:nth-child(5) {\n      background-color: #082d47 !important;\n    }\n\n    @media (min-width: 768px) {\n      .lvev-e4 {\n        padding-top: 14px;\n        padding-bottom: 20px;\n      }\n    }\n  " }} />
           <div className="lvev-e4-glow lvev-e4-glow--left" aria-hidden="true" />
           <div className="lvev-e4-glow lvev-e4-glow--right" aria-hidden="true" />
           <div className="lvev-e4-glow lvev-e4-glow--bottom" aria-hidden="true" />
@@ -925,7 +925,7 @@ export default function Page() {
                     <th className="lvev-e4-cell lvev-e4-cell--group" colSpan={4} scope="colgroup"><span className="lvev-e4-grad">Starter Accounts</span></th>
                   </tr>
                   <tr className="lvev-e4-row-sizes">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature lvev-e4-cell--feature-head" scope="col">Feature</th>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature lvev-e4-cell--feature-head" style={{ backgroundColor: "#051016 !important" }} scope="col">Feature</th>
                     <th className="lvev-e4-cell lvev-e4-cell--size" scope="col">25K</th>
                     <th className="lvev-e4-cell lvev-e4-cell--size" scope="col">50K</th>
                     <th className="lvev-e4-cell lvev-e4-cell--size" scope="col">100K</th>
@@ -938,7 +938,7 @@ export default function Page() {
                 </thead>
                 <tbody>
                   <tr className="lvev-e4-row lvev-e4-row--tall">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Evaluation Payment</th>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature" style={{ backgroundColor: "#051016 !important" }} scope="row">Evaluation Payment</th>
                     <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span>One-Time</span><span className="lvev-e4-grad" style={{ fontWeight: '600' }}>OR</span><span>Monthly</span></span></td>
                     <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span>One-Time</span><span className="lvev-e4-grad" style={{ fontWeight: '600' }}>OR</span><span>Monthly</span></span></td>
                     <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span>One-Time</span><span className="lvev-e4-grad" style={{ fontWeight: '600' }}>OR</span><span>Monthly</span></span></td>
@@ -949,29 +949,29 @@ export default function Page() {
                     <td className="lvev-e4-cell">One-Time</td>
                   </tr>
                   <tr className="lvev-e4-row lvev-e4-row--hi">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature lvev-e4-cell--feature-strong" scope="row">One-Time Price</th>
-                    <td className="lvev-e4-cell lvev-e4-cell--price">$194</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--price">$338</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--price">$554</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--price">$714</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--price">$129</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--price">$194</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--price">$259</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--price">$324</td>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature lvev-e4-cell--feature-strong" style={{ backgroundColor: "#071f2d !important" }} scope="row">One-Time Price</th>
+                    <td className="lvev-e4-cell lvev-e4-cell--price" style={{ backgroundColor: "#09324E !important" }}>$194</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--price" style={{ backgroundColor: "#09324E !important" }}>$338</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--price" style={{ backgroundColor: "#09324E !important" }}>$554</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--price" style={{ backgroundColor: "#09324E !important" }}>$714</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--price" style={{ backgroundColor: "#09324E !important" }}>$129</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--price" style={{ backgroundColor: "#09324E !important" }}>$194</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--price" style={{ backgroundColor: "#09324E !important" }}>$259</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--price" style={{ backgroundColor: "#09324E !important" }}>$324</td>
                   </tr>
                   <tr className="lvev-e4-row lvev-e4-row--hi">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature lvev-e4-cell--feature-strong" scope="row">Monthly Price</th>
-                    <td className="lvev-e4-cell lvev-e4-cell--price">$129/mo</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--price">$225/mo</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--price">$369/mo</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--price">$476/mo</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--dim">Not Applicable</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--dim">Not Applicable</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--dim">Not Applicable</td>
-                    <td className="lvev-e4-cell lvev-e4-cell--dim">Not Applicable</td>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature lvev-e4-cell--feature-strong" style={{ backgroundColor: "#071f2d !important" }} scope="row">Monthly Price</th>
+                    <td className="lvev-e4-cell lvev-e4-cell--price" style={{ backgroundColor: "#09324E !important" }}>$129/mo</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--price" style={{ backgroundColor: "#09324E !important" }}>$225/mo</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--price" style={{ backgroundColor: "#09324E !important" }}>$369/mo</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--price" style={{ backgroundColor: "#09324E !important" }}>$476/mo</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--dim" style={{ backgroundColor: "#071F2C !important" }}>Not Applicable</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--dim" style={{ backgroundColor: "#071F2C !important" }}>Not Applicable</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--dim" style={{ backgroundColor: "#071F2C !important" }}>Not Applicable</td>
+                    <td className="lvev-e4-cell lvev-e4-cell--dim" style={{ backgroundColor: "#071F2C !important" }}>Not Applicable</td>
                   </tr>
                   <tr className="lvev-e4-row">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Profit Target</th>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row" style={{ backgroundColor: "#051016 !important" }}>Profit Target</th>
                     <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>6%</span><span className="lvev-e4-note">($1,500)</span></span></td>
                     <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>6%</span><span className="lvev-e4-note">($3,000)</span></span></td>
                     <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>7%</span><span className="lvev-e4-note">($7,000)</span></span></td>
@@ -982,7 +982,7 @@ export default function Page() {
                     <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>8%</span><span className="lvev-e4-note">($12,000)</span></span></td>
                   </tr>
                   <tr className="lvev-e4-row">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Maximum Drawdown</th>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row" style={{ backgroundColor: "#051016 !important" }}>Maximum Drawdown</th>
                     <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>5%</span><span className="lvev-e4-note">($1,250)</span></span></td>
                     <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>5%</span><span className="lvev-e4-note">($2,500)</span></span></td>
                     <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>5%</span><span className="lvev-e4-note">($5,000)</span></span></td>
@@ -993,7 +993,7 @@ export default function Page() {
                     <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>3%</span><span className="lvev-e4-note">($4,500)</span></span></td>
                   </tr>
                   <tr className="lvev-e4-row">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Drawdown Type</th>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row" style={{ backgroundColor: "#051016 !important" }}>Drawdown Type</th>
                     <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>EOD</span> Trailing</td>
                     <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>EOD</span> Trailing</td>
                     <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>EOD</span> Trailing</td>
@@ -1004,7 +1004,7 @@ export default function Page() {
                     <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>EOD</span> Trailing</td>
                   </tr>
                   <tr className="lvev-e4-row">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Min. Trading Days</th>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row" style={{ backgroundColor: "#051016 !important" }}>Min. Trading Days</th>
                     <td className="lvev-e4-cell">5 Days</td>
                     <td className="lvev-e4-cell">5 Days</td>
                     <td className="lvev-e4-cell">5 Days</td>
@@ -1015,7 +1015,7 @@ export default function Page() {
                     <td className="lvev-e4-cell">5 Days</td>
                   </tr>
                   <tr className="lvev-e4-row">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Maximum Contracts</th>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row" style={{ backgroundColor: "#051016 !important" }}>Maximum Contracts</th>
                     <td className="lvev-e4-cell">1 mini</td>
                     <td className="lvev-e4-cell">3 mini</td>
                     <td className="lvev-e4-cell">6 mini</td>
@@ -1026,7 +1026,7 @@ export default function Page() {
                     <td className="lvev-e4-cell">9 mini</td>
                   </tr>
                   <tr className="lvev-e4-row">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Profit Split</th>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row" style={{ backgroundColor: "#051016 !important" }}>Profit Split</th>
                     <td className="lvev-e4-cell">80%</td>
                     <td className="lvev-e4-cell">80%</td>
                     <td className="lvev-e4-cell">80%</td>
@@ -1037,7 +1037,7 @@ export default function Page() {
                     <td className="lvev-e4-cell">100%</td>
                   </tr>
                   <tr className="lvev-e4-row">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Payout Terms</th>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row" style={{ backgroundColor: "#051016 !important" }}>Payout Terms</th>
                     <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>10%</span> Cap</td>
                     <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>10%</span> Cap</td>
                     <td className="lvev-e4-cell"><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>10%</span> Cap</td>
@@ -1048,7 +1048,7 @@ export default function Page() {
                     <td className="lvev-e4-cell"><span className="lvev-e4-stack"><span><span className="lvev-e4-grad lvev-e4-grad--bold" style={{ fontWeight: '600' }}>2%</span> Cap</span><span className="lvev-e4-note">Up to 50% Profit</span></span></td>
                   </tr>
                   <tr className="lvev-e4-row">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Payout Cycle</th>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row" style={{ backgroundColor: "#051016 !important" }}>Payout Cycle</th>
                     <td className="lvev-e4-cell">Every 14 Days</td>
                     <td className="lvev-e4-cell">Every 14 Days</td>
                     <td className="lvev-e4-cell">Every 14 Days</td>
@@ -1059,7 +1059,7 @@ export default function Page() {
                     <td className="lvev-e4-cell">Every 5 Profitable Days</td>
                   </tr>
                   <tr className="lvev-e4-row">
-                    <th className="lvev-e4-cell lvev-e4-cell--feature" scope="row">Activation Fee</th>
+                    <th className="lvev-e4-cell lvev-e4-cell--feature" style={{ backgroundColor: "#051016 !important" }} scope="row">Activation Fee</th>
                     <td className="lvev-e4-cell">Required After Passing</td>
                     <td className="lvev-e4-cell">Required After Passing</td>
                     <td className="lvev-e4-cell">Required After Passing</td>
