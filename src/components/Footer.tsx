@@ -145,7 +145,7 @@ export default function Footer() {
                     <p className="lvf-s11-colhead" id="lvf-s11-h-support">Support</p>
                     <ul>
                       <li><a href="faqs.html">FAQ</a></li>
-                      <li><span className="lvf-s11-note">Live Chat</span></li>
+                      <li><span className="lvf-s11-note" data-lvct-link="live-chat">Live Chat</span></li>
                       <li><a href="contact.html#lvct-kontaktformular">Contact Support</a></li>
                     </ul>
                   </nav>
