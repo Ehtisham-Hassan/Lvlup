@@ -40,11 +40,11 @@
 
 .lvev-e1 .lvev-e1-panel {
   -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 43%, rgba(0, 0, 0, 0) 66%);
-          mask-image: linear-gradient(180deg, #000 0%, #000 43%, rgba(0, 0, 0, 0) 66%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 43%, rgba(0, 0, 0, 0) 66%);
   -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
-          mask-size: 100% 100%;
+  mask-size: 100% 100%;
 }
 
 
@@ -65,13 +65,15 @@
    Soll laut Referenz: Tinte 164 x 21 px. */
 
 .lvev-e3 .lvev-e3-dx-word {
-  height: 18px;                    /* Basis (background-size 128px): Fenster 992..1228 */
+  height: 18px;
+  /* Basis (background-size 128px): Fenster 992..1228 */
   background-position: 0 100%;
 }
 
 @media (min-width: 1024px) {
   .lvev-e3 .lvev-e3-dx-word {
-    height: 22px;                  /* background-size 164px: Fenster 1003..1228 */
+    height: 22px;
+    /* background-size 164px: Fenster 1003..1228 */
     background-position: 0 100%;
   }
 }
@@ -140,4 +142,70 @@
     line-height: 28px;
     letter-spacing: -0.37px;
   }
+}
+
+/* --------------------------------------------------------------------------
+   4) Account Type Toggle (Lvlup Accounts / Starter Accounts)
+   -------------------------------------------------------------------------- */
+.lvf-page .lvev-e2 .lvev-e2-toggle {
+  background: #020c18;
+  border: 1px solid rgba(0, 162, 255, 0.22);
+  border-radius: 16px;
+  padding: 6px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  gap: 4px;
+}
+
+.lvf-page .lvev-e2 button.lvev-e2-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 44px;
+  border-radius: 10px;
+  border: none;
+  background: transparent !important;
+  color: #ffffff !important;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: none !important;
+  padding: 0 16px;
+}
+
+.lvf-page .lvev-e2 button.lvev-e2-tab::before {
+  display: none;
+}
+
+.lvf-page .lvev-e2 button.lvev-e2-tab:hover {
+  color: #cfeaff !important;
+}
+
+.lvf-page .lvev-e2 button.lvev-e2-tab.is-active {
+  background: linear-gradient(180deg, #7ee0fe 0%, #45c0fe 46%, #05aafd 100%) !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: 0 6px 18px -2px rgba(0, 170, 255, 0.45), inset 0 1px 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+.lvf-page .lvev-e2 button.lvev-e2-tab.is-active .lvev-e2-tab-t {
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+.lvf-page .lvev-e2 button.lvev-e2-tab:not(.is-active) {
+  background: transparent !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.lvf-page .lvev-e2 button.lvev-e2-tab:not(.is-active) .lvev-e2-tab-t {
+  color: #ffffff !important;
 }
