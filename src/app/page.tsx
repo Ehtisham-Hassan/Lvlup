@@ -168,7 +168,7 @@ export default function Page() {
             <div className="lvf-container lvf-s02-partners">
               <span className="lvf-s02-dx">
                 <span className="lvf-s02-dx-mark">
-                  <img src="https://lvlup.tivaosagencytempdomains.de/wp-content/uploads/2026/08/lvlup-9e83bcda12.webp" width={62} height={45} loading="lazy" decoding="async" alt />
+                  <img src="https://lvlup.tivaosagencytempdomains.de/wp-content/uploads/2026/08/lvlup-9e83bcda12.webp" width={62} height={45} loading="lazy" decoding="async" alt="true" />
                 </span>
                 <span className="lvf-s02-dx-word">
                   <img src="https://lvlup.tivaosagencytempdomains.de/wp-content/uploads/2026/08/lvlup-9e83bcda12.webp" width={198} height={145} loading="lazy" decoding="async" alt="DX Trade" />

@@ -1,36 +1,36 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import { useLayoutEffect, useEffect } from 'react';
-
-const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+import { useEffect } from 'react';
 
 export default function BodyManager() {
   const pathname = usePathname();
 
-  useIsomorphicLayoutEffect(() => {
-    // Remove all existing page-specific and theme classes immediately
-    document.body.className = document.body.className
-      .replace(/\bpage-id-\d+\b|\blvf-gold\b/g, '')
-      .replace(/\s+/g, ' ')
-      .trim();
+  useEffect(() => {
+    // Remove any page‑specific or theme classes that may already exist.
+    const classesToRemove: string[] = [];
+    document.body.classList.forEach(cls => {
+      if (/^page-id-\d+$/.test(cls) || cls === 'lvf-gold') {
+        classesToRemove.push(cls);
+      }
+    });
+    if (classesToRemove.length) {
+      document.body.classList.remove(...classesToRemove);
+    }
 
-    // Add correct classes based on route synchronously before paint
-    if (pathname === '/') {
-      document.body.classList.add('page-id-7895');
-    } else if (pathname === '/elite') {
-      document.body.classList.add('lvf-gold', 'page-id-8046');
-    } else if (pathname === '/rules') {
-      document.body.classList.add('page-id-8048');
-    } else if (pathname === '/evaluation') {
-      document.body.classList.add('page-id-8049');
-    } else if (pathname === '/about') {
-      document.body.classList.add('page-id-8095');
-    } else if (pathname === '/affiliate') {
-      document.body.classList.add('page-id-5024', 'page-id-8041');
-    } else if (pathname === '/contact') {
-      document.body.classList.add('page-id-8096');
-    } else if (pathname === '/faqs') {
-      document.body.classList.add('page-id-8104');
+    // Map routes to the body classes we need.
+    const map: Record<string, string[]> = {
+      '/': ['page-id-7895'],
+      '/elite': ['lvf-gold', 'page-id-8046'],
+      '/rules': ['page-id-8048'],
+      '/evaluation': ['page-id-8049'],
+      '/about': ['page-id-8095'],
+      '/affiliate': ['page-id-5024', 'page-id-8041'],
+      '/contact': ['page-id-8096'],
+      '/faqs': ['page-id-8104'],
+    };
+    const classes = map[pathname] ?? [];
+    if (classes.length) {
+      document.body.classList.add(...classes);
     }
   }, [pathname]);
 
