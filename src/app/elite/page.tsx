@@ -4,7 +4,7 @@ import Script from 'next/script';
 export default function Page() {
   return (
     <>
-      <link rel="stylesheet" href="/assets/css/live/post-8046.css" />
+      {/* <link rel="stylesheet" href="/assets/css/live/post-8046.css" /> */}
       <link rel="stylesheet" href="/assets/css/live/elite.css" />
       <div className="lvf-page">
         {/* e1-hero */}
