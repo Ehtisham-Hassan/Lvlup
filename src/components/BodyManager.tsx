@@ -14,6 +14,8 @@ export default function BodyManager() {
       document.body.classList.add('page-id-7895');
     } else if (pathname === '/elite') {
       document.body.classList.add('lvf-gold', 'page-id-8046');
+    } else if (pathname === '/rules') {
+      document.body.classList.add('page-id-8048');
     }
   }, [pathname]);
 
