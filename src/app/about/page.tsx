@@ -37,7 +37,7 @@ export default function Page() {
             </span>
             <span className="lvab-btn-label">Discover Our Story</span>
           </a>
-          <a className="lvab-btn-ghost" href="/evaluation/">Explore Evaluations</a>
+          <a className="lvab-btn-ghost" href="/evaluation">Explore Evaluations</a>
         </div>
       </div>
     </section>

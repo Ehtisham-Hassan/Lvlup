@@ -542,7 +542,7 @@ export default function Page() {
                       </span>
                       Choose Your Evaluation
                     </a>
-                    <a className="lve-e7-btn lve-e7-btn--ghost" href="rules.html">View the Rules</a>
+                    <a className="lve-e7-btn lve-e7-btn--ghost" href="/rules">View the Rules</a>
                   </div>
                 </div>
               </div>

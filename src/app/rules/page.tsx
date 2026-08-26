@@ -2123,7 +2123,7 @@ export default function Page() {
               <img src="assets/media/CTA_frame.png" alt="Choose Your Evaluation - Build Toward $1M" style={{ width: '100%', height: 'auto', objectFit: 'contain', borderRadius: 40, display: 'block', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }} />
               {/* Transparent functional links mapped over the baked-in image buttons */}
               <a href="/#evaluations" aria-label="Choose Your Evaluation" style={{ position: 'absolute', left: '25%', top: '65%', width: '24%', height: '25%', zIndex: 10, display: 'block' }} />
-              <a href="rules.html" aria-label="View the Rules" style={{ position: 'absolute', left: '51%', top: '65%', width: '24%', height: '25%', zIndex: 10, display: 'block' }} />
+              <a href="/rules" aria-label="View the Rules" style={{ position: 'absolute', left: '51%', top: '65%', width: '24%', height: '25%', zIndex: 10, display: 'block' }} />
             </div>
           </div>
         </section>

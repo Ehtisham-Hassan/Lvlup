@@ -113,7 +113,7 @@ export default function Page() {
                 </span>
                 <span className="lvev-e1-btn-label">View Account Options</span>
               </a>
-              <a className="lvev-e1-btn lvev-e1-btn--ghost" href="rules.html" style={{ padding: '12px 24px', borderRadius: '14px', background: 'rgba(0,0,0,0.2)', boxShadow: 'inset 4px 6px 12px rgba(0,0,0,0.8), inset -2px -4px 12px rgba(0,164,255,0.8), 0 1px 2px rgba(255,255,255,0.1)', color: '#ffffff', border: 'none' }}>Review Trading Rules</a>
+              <a className="lvev-e1-btn lvev-e1-btn--ghost" href="/rules" style={{ padding: '12px 24px', borderRadius: '14px', background: 'rgba(0,0,0,0.2)', boxShadow: 'inset 4px 6px 12px rgba(0,0,0,0.8), inset -2px -4px 12px rgba(0,164,255,0.8), 0 1px 2px rgba(255,255,255,0.1)', color: '#ffffff', border: 'none' }}>Review Trading Rules</a>
             </div>
           </div>
           {/* R3: Marquee-Band am Hero-Fuss. Referenz: zwei versetzte Laufzeilen,
@@ -1069,7 +1069,7 @@ export default function Page() {
               </table>
             </div>
             <div className="lvev-e4-cta">
-              <a className="lvev-e4-pill" href="rules.html">Rules You Should Know</a>
+              <a className="lvev-e4-pill" href="/rules">Rules You Should Know</a>
             </div>
           </div>
           {/* </section> */}
@@ -1263,7 +1263,7 @@ export default function Page() {
                 </span>
                 Choose Your Evaluation
               </a>
-              <a className="lvev-e6-btn lvev-e6-btn--ghost" href="rules.html">View all the Rules</a>
+              <a className="lvev-e6-btn lvev-e6-btn--ghost" href="/rules">View all the Rules</a>
             </div>
           </div>
         </section>
@@ -1511,7 +1511,7 @@ export default function Page() {
                 </svg>
                 <span className="lvev-e7-pill-text">View Rules Summary</span>
               </button>
-              <a className="lvev-e7-link" href="rules.html">Open Full Trading Rules →</a>
+              <a className="lvev-e7-link" href="/rules">Open Full Trading Rules →</a>
             </div>
           </div>
           {/* </section> */}
@@ -1529,7 +1529,7 @@ export default function Page() {
               <img src="assets/media/CTA_frame.png" alt="Choose Your Evaluation - Build Toward $1M" style={{ width: '100%', height: 'auto', objectFit: 'contain', borderRadius: 40, display: 'block', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }} />
               {/* Transparent functional links mapped over the baked-in image buttons */}
               <a href="#pricing" aria-label="Choose Your Evaluation" style={{ position: 'absolute', left: '25%', top: '65%', width: '24%', height: '25%', zIndex: 10, display: 'block' }} />
-              <a href="rules.html" aria-label="View the Rules" style={{ position: 'absolute', left: '51%', top: '65%', width: '24%', height: '25%', zIndex: 10, display: 'block' }} />
+              <a href="/rules" aria-label="View the Rules" style={{ position: 'absolute', left: '51%', top: '65%', width: '24%', height: '25%', zIndex: 10, display: 'block' }} />
             </div>
           </div>
         </section>

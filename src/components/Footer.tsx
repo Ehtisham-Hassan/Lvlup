@@ -66,7 +66,7 @@ export default function Footer() {
             {/* Brand strip: logo, tagline, social links */}
             <div className="lvf-s11-strip">
               <div className="lvf-s11-strip-inner">
-                <a className="lvf-s11-logo" href="index.html" aria-label="Lvlup Futures - back to top">
+                <a className="lvf-s11-logo" href="/" aria-label="Lvlup Futures - back to top">
                   <img className="lvf-s11-logo-img" src="https://lvlup.tivaosagencytempdomains.de/wp-content/uploads/2026/08/lvlup-logo-nav.webp" width={780} height={120} alt="true" loading="lazy" decoding="async" />
                 </a>
                 <p className="lvf-s11-tagline">A refined structure for futures evaluations, built around clarity and discipline.</p>
@@ -128,25 +128,25 @@ export default function Footer() {
                   <nav className="lvf-s11-nav" aria-labelledby="lvf-s11-h-company">
                     <p className="lvf-s11-colhead" id="lvf-s11-h-company">Company</p>
                     <ul>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                      <li><a href="affiliate.html">Affiliate</a></li>
+                      <li><a href="/about">About</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/affiliate">Affiliate</a></li>
                     </ul>
                   </nav>
                   <nav className="lvf-s11-nav" aria-labelledby="lvf-s11-h-trading">
                     <p className="lvf-s11-colhead" id="lvf-s11-h-trading">Trading</p>
                     <ul>
-                      <li><a href="evaluation.html">Evaluations</a></li>
-                      <li><a href="rules.html">Rules</a></li>
-                      <li><a href="elite.html">Lvlup Elite</a></li>
+                      <li><a href="/evaluation">Evaluations</a></li>
+                      <li><a href="/rules">Rules</a></li>
+                      <li><a href="/elite">Lvlup Elite</a></li>
                     </ul>
                   </nav>
                   <nav className="lvf-s11-nav lvf-s11-nav--support" aria-labelledby="lvf-s11-h-support">
                     <p className="lvf-s11-colhead" id="lvf-s11-h-support">Support</p>
                     <ul>
-                      <li><a href="faqs.html">FAQ</a></li>
+                      <li><a href="/faqs">FAQ</a></li>
                       <li><span className="lvf-s11-note" data-lvct-link="live-chat">Live Chat</span></li>
-                      <li><a href="contact.html#lvct-kontaktformular">Contact Support</a></li>
+                      <li><a href="/contact#lvct-kontaktformular">Contact Support</a></li>
                     </ul>
                   </nav>
                   <nav className="lvf-s11-nav" aria-labelledby="lvf-s11-h-legal">
