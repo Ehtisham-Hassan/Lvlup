@@ -903,7 +903,7 @@ export default function Page() {
           <div className="lvev-e4-glow lvev-e4-glow--left" aria-hidden="true" />
           <div className="lvev-e4-glow lvev-e4-glow--right" aria-hidden="true" />
           <div className="lvev-e4-glow lvev-e4-glow--bottom" aria-hidden="true" />
-          <div className="lvf-container">
+          <div className="lvf-container" id="compare" style={{ scrollMarginTop: '100px' }}>
             <div className="lvev-e4-head" style={{ paddingTop: '30px' }}>
               <h2 className="lvev-e4-title" style={{ color: '#ffffff' }}>Compare Evaluation <span className="lvev-e4-title-accent" style={{ fontWeight: 600 }}>Structures</span></h2>
               <p className="lvev-e4-sub">Review the main differences across the four account sizes.</p>
