@@ -1769,11 +1769,11 @@ export default function Page() {
                 </div>
                 <div className="lvr-r8-body">
                   <p>Lvlup Futures currently supports:</p>
-                  <ol className="lvr-r8-list">
+                  <ul style={{ listStyleType: 'disc' }}>
                     <li>DXtrade</li>
                     <li>Volumetrica</li>
-                  </ol>
-                  <p>The available platform is selected inside the external dashboard. Pricing may vary depending on the selected account type, size and trading platform.</p>
+                  </ul>
+                  <p>The selected platform is configured through the external dashboard.</p>
                 </div>
               </article>
               <article className="lvr-r8-card">
@@ -1781,9 +1781,8 @@ export default function Page() {
                   <h3 className="lvr-r8-cardtitle">Third-Party Market Infrastructure</h3>
                 </div>
                 <div className="lvr-r8-body">
-                  <p>Market pricing, order execution and platform functionality are provided through external exchanges, data providers and trading infrastructure.</p>
-                  <p>Traders must use these systems for genuine market participation.</p>
-                  <p>Trader May not attempt to exploit technical delays, incorrect pricing or platform errors.</p>
+                  <p>Market pricing, execution and trading-platform functionality may rely on third-party exchanges, market-data providers and infrastructure.</p>
+                  <p>Traders may not exploit incorrect pricing, execution delays, platform faults or technical errors.</p>
                 </div>
               </article>
               <article className="lvr-r8-card lvr-r8-card--full">
@@ -1791,8 +1790,8 @@ export default function Page() {
                   <h3 className="lvr-r8-cardtitle">Lvlup Trading Terminal</h3>
                 </div>
                 <div className="lvr-r8-body">
-                  <p>Lvlup Trading Terminal is a future proprietary trading environment currently in development.</p>
-                  <p>It is not yet available for live evaluation or funded-account selection and should be treated as an upcoming platform.</p>
+                  <p>The Lvlup Trading Terminal is currently in development.</p>
+                  <p>It is planned as a future proprietary trading environment and is not currently available for live Evaluation or Funded Account selection.</p>
                 </div>
               </article>
               <article className="lvr-r8-card lvr-r8-card--full lvr-r8-card--d45">
@@ -1800,7 +1799,7 @@ export default function Page() {
                   <h3 className="lvr-r8-cardtitle">Futures Commission Rates</h3>
                 </div>
                 <div className="lvr-r8-body">
-                  <p>Trading commissions are charged per side and may vary by product.</p>
+                  <p>Trading commissions are charged per side.</p>
                   <table className="lvr-r8-table">
                     <thead>
                       <tr>
@@ -1809,7 +1808,7 @@ export default function Page() {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr><td>ES, NQ, YM, RTY</td><td>$2.18</td></tr>
+                      <tr><td>ES, NQ, YM, RTY</td><td>$2.16</td></tr>
                       <tr><td>MES, MNQ, MYM, M2K</td><td>$0.71</td></tr>
                       <tr><td>6E, 6B, 6J, 6C, 6S, 6A</td><td>$2.40</td></tr>
                       <tr><td>CL, HO, RB</td><td>$2.30</td></tr>
@@ -1821,7 +1820,7 @@ export default function Page() {
                       <tr><td>MET</td><td>$0.46</td></tr>
                     </tbody>
                   </table>
-                  <p>Commissions are deducted from the trading account and affect the account balance, profit target and drawdown position.</p>
+                  <p>Trading commissions affect the account balance and therefore also affect profit, Drawdown and Evaluation performance.</p>
                 </div>
               </article>
             </div>
@@ -1836,8 +1835,8 @@ export default function Page() {
                   <h3 className="lvr-r8-cardtitle">KYC Verification</h3>
                 </div>
                 <div className="lvr-r8-body">
-                  <p>KYC means Know Your Customer and is used to verify the identity of the registered trader.</p>
-                  <p>After passing an evaluation, the trader must complete identity verification through Sumsub. Funded-account activation and payout access may remain unavailable until verification has been successfully completed.</p>
+                  <p>Lvlup Futures uses Sumsub for identity verification.</p>
+                  <p>After passing an Evaluation, the trader must complete the required verification before Funded Account access or payout access where applicable.</p>
                 </div>
               </article>
               <article className="lvr-r8-card">
@@ -1845,8 +1844,8 @@ export default function Page() {
                   <h3 className="lvr-r8-cardtitle">Simulated Trading Environment</h3>
                 </div>
                 <div className="lvr-r8-body">
-                  <p>Lvlup evaluations and funded accounts operate in a simulated trading environment unless expressly stated otherwise in the applicable agreement.</p>
-                  <p>Performance is measured using simulated market activity, while payout eligibility remains subject to the account rules and funded terms.</p>
+                  <p>Lvlup Evaluations and Funded Accounts operate in a simulated trading environment unless expressly stated otherwise in the applicable agreement.</p>
+                  <p>Trading performance and payout eligibility remain subject to the applicable account rules.</p>
                 </div>
               </article>
               <article className="lvr-r8-card lvr-r8-card--d85">
@@ -1854,8 +1853,8 @@ export default function Page() {
                   <h3 className="lvr-r8-cardtitle">Personal Account Use</h3>
                 </div>
                 <div className="lvr-r8-body">
-                  <p>Every account is personal to the verified account holder.</p>
-                  <p>Account credentials may not be shared, sold, transferred or used by another individual. The registered trader must personally manage all activity performed through the account.</p>
+                  <p>Every trading account belongs to the verified account holder.</p>
+                  <p>Account credentials may not be shared, sold, transferred or operated by another person.</p>
                 </div>
               </article>
               <article className="lvr-r8-card lvr-r8-card--d50">
@@ -1863,8 +1862,7 @@ export default function Page() {
                   <h3 className="lvr-r8-cardtitle">Funded Trader Agreement</h3>
                 </div>
                 <div className="lvr-r8-body">
-                  <p>Before receiving access to a funded account, the trader may be required to accept a separate Funded Trader Agreement.</p>
-                  <p>The agreement governs funded access, payouts, account conduct, enforcement and other funded-stage conditions.</p>
+                  <p>A trader may be required to accept the applicable Funded Trader Agreement before receiving Funded Account access.</p>
                 </div>
               </article>
               <article className="lvr-r8-card lvr-r8-card--full lvr-r8-card--d80">
@@ -1872,8 +1870,14 @@ export default function Page() {
                   <h3 className="lvr-r8-cardtitle">Device and Access Monitoring</h3>
                 </div>
                 <div className="lvr-r8-body">
-                  <p>Lvlup Futures may review account access, device information, IP addresses and trading patterns to protect account security and prevent unauthorized use.</p>
-                  <p>Unusual or conflicting access may result in additional verification, account restriction or termination.</p>
+                  <p>Lvlup Futures may review:</p>
+                  <ul style={{ listStyleType: 'disc' }}>
+                    <li>Account access</li>
+                    <li>Devices</li>
+                    <li>IP addresses</li>
+                    <li>Trading patterns</li>
+                  </ul>
+                  <p>This may be used to protect account security and identify unauthorized account use or prohibited trading activity.</p>
                 </div>
               </article>
             </div>
@@ -1886,17 +1890,19 @@ export default function Page() {
             <div className="lvr-section-divider" aria-hidden="true" />
             <div className="lvr-r9-head">
               <span className="lvr-r9-badge" aria-hidden="true">13</span>
-              <h2 className="lvr-r9-title">Prohibited Trading <span className="lvr-r9-accent">Rules</span></h2>
+              <h2 className="lvr-r9-title">Prohibited and Allowed Trading <span className="lvr-r9-accent">Activity</span></h2>
             </div>
             <div className="lvr-r9-grid">
+              {/* LEFT COLUMN */}
               <div className="lvr-r9-col">
-                <article className="lvr-r9-card lvr-r9-card--dark">
+                <article className="lvr-r9-card">
                   <div className="lvr-r9-cardhead">
-                    <h3 className="lvr-r9-cardtitle">Pricing and Latency Exploitation</h3>
+                    <h3 className="lvr-r9-cardtitle">Own Trading Bots</h3>
                   </div>
                   <div className="lvr-r9-body">
-                    <p>Traders may not exploit delayed price feeds, incorrect quotes, platform errors, latency differences or execution faults.</p>
-                    <p>Trading must be based on genuine market decisions rather than attempts to benefit from a technical issue or temporary pricing discrepancy.</p>
+                    <p>A trader may use their own Trading Bot or automated trading system.</p>
+                    <p>The automation must be used for the verified trader's own strategy and trading activity.</p>
+                    <p>Automation may not be used to coordinate or copy trades between different traders.</p>
                   </div>
                 </article>
                 <article className="lvr-r9-card">
@@ -1904,72 +1910,7 @@ export default function Page() {
                     <h3 className="lvr-r9-cardtitle">Front-Running</h3>
                   </div>
                   <div className="lvr-r9-body">
-                    <p>Traders may not place orders using advance knowledge of another order that is about to enter the market.</p>
-                    <p>This includes using information from another account, trader, group or platform to enter before an expected market-moving order.</p>
-                  </div>
-                </article>
-                <article className="lvr-r9-card lvr-r9-card--dark">
-                  <div className="lvr-r9-cardhead">
-                    <h3 className="lvr-r9-cardtitle">Cross-Account Hedging</h3>
-                  </div>
-                  <div className="lvr-r9-body">
-                    <p>Opposing positions may not be placed across separate accounts to neutralize risk.</p>
-                    <p>This includes hedging between two Lvlup Accounts or between a Lvlup Account and an account held with another firm.</p>
-                  </div>
-                </article>
-                <article className="lvr-r9-card lvr-r9-card--dark">
-                  <div className="lvr-r9-cardhead">
-                    <h3 className="lvr-r9-cardtitle">Mirroring Between Different Traders</h3>
-                  </div>
-                  <div className="lvr-r9-body">
-                    <p>Trades may not be copied or mirrored between accounts owned by different people.</p>
-                    <p>Repeatedly matching entries, exits, instruments, position sizes or timing across unrelated accounts may result in a compliance review.</p>
-                  </div>
-                </article>
-                <article className="lvr-r9-card">
-                  <div className="lvr-r9-cardhead">
-                    <h3 className="lvr-r9-cardtitle">Third-Party Challenge-Passing Services</h3>
-                  </div>
-                  <div className="lvr-r9-body">
-                    <p>Traders may not use purchased, rented or managed services designed to pass an evaluation on their behalf.</p>
-                    <p>The evaluation must reflect the registered trader’s own decisions, strategy and risk management.</p>
-                  </div>
-                </article>
-                <article className="lvr-r9-card lvr-r9-card--dark">
-                  <div className="lvr-r9-cardhead">
-                    <h3 className="lvr-r9-cardtitle">Manipulative Strategy Switching</h3>
-                  </div>
-                  <div className="lvr-r9-body">
-                    <p>A trader may not use an artificial or excessively aggressive strategy only to pass the evaluation and then completely change the strategy after receiving a funded account.</p>
-                    <p>Trading should demonstrate a genuine and reasonably consistent approach across the evaluation and funded stages.</p>
-                  </div>
-                </article>
-                <article className="lvr-r9-card">
-                  <div className="lvr-r9-cardhead">
-                    <h3 className="lvr-r9-cardtitle">Account Sharing</h3>
-                  </div>
-                  <div className="lvr-r9-body">
-                    <p>Account access may not be shared with another person.</p>
-                    <p>No third party may trade, manage or operate the account on behalf of the registered trader.</p>
-                  </div>
-                </article>
-                <article className="lvr-r9-card lvr-r9-card--dark">
-                  <div className="lvr-r9-cardhead">
-                    <h3 className="lvr-r9-cardtitle">Spam and Unauthorized Solicitation</h3>
-                  </div>
-                  <div className="lvr-r9-body">
-                    <p>Lvlup services may not be used to send unsolicited commercial messages, promote unauthorized services or solicit other traders.</p>
-                  </div>
-                </article>
-              </div>
-              <div className="lvr-r9-col">
-                <article className="lvr-r9-card">
-                  <div className="lvr-r9-cardhead">
-                    <h3 className="lvr-r9-cardtitle">Insider or Non-Public Information</h3>
-                  </div>
-                  <div className="lvr-r9-body">
-                    <p>Trading using confidential, insider or non-public information is prohibited.</p>
-                    <p>All trading decisions must be based on information legally available to the public.</p>
+                    <p>Traders may not use advance knowledge of another trader's or account's pending market order to enter the market beforehand.</p>
                   </div>
                 </article>
                 <article className="lvr-r9-card">
@@ -1978,34 +1919,38 @@ export default function Page() {
                   </div>
                   <div className="lvr-r9-body">
                     <p>Arbitrage between Lvlup Accounts or between Lvlup Futures and another trading firm is prohibited.</p>
-                    <p>Traders may not create coordinated positions across multiple accounts to guarantee a profit or remove normal market risk.</p>
                   </div>
                 </article>
                 <article className="lvr-r9-card">
                   <div className="lvr-r9-cardhead">
-                    <h3 className="lvr-r9-cardtitle">Group Trading</h3>
+                    <h3 className="lvr-r9-cardtitle">Group Trading and Signal Groups</h3>
                   </div>
                   <div className="lvr-r9-body">
-                    <p>Coordinated trading between different traders is not permitted.</p>
-                    <p>Users may not enter or exit trades together through shared signals, synchronized strategies or organized account groups intended to reproduce matching results.</p>
+                    <p>Coordinated group trading is prohibited.</p>
+                    <p>Traders may not enter or exit trades together through:</p>
+                    <ul style={{ listStyleType: 'disc' }}>
+                      <li>Signal groups</li>
+                      <li>Coordinated trading groups</li>
+                      <li>Synchronized strategies</li>
+                      <li>Organized accounts designed to reproduce matching results</li>
+                    </ul>
                   </div>
                 </article>
                 <article className="lvr-r9-card">
                   <div className="lvr-r9-cardhead">
-                    <h3 className="lvr-r9-cardtitle">Automated Copying Between Traders</h3>
+                    <h3 className="lvr-r9-cardtitle">Automated Copying Between Different Traders</h3>
                   </div>
                   <div className="lvr-r9-body">
-                    <p>Bots, Expert Advisors, scripts or other automation may not be used to copy trades between different traders or coordinated accounts.</p>
-                    <p>Automation designed to bypass account-ownership or group-trading restrictions is prohibited.</p>
+                    <p>Bots, scripts, Expert Advisors or other automation may not be used to copy trades between different traders.</p>
                   </div>
                 </article>
-                <article className="lvr-r9-card lvr-r9-card--dark">
+                <article className="lvr-r9-card">
                   <div className="lvr-r9-cardhead">
-                    <h3 className="lvr-r9-cardtitle">Copy Trading Between Your Own Accounts</h3>
+                    <h3 className="lvr-r9-cardtitle">Third-Party Challenge Passing</h3>
                   </div>
                   <div className="lvr-r9-body">
-                    <p>Copy trading may only be used across accounts owned by the same verified trader and must remain within all allocation, contract and exposure limits.</p>
-                    <p>The trader remains responsible for every copied trade and every rule violation created by the copying process.</p>
+                    <p>Third-party services may not trade, manage or pass an Evaluation on behalf of the registered trader.</p>
+                    <p>The Evaluation must reflect the registered trader's own trading activity.</p>
                   </div>
                 </article>
                 <article className="lvr-r9-card">
@@ -2013,17 +1958,15 @@ export default function Page() {
                     <h3 className="lvr-r9-cardtitle">Gambling and All-In Trading</h3>
                   </div>
                   <div className="lvr-r9-body">
-                    <p>All-in trading, excessive leverage and placing a substantial portion of the account at risk on one market movement are prohibited.</p>
-                    <p>Traders are expected to use structured risk management rather than binary-style betting or repeated maximum-risk positions.</p>
+                    <p>All-in trading, excessive leverage and repeatedly placing an unreasonable portion of the account at risk on a single market move are prohibited.</p>
                   </div>
                 </article>
-                <article className="lvr-r9-card lvr-r9-card--dark">
+                <article className="lvr-r9-card">
                   <div className="lvr-r9-cardhead">
-                    <h3 className="lvr-r9-cardtitle">Platform Manipulation</h3>
+                    <h3 className="lvr-r9-cardtitle">Spam and Unauthorized Solicitation</h3>
                   </div>
                   <div className="lvr-r9-body">
-                    <p>Traders may not hack, reverse engineer, interfere with, overload or bypass the security of the website, dashboard or trading platforms.</p>
-                    <p>The use of malware, malicious links, unauthorized scraping or denial-of-service activity is prohibited.</p>
+                    <p>Lvlup services may not be used for unauthorized commercial solicitation or spam.</p>
                   </div>
                 </article>
                 <article className="lvr-r9-card">
@@ -2031,21 +1974,111 @@ export default function Page() {
                     <h3 className="lvr-r9-cardtitle">Regulatory and Exchange Compliance</h3>
                   </div>
                   <div className="lvr-r9-body">
-                    <p>Trading must comply with applicable exchange rules, platform conditions and regulatory requirements.</p>
-                    <p>Activity that threatens exchange relationships, creates execution risk or results in cancelled trades may be treated as prohibited conduct.</p>
+                    <p>Trading must comply with applicable exchange, platform and regulatory requirements.</p>
+                  </div>
+                </article>
+              </div>
+              {/* RIGHT COLUMN */}
+              <div className="lvr-r9-col">
+                <article className="lvr-r9-card">
+                  <div className="lvr-r9-cardhead">
+                    <h3 className="lvr-r9-cardtitle">Insider or Non-Public Information</h3>
+                  </div>
+                  <div className="lvr-r9-body">
+                    <p>Trading using confidential, insider or non-public information is prohibited.</p>
+                  </div>
+                </article>
+                <article className="lvr-r9-card">
+                  <div className="lvr-r9-cardhead">
+                    <h3 className="lvr-r9-cardtitle">Cross-Account Hedging</h3>
+                  </div>
+                  <div className="lvr-r9-body">
+                    <p>Opposing positions may not be used across separate accounts to neutralize normal market risk.</p>
+                    <p>This includes hedging:</p>
+                    <ul style={{ listStyleType: 'disc' }}>
+                      <li>Between separate Lvlup Accounts</li>
+                      <li>Between a Lvlup Account and another firm's account</li>
+                    </ul>
+                  </div>
+                </article>
+                <article className="lvr-r9-card">
+                  <div className="lvr-r9-cardhead">
+                    <h3 className="lvr-r9-cardtitle">Mirroring Between Different Traders</h3>
+                  </div>
+                  <div className="lvr-r9-body">
+                    <p>Trades may not be copied or mirrored between accounts owned by different people.</p>
+                  </div>
+                </article>
+                <article className="lvr-r9-card">
+                  <div className="lvr-r9-cardhead">
+                    <h3 className="lvr-r9-cardtitle">Copy Trading Between Your Own Accounts</h3>
+                  </div>
+                  <div className="lvr-r9-body">
+                    <p>Copy Trading is allowed between accounts owned by the same verified trader.</p>
+                    <p>All copied trades must remain within:</p>
+                    <ul style={{ listStyleType: 'disc' }}>
+                      <li>Maximum Allocation limits</li>
+                      <li>Contract limits</li>
+                      <li>Exposure limits</li>
+                      <li>All other Trading Rules</li>
+                    </ul>
+                  </div>
+                </article>
+                <article className="lvr-r9-card">
+                  <div className="lvr-r9-cardhead">
+                    <h3 className="lvr-r9-cardtitle">Manipulative Strategy Switching</h3>
+                  </div>
+                  <div className="lvr-r9-body">
+                    <p>Trading should represent a genuine strategy rather than an artificial high-risk method used only to pass the Evaluation before completely changing behaviour in the Funded Stage.</p>
+                  </div>
+                </article>
+                <article className="lvr-r9-card">
+                  <div className="lvr-r9-cardhead">
+                    <h3 className="lvr-r9-cardtitle">Account Sharing</h3>
+                  </div>
+                  <div className="lvr-r9-body">
+                    <p>Account credentials may not be shared.</p>
+                    <p>No other person may trade or manage the account on behalf of the registered trader.</p>
+                  </div>
+                </article>
+                <article className="lvr-r9-card">
+                  <div className="lvr-r9-cardhead">
+                    <h3 className="lvr-r9-cardtitle">Platform Manipulation</h3>
+                  </div>
+                  <div className="lvr-r9-body">
+                    <p>Traders may not:</p>
+                    <ul style={{ listStyleType: 'none', padding: 0 }}>
+                      <li>Hack</li>
+                      <li>Reverse engineer</li>
+                      <li>Interfere with</li>
+                      <li>Overload</li>
+                      <li>Bypass security</li>
+                      <li>Exploit technical weaknesses</li>
+                    </ul>
+                    <p>of the website, dashboard or trading platforms.</p>
                   </div>
                 </article>
               </div>
             </div>
+            {/* ENFORCEMENT — full width bottom card */}
             <article className="lvr-r9-card lvr-r9-card--wide">
               <div className="lvr-r9-cardhead">
-                <h3 className="lvr-r9-cardtitle">Enforcement of Rule Violations</h3>
+                <h3 className="lvr-r9-cardtitle">Enforcement</h3>
               </div>
               <div className="lvr-r9-body">
-                <p>A prohibited-trading violation may result in account suspension, permanent termination, loss of funded eligibility, forfeiture of profits and loss of paid fees.</p>
-                <p>Trading activity may be reviewed before funded approval or payout processing. Lvlup Futures may take action when account activity violates the trading rules, platform conditions or applicable agreements.</p>
+                <p>Violations of prohibited trading rules may result in:</p>
+                <ul style={{ listStyleType: 'disc' }}>
+                  <li>Account suspension</li>
+                  <li>Account termination</li>
+                  <li>Loss of Funded eligibility</li>
+                  <li>Loss of payout eligibility</li>
+                  <li>Forfeiture of profit</li>
+                  <li>Loss of paid fees</li>
+                </ul>
+                <p>Trading activity may be reviewed before Funded approval or payout processing.</p>
               </div>
             </article>
+
           </div>
         </section>
         {/* r9b-cta */}
