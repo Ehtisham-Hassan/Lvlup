@@ -20,13 +20,27 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="/assets/css/live/reset.css" />
         <link rel="stylesheet" href="/assets/css/live/frontend.min.css" />
-        <link rel="stylesheet" href="/assets/css/live/post-7895.css" />
-        <link rel="stylesheet" href="/assets/css/live/post-4611.css" />
-        <link rel="stylesheet" href="/assets/css/live/post-67.css" />
         <link rel="stylesheet" href="/assets/css/live/widget-styles.css" />
         <link rel="stylesheet" href="/assets/css/live/responsive.css" />
         <link rel="stylesheet" href="/assets/css/live/lvlup-theme.css" />
         <link rel="stylesheet" href="/assets/css/live/lvlup-home.css" />
+        <link rel="stylesheet" href="/assets/css/live/evaluation.css" />
+        <link rel="stylesheet" href="/assets/css/live/elite.css" />
+        <link rel="stylesheet" href="/assets/css/live/rules.css" />
+        <link rel="stylesheet" href="/assets/css/about.css" />
+        <link rel="stylesheet" href="/assets/css/affiliate.css" />
+        <link rel="stylesheet" href="/assets/css/contact.css" />
+        <link rel="stylesheet" href="/assets/css/faqs.css" />
+        <link rel="stylesheet" href="/assets/css/live/post-7895.css" />
+        <link rel="stylesheet" href="/assets/css/live/post-4611.css" />
+        <link rel="stylesheet" href="/assets/css/live/post-67.css" />
+        <link rel="stylesheet" href="/assets/css/live/post-8049.css" />
+        <link rel="stylesheet" href="/assets/css/live/post-8046.css" />
+        <link rel="stylesheet" href="/assets/css/live/post-8048.css" />
+        <link rel="stylesheet" href="/assets/css/live/post-8095.css" />
+        <link rel="stylesheet" href="/assets/css/live/post-8096.css" />
+        <link rel="stylesheet" href="/assets/css/live/post-8104.css" />
+        <link rel="stylesheet" href="/assets/css/live/post-5024.css" />
         <link rel="stylesheet" href="/assets/css/live/fixes-elite.css" />
         <link rel="stylesheet" href="/assets/css/live/fixes-evaluation.css" />
         <link rel="stylesheet" href="/assets/css/live/fixes-header.css" />
