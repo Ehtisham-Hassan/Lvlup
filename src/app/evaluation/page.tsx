@@ -1534,7 +1534,105 @@ export default function Page() {
           </div>
         </section>
       </div>
+      {/* Trading Conditions popup — same modal used on the home page */}
+      <div className="lvf-conditions-modal" data-lvf-conditions-modal hidden>
+        <div className="lvf-conditions-backdrop" data-lvf-conditions-close />
+        <div className="lvf-conditions-dialog" role="dialog" aria-modal="true" aria-labelledby="lvf-conditions-title">
+          <button className="lvf-conditions-x" type="button" data-lvf-conditions-close aria-label="Close">×</button>
+          <div className="lvf-conditions-head">
+            <p className="lvf-conditions-kicker">Quick Rules Overview</p>
+            <h2 className="lvf-conditions-title" id="lvf-conditions-title">Know the <span className="lvf-conditions-title-hl">Conditions Before You Trade</span></h2>
+            <p className="lvf-conditions-sub">Check the rules that shape your evaluation, funded account and payout eligibility.</p>
+            <div className="lvf-conditions-tabs">
+              <button className="lvf-conditions-tab" type="button" data-lvf-conditions-tab="lvlup">Lvlup Accounts</button>
+              <button className="lvf-conditions-tab is-active" type="button" data-lvf-conditions-tab="starter">Starter Accounts</button>
+            </div>
+          </div>
+          <div className="lvf-conditions-frame">
+            {/* Lvlup Accounts panel */}
+            <div className="lvf-conditions-panel" data-lvf-conditions-panel="lvlup" hidden>
+              <div className="lvf-conditions-list">
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">1. No</span> Daily Loss <span className="lvf-conditions-row-hl">Limit</span></p>
+                  <p className="lvf-conditions-row-d">There is no separate daily loss cap. Your account must remain within the overall trailing drawdown.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">2. EOD</span> Trailing Drawdown</p>
+                  <p className="lvf-conditions-row-d">The drawdown threshold updates from your highest end-of-day balance rather than every intraday fluctuation.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">3. 5 Minimum</span> Trading Days</p>
+                  <p className="lvf-conditions-row-d">Trade on at least five separate days before completing the evaluation.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">4. 40%</span> Consistency <span className="lvf-conditions-row-hl">Rule</span></p>
+                  <p className="lvf-conditions-row-d">Your most profitable trading day cannot represent more than 40% of your total profits.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">5. 80%</span> Profit Split</p>
+                  <p className="lvf-conditions-row-d">Keep 80% of approved profits generated inside your funded Lvlup Account.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">6. Payouts</span> Every 14 Days</p>
+                  <p className="lvf-conditions-row-d">Eligible funded traders can submit payout requests on a biweekly schedule.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">7. News</span> Trading Allowed</p>
+                  <p className="lvf-conditions-row-d">Trading during scheduled economic news events is permitted under the applicable trading conditions.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">8. No</span> Overnight or Weekend <span className="lvf-conditions-row-hl">Holding</span></p>
+                  <p className="lvf-conditions-row-d">Positions must be closed before the applicable market close and cannot remain open through the weekend.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">9. Activation Fee</span> After Passing</p>
+                  <p className="lvf-conditions-row-d">Choose Monthly or One-Time evaluation payment. After passing, the required activation fee must be paid before the funded account becomes active.</p>
+                </div>
+              </div>
+            </div>
+            {/* Starter Accounts panel */}
+            <div className="lvf-conditions-panel is-active" data-lvf-conditions-panel="starter">
+              <div className="lvf-conditions-list">
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">1. One-Time</span> Fee Only</p>
+                  <p className="lvf-conditions-row-d">Starter evaluations are purchased through a single one-time payment with no monthly evaluation subscription.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">2. No</span> Activation <span className="lvf-conditions-row-hl">Fee</span></p>
+                  <p className="lvf-conditions-row-d">After passing the evaluation, there is no additional activation fee before receiving the funded account.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">3. 5 Minimum</span> Trading <span className="lvf-conditions-row-hl">Days</span></p>
+                  <p className="lvf-conditions-row-d">Trade on at least five separate days before completing the evaluation.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">4. 40%</span> Consistency <span className="lvf-conditions-row-hl">Rule</span></p>
+                  <p className="lvf-conditions-row-d">Your most profitable evaluation day cannot exceed 40% of your total evaluation profit.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">5. 100%</span> Profit Split</p>
+                  <p className="lvf-conditions-row-d">Keep 100% of the eligible profits approved for payout from your Starter Account.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">6. Up to 50%</span> Profit Per Payout</p>
+                  <p className="lvf-conditions-row-d">You may withdraw a maximum of 50% of the profit generated on the account in one payout.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">7. Maximum</span> 5 Payouts</p>
+                  <p className="lvf-conditions-row-d">A Starter Account journey is limited to five approved payouts.</p>
+                </div>
+                <div className="lvf-conditions-row">
+                  <p className="lvf-conditions-row-t"><span className="lvf-conditions-row-hl">8. 30-Day</span> Evaluation and Inactivity <span className="lvf-conditions-row-hl">Limits</span></p>
+                  <p className="lvf-conditions-row-d">The evaluation has a maximum duration of 30 days, and accounts are also subject to a 30-day inactivity limit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <Script src="/assets/js/live/evaluation.js" strategy="lazyOnload" />
+      {/* Load the home JS so the conditions modal open/close logic runs on this page too */}
+      <Script src="/assets/js/live/lvlup-home.js" strategy="lazyOnload" />
     </>
   );
 }
