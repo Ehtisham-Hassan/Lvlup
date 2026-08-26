@@ -3071,6 +3071,27 @@
   .lvr-r8 .lvr-r8-body { padding-inline: 16px 15px; }
 }
 
+/* Rules 10–12: alternating edge illumination. The Payout Protector block
+   receives the blue-white bloom from the right; Platforms from the left; and
+   Verification from the right again. Keeping these glows behind the content
+   preserves the near-black cards and makes the light read from the page edge. */
+@media (min-width: 1024px) {
+  .lvf-page .lvr-r7 .lvr-r7-glow {
+    background:
+      radial-gradient(ellipse 720px 820px at 105% 78%, rgba(238, 250, 255, 0.92) 0%, rgba(141, 220, 255, 0.78) 14%, rgba(0, 166, 255, 0.58) 44%, rgba(0, 166, 255, 0) 82%),
+      radial-gradient(ellipse 50% 26% at -8% 2%, rgba(0, 162, 255, 0.42) 0%, rgba(0, 162, 255, 0) 68%),
+      radial-gradient(ellipse 34% 20% at 0% 9%, rgba(140, 213, 255, 0.22) 0%, rgba(140, 213, 255, 0) 70%),
+      radial-gradient(ellipse 42% 34% at -5% 41%, rgba(0, 162, 255, 0.26) 0%, rgba(0, 162, 255, 0) 70%);
+  }
+
+  .lvf-page .lvr-r8 .lvr-r8-glow {
+    background:
+      radial-gradient(ellipse 720px 820px at -5% 28%, rgba(238, 250, 255, 0.94) 0%, rgba(141, 220, 255, 0.8) 14%, rgba(0, 166, 255, 0.6) 44%, rgba(0, 166, 255, 0) 82%),
+      radial-gradient(ellipse 720px 820px at 105% 78%, rgba(238, 250, 255, 0.9) 0%, rgba(141, 220, 255, 0.72) 14%, rgba(0, 166, 255, 0.56) 44%, rgba(0, 166, 255, 0) 82%),
+      radial-gradient(ellipse 76% 50% at 50% 50%, rgba(2, 18, 30, 0.42) 0%, rgba(2, 18, 30, 0) 78%);
+  }
+}
+
 /* == r9-prohibited == */
 /* Sektion r9-prohibited (Trading Rules) - Praefix .lvr-r9- */
 .lvr-r9 {
