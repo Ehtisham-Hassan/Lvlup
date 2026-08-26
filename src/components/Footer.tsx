@@ -145,7 +145,7 @@ export default function Footer() {
                     <p className="lvf-s11-colhead" id="lvf-s11-h-support">Support</p>
                     <ul>
                       <li><a href="/faqs">FAQ</a></li>
-                      <li><span className="lvf-s11-note" data-lvct-link="live-chat">Live Chat</span></li>
+                      <li><a href="#live-chat" data-lvct-link="live-chat">Live Chat</a></li>
                       <li><a href="/contact#lvct-kontaktformular">Contact Support</a></li>
                     </ul>
                   </nav>
@@ -153,15 +153,15 @@ export default function Footer() {
                     <p className="lvf-s11-colhead" id="lvf-s11-h-legal">Legal</p>
                     <ul>
                       <li><a href="#">Imprint</a></li>
-                      <li><span className="lvf-s11-note">Affiliate Disclaimer</span></li>
-                      <li><span className="lvf-s11-note">Restricted Countries</span></li>
-                      <li><span className="lvf-s11-note">Risk Disclaimer</span></li>
+                      <li><a href="#" className="lvf-s11-note">Affiliate Disclaimer</a></li>
+                      <li><a href="#" className="lvf-s11-note">Restricted Countries</a></li>
+                      <li><a href="#" className="lvf-s11-note">Risk Disclaimer</a></li>
                     </ul>
                   </nav>
                   <nav className="lvf-s11-nav lvf-s11-nav--other" aria-labelledby="lvf-s11-h-other">
                     <p className="lvf-s11-colhead" id="lvf-s11-h-other">Other</p>
                     <ul>
-                      <li><span className="lvf-s11-note">Sitemap</span></li>
+                      <li><a href="#" className="lvf-s11-note">Sitemap</a></li>
                       <li><a href="https://lvlupfuturesdashboard.propaccount.com/en/sign-in" target="_blank" rel="noopener noreferrer">Dashboard</a></li>
                     </ul>
                   </nav>

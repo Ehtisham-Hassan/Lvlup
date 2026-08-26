@@ -1,1 +1,23 @@
-/* Obsolet seit Umbau 06.08.2026: alle Regeln zielten auf die geloeschte Elementor-Startseite (Seite 40) und den alten Header-Inhalt. Original in der Git-Historie bzw. Sicherung. */
+/* Footer Link Hover States */
+.lvf-s11-nav a,
+.lvf-s11-nav .lvf-s11-note,
+.lvf-s11-nav [data-lvct-link] {
+  cursor: pointer;
+  transition: color 0.18s ease;
+}
+
+.lvf-s11-nav a:hover,
+.lvf-s11-nav .lvf-s11-note:hover,
+.lvf-s11-nav [data-lvct-link]:hover {
+  color: #ffffff !important;
+}
+
+body.lvf-gold .lvf-s11-nav a:hover,
+body.lvf-gold .lvf-s11-nav .lvf-s11-note:hover,
+body.lvf-gold .lvf-s11-nav [data-lvct-link]:hover,
+body.page-id-8046 .lvf-s11-nav a:hover,
+body.page-id-8046 .lvf-s11-nav .lvf-s11-note:hover,
+body.page-id-8046 .lvf-s11-nav [data-lvct-link]:hover {
+  color: #ffbc54 !important;
+}
+
