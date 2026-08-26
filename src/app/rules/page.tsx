@@ -73,6 +73,8 @@ const RULES_INDEX = [
   { id: 'rule-supported-platforms', title: 'Supported Trading Platforms', category: 'Platforms', sectionId: 'platforms-verification', text: 'Supports DXtrade and Volumetrica.' },
   { id: 'rule-commission-rates', title: 'Futures Commission Rates', category: 'Platforms', sectionId: 'platforms-verification', text: 'ES/NQ ($2.18), MES/MNQ ($0.71), Gold/Crude rates listed.' },
   { id: 'rule-kyc-verification', title: 'KYC Verification', category: 'Platforms', sectionId: 'platforms-verification', text: 'Identity verification required via Sumsub after passing.' },
+  { id: 'rule-pricing-latency-exploitation', title: 'Pricing and Latency Exploitation', category: 'Prohibited Trading', sectionId: 'prohibited-trading-rules', text: 'Delayed price feeds, incorrect quotes, platform errors, latency differences and execution faults may not be exploited.' },
+  { id: 'rule-no-minimum-trade-duration', title: 'No Minimum Trade Duration', category: 'Prohibited Trading', sectionId: 'prohibited-trading-rules', text: 'There is no minimum required duration for an individual trade, provided the activity does not violate HFT or technical-exploitation rules.' },
   { id: 'rule-prohibited-trading', title: 'Prohibited Trading Rules', category: 'Prohibited Trading', sectionId: 'prohibited-trading-rules', text: 'Latency exploitation, front-running, cross-account hedging, group trading prohibited.' },
 ];
 
@@ -1808,7 +1810,7 @@ export default function Page() {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr><td>ES, NQ, YM, RTY</td><td>$2.16</td></tr>
+                      <tr><td>ES, NQ, YM, RTY</td><td>$2.18</td></tr>
                       <tr><td>MES, MNQ, MYM, M2K</td><td>$0.71</td></tr>
                       <tr><td>6E, 6B, 6J, 6C, 6S, 6A</td><td>$2.40</td></tr>
                       <tr><td>CL, HO, RB</td><td>$2.30</td></tr>
@@ -1895,6 +1897,22 @@ export default function Page() {
             <div className="lvr-r9-grid">
               {/* LEFT COLUMN */}
               <div className="lvr-r9-col">
+                <article className="lvr-r9-card" id="rule-pricing-latency-exploitation">
+                  <div className="lvr-r9-cardhead">
+                    <h3 className="lvr-r9-cardtitle">Pricing and Latency Exploitation</h3>
+                  </div>
+                  <div className="lvr-r9-body">
+                    <p>Traders may not exploit:</p>
+                    <ul style={{ listStyleType: 'none', padding: 0 }}>
+                      <li>Delayed price feeds</li>
+                      <li>Incorrect quotes</li>
+                      <li>Platform errors</li>
+                      <li>Latency differences</li>
+                      <li>Execution faults</li>
+                    </ul>
+                    <p>Trading must be based on genuine market activity rather than technical exploitation.</p>
+                  </div>
+                </article>
                 <article className="lvr-r9-card">
                   <div className="lvr-r9-cardhead">
                     <h3 className="lvr-r9-cardtitle">Own Trading Bots</h3>
@@ -1980,6 +1998,23 @@ export default function Page() {
               </div>
               {/* RIGHT COLUMN */}
               <div className="lvr-r9-col">
+                <article className="lvr-r9-card" id="rule-high-frequency-trading">
+                  <div className="lvr-r9-cardhead">
+                    <h3 className="lvr-r9-cardtitle">High-Frequency Trading</h3>
+                  </div>
+                  <div className="lvr-r9-body">
+                    <p>High-Frequency Trading and HFT bots are prohibited.</p>
+                  </div>
+                </article>
+                <article className="lvr-r9-card" id="rule-no-minimum-trade-duration">
+                  <div className="lvr-r9-cardhead">
+                    <h3 className="lvr-r9-cardtitle">No Minimum Trade Duration</h3>
+                  </div>
+                  <div className="lvr-r9-body">
+                    <p>There is no minimum required duration for an individual trade.</p>
+                    <p>Traders may enter and exit positions without a required minimum holding time, provided the activity does not violate the HFT or technical-exploitation rules.</p>
+                  </div>
+                </article>
                 <article className="lvr-r9-card">
                   <div className="lvr-r9-cardhead">
                     <h3 className="lvr-r9-cardtitle">Insider or Non-Public Information</h3>
